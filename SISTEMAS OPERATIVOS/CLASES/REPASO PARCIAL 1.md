@@ -2,8 +2,8 @@
 
 ## Módulo 1: Introducción a los Sistemas Operativos
 - [ ] **1.1 Conceptos Fundamentales**
-  - [ ] [[Definición del Sistema Operativo]]: comprender el rol de intermediario entre hardware y programas que oculta la complejidad física[cite: 1, 3, 6].
-  - [ ] [[Propósito del SO]]: saber cómo simplifica el uso de la máquina frente al acceso directo al hardware[cite: 1, 3, 6].
+  - [x] [[Definición del Sistema Operativo]]: comprender el rol de intermediario entre hardware y programas que oculta la complejidad física[cite: 1, 3, 6].
+  - [x] [[Propósito del SO]]: saber cómo simplifica el uso de la máquina frente al acceso directo al hardware[cite: 1, 3, 6].
   - [ ] [[Software Privativo vs Código Abierto]]: dominar las diferencias respecto al acceso al código fuente, licencias, estudio y modificación[cite: 6].
   - [ ] [[Ubicación de Shell y GUI]]: entender por qué la interfaz de usuario no forma parte estricta del núcleo[cite: 6].
 - [ ] **1.2 Funciones y Objetivos Principales**
@@ -108,5 +108,17 @@
 # Conceptos Fundamentales
 
 ## Introducción a los Sistemas Operativos
-### Definicion Sistema Operativo
-SISTEMA OPERATIVO: es un intermediario entre los programas y las piezas físicas (el har)
+
+~={blue} **Definición Sistema Operativo** =~
+
+SISTEMA OPERATIVO: es un intermediario entre los programas (navegador, reproductor de musica, etc) y las piezas físicas (el hardware: CPU, memoria RAM, discos) de la máquina
+
+Para cumplir este propósito, el SO 
+1) **provee abstracciones (hacia las aplicaciones):** oculta la complejidad física del hardware creando modelos sencillos.
+2) **administra recursos (hacia el hardware):** coordina y distribuye el uso de la CPU, memoria RAM y los dispositivos de entrada/salida entre todos los programas que lo solicitan, evitando que un solo proceso monopolice el sistema o que cause conflictos con los demás.
+
+~={blue}**Software Privativo vs Código Abierto**=~
+
+|                         | Software Privativo | Código Abierto   |
+| ----------------------- | ------------------ | ---------------- |
+| Acceso al código fuente |                    | está disponible  |
