@@ -1,11 +1,11 @@
 # 📚 Checklist de Estudio: Primer Parcial de Sistemas Operativos
 
 ## Módulo 1: Introducción a los Sistemas Operativos
-- [ ] **1.1 Conceptos Fundamentales**
+- [x] **1.1 Conceptos Fundamentales**
   - [x] [[Definición del Sistema Operativo]]: comprender el rol de intermediario entre hardware y programas que oculta la complejidad física[cite: 1, 3, 6].
   - [x] [[Propósito del SO]]: saber cómo simplifica el uso de la máquina frente al acceso directo al hardware[cite: 1, 3, 6].
   - [x] [[Software Privativo vs Código Abierto]]: dominar las diferencias respecto al acceso al código fuente, licencias, estudio y modificación[cite: 6].
-  - [ ] [[Ubicación de Shell y GUI]]: entender por qué la interfaz de usuario no forma parte estricta del núcleo[cite: 6].
+  - [x] [[Ubicación de Shell y GUI]]: entender por qué la interfaz de usuario no forma parte estricta del núcleo[cite: 6].
 - [ ] **1.2 Funciones y Objetivos Principales**
   - [ ] [[Proveer Abstracciones]]: transformar disco físico en archivos, impresoras en colas y periféricos en controladores[cite: 1, 4, 6].
   - [ ] [[Administrador de Recursos]]: arbitraje y asignación de CPU, memoria RAM, almacenamiento, dispositivos de E/S y red[cite: 1, 6].
@@ -135,6 +135,13 @@ GUI: Interfaz gráfica de usuario ej. escritorio o ventanas son los programas qu
 - No forma parte del nucleo (KERNEL) del sistema operativo
  UBICACIÓN: ambos se ejecutan en el espacio de usuario (MODO USUARIO)
  INTERACCIÓN: cuando cuando se realiza una acción la GUI o el SHELL no tocan el disco duro directamente -> le envian una LLAMADA al sistema (SYSTEM CALL) al kernel para que él realice la tarea
-MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el siste
+MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el sistema
 -> si la interfaz de usuario falla o se bloquea, el núcleo del sistema operativo sigue funcionando con total estabilidad en el espacio kernel.
+
+* AISLAMIENTO Si la GUI se congela o falla, el problema queda contenido dentro del espacio de usuario. Como el kernel sigue funcionando de forma aislada e independiente en su propio espacio, el procesador puede continuar administrando otros procesos en segundo plano sin que todo el sistema colapse.*
+
+## Funciones y Objetivos Principales
+
+**Proveer abstracciones**
+
 
