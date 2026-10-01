@@ -109,7 +109,7 @@
 
 ## Introducción a los Sistemas Operativos
 
-~={blue} **Definición Sistema Operativo** =~
+ **Definición Sistema Operativo** 
 
 SISTEMA OPERATIVO: es un intermediario entre los programas (navegador, reproductor de musica, etc) y las piezas físicas (el hardware: CPU, memoria RAM, discos) de la máquina
 
@@ -117,7 +117,7 @@ Para cumplir este propósito, el SO
 1) **provee abstracciones (hacia las aplicaciones):** oculta la complejidad física del hardware creando modelos sencillos.
 2) **administra recursos (hacia el hardware):** coordina y distribuye el uso de la CPU, memoria RAM y los dispositivos de entrada/salida entre todos los programas que lo solicitan, evitando que un solo proceso monopolice el sistema o que cause conflictos con los demás.
 
-~={blue}**Software Privativo vs Código Abierto**=~
+**Software Privativo vs Código Abierto**
 
 |                         | Software Privativo                                                                                                                | Código Abierto                                                                           |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -127,4 +127,14 @@ Para cumplir este propósito, el SO
 
 
 ***Que sea de código abierto no siempre significa que sea gratuito; la clave está en la libertad de acceso y modificación del código fuente, no en su precio***
+
+**Ubicación de Shell y GUI**
+
+SHELL : Interfaz de línea de comandos
+GUI: Interfaz gráfica de usuario ej. escritorio o ventanas son los programas que permiten al usuario interactuar con la máquina
+- No forma parte del nucleo (KERNEL) del sistema operativo
+ UBICACIÓN: ambos se ejecutan en el espacio de usuario (MODO USUARIO)
+ INTERACCIÓN: cuando cuando se realiza una acción la GUI o el SHELL no tocan el disco duro directamente -> le envian una LLAMADA al sistema (SYSTEM CALL) al kernel para que él realice la tarea
+MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el siste
+-> si la interfaz de usuario falla o se bloquea, el núcleo del sistema operativo sigue funcionando con total estabilidad en el espacio kernel.
 
