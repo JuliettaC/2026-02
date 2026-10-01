@@ -124,5 +124,7 @@ Para cumplir este propósito, el SO
 | Acceso al código fuente | es secreto y pertenece a la empresa creadora                                                                                      | está disponible públicamente para cualquier persona                                      |
 | Estudio y modificación  | prohíbe por contrato (licencia) cualquier alteración o ingeniería inversa                                                         | permite analizar cómo funcoina por dentro y modificarlo para adaptarlo a tus necesidades |
 | Licencias               | otorgan un permiso limitado de uso bajo las condiciones impuestas por el fabricante (ej. pago de licencias por usuario o máquina) | garantizan libertades de uso, redistribución y mejora                                    |
+
+
 ***Que sea de código abierto no siempre significa que sea gratuito; la clave está en la libertad de acceso y modificación del código fuente, no en su precio***
 
