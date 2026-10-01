@@ -4,7 +4,7 @@
 - [ ] **1.1 Conceptos Fundamentales**
   - [x] [[Definición del Sistema Operativo]]: comprender el rol de intermediario entre hardware y programas que oculta la complejidad física[cite: 1, 3, 6].
   - [x] [[Propósito del SO]]: saber cómo simplifica el uso de la máquina frente al acceso directo al hardware[cite: 1, 3, 6].
-  - [ ] [[Software Privativo vs Código Abierto]]: dominar las diferencias respecto al acceso al código fuente, licencias, estudio y modificación[cite: 6].
+  - [x] [[Software Privativo vs Código Abierto]]: dominar las diferencias respecto al acceso al código fuente, licencias, estudio y modificación[cite: 6].
   - [ ] [[Ubicación de Shell y GUI]]: entender por qué la interfaz de usuario no forma parte estricta del núcleo[cite: 6].
 - [ ] **1.2 Funciones y Objetivos Principales**
   - [ ] [[Proveer Abstracciones]]: transformar disco físico en archivos, impresoras en colas y periféricos en controladores[cite: 1, 4, 6].
@@ -119,6 +119,10 @@ Para cumplir este propósito, el SO
 
 ~={blue}**Software Privativo vs Código Abierto**=~
 
-|                         | Software Privativo | Código Abierto   |
-| ----------------------- | ------------------ | ---------------- |
-| Acceso al código fuente |                    | está disponible  |
+|                         | Software Privativo                                                                                                                | Código Abierto                                                                           |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Acceso al código fuente | es secreto y pertenece a la empresa creadora                                                                                      | está disponible públicamente para cualquier persona                                      |
+| Estudio y modificación  | prohíbe por contrato (licencia) cualquier alteración o ingeniería inversa                                                         | permite analizar cómo funcoina por dentro y modificarlo para adaptarlo a tus necesidades |
+| Licencias               | otorgan un permiso limitado de uso bajo las condiciones impuestas por el fabricante (ej. pago de licencias por usuario o máquina) | garantizan libertades de uso, redistribución y mejora                                    |
+***Que sea de código abierto no siempre significa que sea gratuito; la clave está en la libertad de acceso y modificación del código fuente, no en su precio***
+
