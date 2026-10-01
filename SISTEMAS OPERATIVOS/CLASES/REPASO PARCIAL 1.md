@@ -6,10 +6,10 @@
   - [x] [[Propósito del SO]]: saber cómo simplifica el uso de la máquina frente al acceso directo al hardware[cite: 1, 3, 6].
   - [x] [[Software Privativo vs Código Abierto]]: dominar las diferencias respecto al acceso al código fuente, licencias, estudio y modificación[cite: 6].
   - [x] [[Ubicación de Shell y GUI]]: entender por qué la interfaz de usuario no forma parte estricta del núcleo[cite: 6].
-- [ ] **1.2 Funciones y Objetivos Principales**
+- [x] **1.2 Funciones y Objetivos Principales**
   - [x] [[Proveer Abstracciones]]: transformar disco físico en archivos, impresoras en colas y periféricos en controladores[cite: 1, 4, 6].
   - [x] [[Administrador de Recursos]]: arbitraje y asignación de CPU, memoria RAM, almacenamiento, dispositivos de E/S y red[cite: 1, 6].
-  - [ ] [[Capas al abrir un archivo]]: memorizar el flujo de `open()` (Aplicación $\rightarrow$ Biblioteca $\rightarrow$ Kernel $\rightarrow$ File System $\rightarrow$ Driver)[cite: 6].
+  - [x] [[Capas al abrir un archivo]]: memorizar el flujo de `open()` (Aplicación $\rightarrow$ Biblioteca $\rightarrow$ Kernel $\rightarrow$ File System $\rightarrow$ Driver)[cite: 6].
 - [ ] **1.3 Modos de Ejecución y Niveles de Privilegio**
   - [ ] [[Modo Kernel]]: características del máximo nivel de privilegios y control total del hardware[cite: 1, 4].
   - [ ] [[Modo Usuario]]: restricciones de ejecución, aislamiento de fallos y ausencia de acceso directo a E/S[cite: 1, 4].
@@ -155,4 +155,13 @@ Cuando un programa necesita abrir un archivo guardado en el equipo, la petición
 3. KERNEL: la petición entra al núcle del SO mediante una llamada al sistema cambiando el modo kernel para operar con privilegios
 4. FILE SYSTEM (Sistema de archivos): El kernel le consulta al sistema de archivos para determinar la ubicación lógica física en la que se encuentran los bloques de ese archivo 
 5. DRIVER (Controlador del dispositivo): Es el software que traduce la orden del file system a instrucciones eléctricas directas para el hardware del disco
+>Si un programa intentara saltarse esas capas, surgirían dos problemas graves:
+>**Se pierde la seguridad:** Es el **Kernel** el encargado de validar la ruta y los permisos del usuario. Sin esa validación, cualquier programa podría leer o sobrescribir archivos privados de otros usuarios o del propio sistema operativo.
+>**Se pierde la abstracción:** Es el **Sistema de archivos** el que localiza los bloques físicos correspondientes a un archivo. Sin él, la aplicación tendría que saber de memoria las direcciones exactas de sectores y bloques en el disco duro.
 
+## Modos de ejecución y niveles de privilegio
+
+**Modo kernel**
+MODO KERNEL (maximo privilegio): en este modo el procesador puede ejecutar cualquier instrucción de la arquitectura y tiene acceso ilimitado a todo el hardware, aquí es donde opera el SO.
+**Modo Usuario**
+MODO USUARIO (privilegio restringido): 
