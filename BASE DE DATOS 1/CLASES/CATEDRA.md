@@ -1,4 +1,4 @@
-Modelo identidad - relación 
+aModelo identidad - relación 
 
 El nombre tiene que ser singular y en mayúsculas.
 
@@ -127,4 +127,7 @@ tipo de comisión
 
 ## ejercicio 2.3.3
 
-ñ
+01.10 
+relaciones 
+clave foranea es una llave primaria en otra entidad
+componentes de una relación 
