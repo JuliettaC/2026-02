@@ -7,8 +7,8 @@
   - [x] [[Software Privativo vs Código Abierto]]: dominar las diferencias respecto al acceso al código fuente, licencias, estudio y modificación[cite: 6].
   - [x] [[Ubicación de Shell y GUI]]: entender por qué la interfaz de usuario no forma parte estricta del núcleo[cite: 6].
 - [ ] **1.2 Funciones y Objetivos Principales**
-  - [ ] [[Proveer Abstracciones]]: transformar disco físico en archivos, impresoras en colas y periféricos en controladores[cite: 1, 4, 6].
-  - [ ] [[Administrador de Recursos]]: arbitraje y asignación de CPU, memoria RAM, almacenamiento, dispositivos de E/S y red[cite: 1, 6].
+  - [x] [[Proveer Abstracciones]]: transformar disco físico en archivos, impresoras en colas y periféricos en controladores[cite: 1, 4, 6].
+  - [x] [[Administrador de Recursos]]: arbitraje y asignación de CPU, memoria RAM, almacenamiento, dispositivos de E/S y red[cite: 1, 6].
   - [ ] [[Capas al abrir un archivo]]: memorizar el flujo de `open()` (Aplicación $\rightarrow$ Biblioteca $\rightarrow$ Kernel $\rightarrow$ File System $\rightarrow$ Driver)[cite: 6].
 - [ ] **1.3 Modos de Ejecución y Niveles de Privilegio**
   - [ ] [[Modo Kernel]]: características del máximo nivel de privilegios y control total del hardware[cite: 1, 4].
@@ -147,4 +147,12 @@ MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el sistema
 **Administrador de recursos** 
 El SO actúa como un administrador y árbitro de los recursos fisicos del equipo: CPU, memoria RAM, almacenamiento, dispositivos de entrada
 -> El SO asigna de forma ordenada quién utiliza cada recurso, cuándo lo utiliza y con qué prioridad evitando que un programa monopolice la máquina o interfiera con los demás
+
+**Capas al abrir un archivo** 
+Cuando un programa necesita abrir un archivo guardado en el equipo, la petición no va directo al disco duro, sino que recorre una serie de capas organizadas secuencialmente
+1. APLICACIÓN: El programa ejecuta la instrucción de abrir el archivo (open())
+2. BIBLIOTECA (Library/ API): traduce la solicitud del lenguaje de programación formateada para el sistema operativo
+3. KERNEL: la petición entra al núcle del SO mediante una llamada al sistema cambiando el modo kernel para operar con privilegios
+4. FILE SYSTEM (Sistema de archivos): El kernel le consulta al sistema de archivos para determinar la ubicación lógica física en la que se encuentran los bloques de ese archivo 
+5. DRIVER (Controlador del dispositivo): Es el software que traduce la orden del file system a instrucciones eléctricas directas para el hardware del disco
 
