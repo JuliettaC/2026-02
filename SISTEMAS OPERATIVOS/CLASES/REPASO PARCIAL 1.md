@@ -144,4 +144,7 @@ MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el sistema
 
 **Proveer abstracciones**
 
+**Administrador de recursos** 
+El SO actúa como un administrador y árbitro de los recursos fisicos del equipo: CPU, memoria RAM, almacenamiento, dispositivos de entrada
+-> El SO asigna de forma ordenada quién utiliza cada recurso, cuándo lo utiliza y con qué prioridad evitando que un programa monopolice la máquina o interfiera con los demás
 
