@@ -208,4 +208,63 @@ MULTICS → UNIX → System V / BSD → POSIX
 **Modo kernel**
 MODO KERNEL (máximo privilegio): en este modo el procesador puede ejecutar cualquier instrucción de la arquitectura y tiene acceso ilimitado a todo el hardware, aquí es donde opera el SO.
 **Modo Usuario**
-MODO USUARIO (privilegio restringido): 
+MODO USUARIO (privilegio restringido): Las aplicaciones se ejecutan con un privilegio limitado. No pueden realizar directamente cualquier operación privilegiada sobre el sistema.
+**Llamada al sistema**
+LLAMADA AL SISTEMA: es la interfaz mediante la cual un programa solicita de forma controlada un servicio al sistema operativo.
+
+**Transferencia de control:** Cuando un programa que se ejecuta en modo usuario necesita un servicio del SO, realiza una llamada al sistema.
+-> La ejecución pasa de forma controlada al kernel, el SO atiende la solicitud y posteriormente se devuelve el control al programa
+
+FLUJO DE UNA LLAMADA AL SISTEMA
+Programa en modo usuario → Llamada al sistema → Kernel → Servicio → Programa
+
+**Llamada de procedimiento y llamada al sistema**
+Una llamada normal a un procedimiento puede permanecer completamente en modo usuario.
+En cambio, cuando una operación requiere un servicio privilegiado del sistema operativo, debe producirse una transferencia controlada hacia el kernel.
+
+***Una operación solicitada al sistema operativo no siempre puede completarse inmediatamente.***
+Durante la espera el SO puede permitir que otro trabajo utilice el procesador
+
+***Relación entre conceptos 
+Una llamada al sistema permite solicitar un servicio al sistema operativo.***  
+***Si la operación requiere esperar una E/S, el sistema puede utilizar el procesador para ejecutar otro trabajo disponible.***
+
+# ⚙️ Servicios y Llamadas al Sistema (POSIX)
+
+## 📌 Concepto Clave
+- **POSIX:** Estándar que define interfaces de programación (API) para sistemas operativos tipo UNIX (Linux, BSD, MINIX). Garantiza compatibilidad y portabilidad de código.
+
+---
+
+## 🛠️ Llamadas al Sistema Principales
+
+| Llamada | Propósito Principal | Nota / Comportamiento |
+| :--- | :--- | :--- |
+| `read()` | Lectura de datos | Puede retornar de inmediato o bloquear el proceso si los datos aún no están disponibles (E/S). |
+| `fork()` | Crear proceso hijo | Clona el proceso padre; a partir de aquí existen ambos en ejecución concurrente. |
+| `execve()` | Ejecutar un nuevo programa | Reemplaza el espacio de memoria y el código del proceso actual por el del nuevo binario. |
+| `waitpid()` | Sincronización / Espera | El padre se bloquea hasta que el hijo finalice, recogiendo su estado de salida. |
+| `exit()` | Terminación de proceso | Finaliza la ejecución del proceso actual y libera sus recursos. |
+
+---
+
+## 🔄 Ciclo de Vida: Modelo Shell
+
+Flujo típico cuando el shell ejecuta un comando de usuario:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Usuario
+    participant P as Proceso Padre (Shell)
+    participant C as Proceso Hijo
+
+    User->>P: Ingresa comando
+    P->>C: fork() (crea clon)
+    par Espera del Padre
+        P->>P: waitpid() (bloqueado esperando)
+    and Ejecución del Hijo
+        C->>C: execve() (reemplaza código por el comando)
+        C->>P: exit() (notifica estado y termina)
+    end
+    P->>User: Vuelve a mostrar el prompt
