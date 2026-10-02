@@ -143,6 +143,7 @@ MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el sistema
 ## Funciones y Objetivos Principales
 
 **Proveer abstracciones**
+El hardware posee detalles técnicos que pueden resultar complejos para los programas y los usuarios, El SO ofrece representaciones más simples de esos recursos. 
 
 **Administrador de recursos** 
 El SO actúa como un administrador y árbitro de los recursos fisicos del equipo: CPU, memoria RAM, almacenamiento, dispositivos de entrada
