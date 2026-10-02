@@ -144,10 +144,12 @@ MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el sistema
 
 **Proveer abstracciones**
 El hardware posee detalles técnicos que pueden resultar complejos para los programas y los usuarios, El SO ofrece representaciones más simples de esos recursos. 
+***Ofrece una forma más sencilla de utilizar los recursos del computador***
 
 **Administrador de recursos** 
 El SO actúa como un administrador y árbitro de los recursos fisicos del equipo: CPU, memoria RAM, almacenamiento, dispositivos de entrada
 -> El SO asigna de forma ordenada quién utiliza cada recurso, cuándo lo utiliza y con qué prioridad evitando que un programa monopolice la máquina o interfiera con los demás
+***Organiza y controla el uso de CPU, memoria, almacenamiento y dispositivos***
 
 **Capas al abrir un archivo** 
 Cuando un programa necesita abrir un archivo guardado en el equipo, la petición no va directo al disco duro, sino que recorre una serie de capas organizadas secuencialmente
@@ -166,3 +168,13 @@ Cuando un programa necesita abrir un archivo guardado en el equipo, la petición
 MODO KERNEL (maximo privilegio): en este modo el procesador puede ejecutar cualquier instrucción de la arquitectura y tiene acceso ilimitado a todo el hardware, aquí es donde opera el SO.
 **Modo Usuario**
 MODO USUARIO (privilegio restringido): 
+
+## Evolución de los sistemas operativos
+
+-> la evolución de los SO estan estrechamente ligada a la evolución de la arquitectura de los computadores
+
+**Primera generación:** La interacción con la máquina era directa y el trabajo requería una importante intervención humana
+**Procesamiento por lotes:** Los trabajos comenzaron a organizarse en lotes para ejecutarse sucesivamente, disminuyendo la intervención entre un trabajo y el siguiente
+**Multiprogramación:** varios trabajos podian permanecer disponibles en memoria. Cuando uno debía esperar una operación de E/S otro podía utilizar el procesador.
+**Spooling:** Los trabajos podían almacenarse en disco y ser seleccionados por el sistema operativo cuando correspondiera su ejecución. el 
+
