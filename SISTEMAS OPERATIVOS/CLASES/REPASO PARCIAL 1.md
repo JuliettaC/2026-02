@@ -229,14 +229,11 @@ Durante la espera el SO puede permitir que otro trabajo utilice el procesador
 Una llamada al sistema permite solicitar un servicio al sistema operativo.***  
 ***Si la operación requiere esperar una E/S, el sistema puede utilizar el procesador para ejecutar otro trabajo disponible.***
 
-# ⚙️ Servicios y Llamadas al Sistema (POSIX)
+## Servicios y Llamadas al Sistema (POSIX)
+**Concepto Clave**
+**POSIX:** Estándar que define interfaces de programación (API) para sistemas operativos tipo UNIX (Linux, BSD, MINIX). Garantiza compatibilidad y portabilidad de código.
 
-## 📌 Concepto Clave
-- **POSIX:** Estándar que define interfaces de programación (API) para sistemas operativos tipo UNIX (Linux, BSD, MINIX). Garantiza compatibilidad y portabilidad de código.
-
----
-
-## 🛠️ Llamadas al Sistema Principales
+**Llamadas al Sistema Principales**
 
 | Llamada | Propósito Principal | Nota / Comportamiento |
 | :--- | :--- | :--- |
@@ -245,26 +242,31 @@ Una llamada al sistema permite solicitar un servicio al sistema operativo.***
 | `execve()` | Ejecutar un nuevo programa | Reemplaza el espacio de memoria y el código del proceso actual por el del nuevo binario. |
 | `waitpid()` | Sincronización / Espera | El padre se bloquea hasta que el hijo finalice, recogiendo su estado de salida. |
 | `exit()` | Terminación de proceso | Finaliza la ejecución del proceso actual y libera sus recursos. |
+Regla Mnemotécnica
+- `fork()`: **Copia**
+- `read()` → **leer datos.**
+- `execve()`: **Muta** (cambia de programa) EJECUTAR OTRO PROGRAMA
+- `waitpid()`: **Aguarda** ESPERAR UN PROCESO HIJO
+- `exit()`: **Muere** TERMINAR UN HIJO
 
----
-
-## 🔄 Ciclo de Vida: Modelo Shell
-
-Flujo típico cuando el shell ejecuta un comando de usuario:
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor User as Usuario
-    participant P as Proceso Padre (Shell)
-    participant C as Proceso Hijo
-
-    User->>P: Ingresa comando
-    P->>C: fork() (crea clon)
-    par Espera del Padre
-        P->>P: waitpid() (bloqueado esperando)
-    and Ejecución del Hijo
-        C->>C: execve() (reemplaza código por el comando)
-        C->>P: exit() (notifica estado y termina)
-    end
-    P->>User: Vuelve a mostrar el prompt
+## Unidad 1 · Conceptos fundamentales
+**Sistema operativo**  
+Intermediario entre programas y hardware.
+**Abstracciones**  
+Simplifican el uso de los recursos físicos.
+**Administración de recursos**  
+Coordina CPU, memoria, almacenamiento y E/S.
+**Multiprogramación**  
+Otro trabajo puede utilizar la CPU mientras uno espera E/S.
+**Spooling**  
+Utiliza almacenamiento en disco para gestionar trabajos.
+**Tiempo compartido**  
+Distribuye CPU por turnos entre varios usuarios.
+**Llamada al sistema**  
+Interfaz controlada entre un programa y el kernel.
+**POSIX**  
+Define interfaces para favorecer compatibilidad entre sistemas.
+**fork() / execve()**  
+Creación de un hijo y ejecución de otro programa.
+**waitpid() / exit()**  
+Espera del padre y terminación del proceso.
