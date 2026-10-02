@@ -104,7 +104,7 @@
   - [ ] `kill(pid, señal)`: envío de señales a procesos para manejo asíncrono o terminación[cite: 1, 4].
   - [ ] `tiempo(&segundos)`: conteo del tiempo transcurrido desde la época UNIX (1 de enero de 1970)[cite: 1, 4].
   - [ ] [[Modelo UNIX vs Windows API]]: llamadas secuenciales al sistema en UNIX frente al modelo dirigido por eventos y manejadores en Win32[cite: 1, 4].
-
+****
 # Conceptos Fundamentales
 
 ## Introducción a los Sistemas Operativos
@@ -139,7 +139,7 @@ MOTIVO DE DISEÑO: mantener la interfaz fuera del kernel protege el sistema
 -> si la interfaz de usuario falla o se bloquea, el núcleo del sistema operativo sigue funcionando con total estabilidad en el espacio kernel.
 
 * AISLAMIENTO Si la GUI se congela o falla, el problema queda contenido dentro del espacio de usuario. Como el kernel sigue funcionando de forma aislada e independiente en su propio espacio, el procesador puede continuar administrando otros procesos en segundo plano sin que todo el sistema colapse.*
-
+****
 ## Funciones y Objetivos Principales
 
 **Proveer abstracciones**
@@ -168,7 +168,7 @@ Cuando un programa necesita abrir un archivo guardado en el equipo, la petición
 MODO KERNEL (maximo privilegio): en este modo el procesador puede ejecutar cualquier instrucción de la arquitectura y tiene acceso ilimitado a todo el hardware, aquí es donde opera el SO.
 **Modo Usuario**
 MODO USUARIO (privilegio restringido): 
-
+****
 ## Evolución de los sistemas operativos
 
 -> la evolución de los SO estan estrechamente ligada a la evolución de la arquitectura de los computadores
@@ -176,5 +176,21 @@ MODO USUARIO (privilegio restringido):
 **Primera generación:** La interacción con la máquina era directa y el trabajo requería una importante intervención humana
 **Procesamiento por lotes:** Los trabajos comenzaron a organizarse en lotes para ejecutarse sucesivamente, disminuyendo la intervención entre un trabajo y el siguiente
 **Multiprogramación:** varios trabajos podian permanecer disponibles en memoria. Cuando uno debía esperar una operación de E/S otro podía utilizar el procesador.
-**Spooling:** Los trabajos podían almacenarse en disco y ser seleccionados por el sistema operativo cuando correspondiera su ejecución. el 
+**Spooling:** Los trabajos podían almacenarse en disco y ser seleccionados por el sistema operativo cuando correspondiera su ejecución. el mecanismo también se utilizó para operaciones de salida.
+**Tiempo compartido:** La cpu se distribuye por turnos entre usuarios que requieren atención, permitiendo ofrecer un servicio interactivo
+**Computadora personal:** Los circuitos de integración a gran escala y posteriormente los microprocesadores permitieron avanzar hacia computadores de uso personal.
+
+**MULTIPROGRAMACIÓN:**  Cuando un trabajo necesita realizar una operación de entrada/salida, puede existir un período durante el cual no pueda continuar utilizando el procesador. 
+-> Si existe otro trabajo preparado para ejecutarse, el sistema puede permitir que éste utilice la CPU mientras el primero espera. De esta forma se mejora el aprovechamiento del procesador.
+***Cuando un trabajo espera una operación de entrada y salida, otro trabajo disponible puede utilizar el procesador.***
+
+**Protección en un entorno multiprogramado:** Mantener varios trabajos en la memoria también trajo con sigo la necesidad de evitar que interfieran indebidamente entre si, por eso la multiprogramación requiere mecanismos de protección que permitan mantener separados los trabajos
+****
+
+| Concepto                | Característica principal                                                                                  |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
+| Procesamiento por lotes | Los trabajos se agrupan y se ejecutan sin requerir interacción continua del usuario                       |
+| Multiprogramación       | Varios trabajos permanecen disponible y la CPU puede ser utilizada por otro cuando uno está esperando E/S |
+| Spooling                | Los trabajos se almacenan en disco para que el SO pueda gestionarlos y seleccionarlos                     |
+|                         |                                                                                                           |
 
