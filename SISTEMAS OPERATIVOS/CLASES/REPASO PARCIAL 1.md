@@ -162,12 +162,6 @@ Cuando un programa necesita abrir un archivo guardado en el equipo, la petición
 >**Se pierde la seguridad:** Es el **Kernel** el encargado de validar la ruta y los permisos del usuario. Sin esa validación, cualquier programa podría leer o sobrescribir archivos privados de otros usuarios o del propio sistema operativo.
 >**Se pierde la abstracción:** Es el **Sistema de archivos** el que localiza los bloques físicos correspondientes a un archivo. Sin él, la aplicación tendría que saber de memoria las direcciones exactas de sectores y bloques en el disco duro.
 
-## Modos de ejecución y niveles de privilegio
-
-**Modo kernel**
-MODO KERNEL (maximo privilegio): en este modo el procesador puede ejecutar cualquier instrucción de la arquitectura y tiene acceso ilimitado a todo el hardware, aquí es donde opera el SO.
-**Modo Usuario**
-MODO USUARIO (privilegio restringido): 
 ****
 ## Evolución de los sistemas operativos
 
@@ -187,10 +181,31 @@ MODO USUARIO (privilegio restringido):
 **Protección en un entorno multiprogramado:** Mantener varios trabajos en la memoria también trajo con sigo la necesidad de evitar que interfieran indebidamente entre si, por eso la multiprogramación requiere mecanismos de protección que permitan mantener separados los trabajos
 ****
 
-| Concepto                | Característica principal                                                                                  |
-| ----------------------- | --------------------------------------------------------------------------------------------------------- |
-| Procesamiento por lotes | Los trabajos se agrupan y se ejecutan sin requerir interacción continua del usuario                       |
-| Multiprogramación       | Varios trabajos permanecen disponible y la CPU puede ser utilizada por otro cuando uno está esperando E/S |
-| Spooling                | Los trabajos se almacenan en disco para que el SO pueda gestionarlos y seleccionarlos                     |
-|                         |                                                                                                           |
+| Concepto                | Característica principal                                                                                                                                                                                                                                                                       |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Procesamiento por lotes | Los trabajos se agrupan y se ejecutan sin requerir interacción continua del usuario                                                                                                                                                                                                            |
+| Multiprogramación       | Varios trabajos permanecen disponible y la CPU puede ser utilizada por otro cuando uno está esperando E/S ~={red}** permite aprovechar la CPU cuando otro trabajo está esperando **=~                                                                                                          |
+| Spooling                | Los trabajos se almacenan en disco para que el SO pueda gestionarlos y seleccionarlos ~={red}**utiliza almacenamiento en disco para gestionar trabajos de entrada y salida.**=~                                                                                                                |
+| Tiempo compartido       | La CPU se asigna por turnos para proporcionar un servicio interactivo a varios usuarios *** reducir el tiempo de respuesta y proporcionar un servicio interactivo a varios usuarios.***~={red} **distribuye la CPU por turnos para proporcionar un servicio interactivo a varios usuarios.**=~ |
 
+**SPOOLING**-> Permitió que los trabajos se almacenaran directamente en disco. El sistema operativo podía seleccionar un nuevo trabajo, cargarlo en un partición disponible y ejecutarlo
+
+-> Redujo la necesidad de transportar físicamente cintas entre máquinas y también se utilizó para administrar operaciones de salida.
+
+FLUJO GENERAL DEL SPOOLING
+Trabajos → Disco → Sistema operativo→ Selecciona trabajo → Ejecución
+
+TIEMPO COMPARTIDO Usuario 1 → CPU  (por turnos) ← Usuario 2 ← Usuario 3
+->**CTSS:**  fue un sistema de tiempo compartido de propósito general desarrollado en MIT sobre una IBM 7094 modificada. ***Representó el avance hacia sistemas en los que varios usuarios podían interactuar con el computador***
+->**MULTICS:** fue concebido para proporcionar capacidad de cómputo a numerosos usuarios. Su propuesta comparaba el acceso a los recursos computacionales con una utilidad: el usuario se conecta y utiliza los recursos que necesita.
+***El proyecto introdujo ideas importantes que influyeron posteriormente en UNIX y sus derivados***
+
+INFLUENCIA HISTORICA
+MULTICS → UNIX → System V / BSD → POSIX
+****
+## Modos de ejecución y niveles de privilegio
+
+**Modo kernel**
+MODO KERNEL (máximo privilegio): en este modo el procesador puede ejecutar cualquier instrucción de la arquitectura y tiene acceso ilimitado a todo el hardware, aquí es donde opera el SO.
+**Modo Usuario**
+MODO USUARIO (privilegio restringido): 
