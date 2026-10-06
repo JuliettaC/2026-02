@@ -1,4 +1,4 @@
-aModelo identidad - relación 
+Modelo identidad - relación 
 
 El nombre tiene que ser singular y en mayúsculas.
 
