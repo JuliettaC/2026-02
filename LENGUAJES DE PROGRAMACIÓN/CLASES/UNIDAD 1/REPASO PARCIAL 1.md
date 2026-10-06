@@ -65,11 +65,11 @@ Los 3 errores clásicos de cálculo y cómo encontrarlos
 - **Cómo encontrarlo en el examen:**
     1. Busca multiplicaciones (`*`) de valores grandes (precios, aranceles, cantidades o segundos).
     2. Revisa el tipo de las variables que se están multiplicando.
-    3. Si ambas variables son `int`, Java multiplica en 32 bits (máximo ~2.147 millones). Si el resultado supera ese límite, da la vuelta a negativo **antes de guardarse en el `long`**.
+    3. Si ambas variables son `int`, Java multiplica en 32 bits (máximo 2 147 483 647). Si el resultado supera ese límite, desborda **antes de guardarse en el `long`**; puede dar un resultado positivo o negativo.
     ```
     int arancel = 5_400_000;
     int alumnos = 800;
-    long total = arancel * alumnos; // Desborda a negativo antes de llegar al long
+    long total = arancel * alumnos; // Desborda a 25_032_704 antes de llegar al long
     ```
 
 - **La corrección:** Convertir a `long` antes de multiplicar: `(long) arancel * alumnos` o usar literales con `L`.
@@ -95,7 +95,7 @@ en la linea 5 hay que pasar todo a double para que no se vuelva loco
 
 ejercicio 8
 
-Referencia: En Java, una **referencia** es simplemente una **dirección de memoria** (piénsalo como una **flecha**) que le dice al programa **dónde encontrar un objeto** guardado en la memoria (el _Heap_). No contiene los datos del objeto directamente dentro de sí, sino el camino para llegar a él.
+Referencia: En Java, una **referencia** es un valor que permite localizar un objeto; la **dirección de memoria** es una analogía (piénsalo como una **flecha**) que le dice al programa **dónde encontrar un objeto** guardado en la memoria (el _Heap_). No contiene los datos del objeto directamente dentro de sí, sino el camino para llegar a él.
 
 - **Tipos primitivos (`int`, `double`, `boolean`, `char`):** La variable es una caja que **guarda directamente el valor**.
 
@@ -106,18 +106,21 @@ Referencia: En Java, una **referencia** es simplemente una **dirección de memor
     String texto = new String("clave123"); 
     // 'texto' no es la palabra en sí; es una flecha que apunta a esa palabra en memoria
 
-el doble == sirve para comparar primitivos no referencias  
+El doble `==` compara valores primitivos; entre referencias compara identidad, no contenido.  
 
 ![[Pasted image 20260905104316.png]]
 
-para primitivos se usa .equals()
+Para comparar contenido de `String` se usa `.equals()`; los primitivos no tienen ese método.
 ![[Pasted image 20260905104903.png]]
 
 en la linea 5 hay que usar .equals
 
-if ingresada.equals(correcta) {
-sout ("acceso concedido")
+```java
+if (ingresada.equals(correcta)) {
+    System.out.println("acceso concedido");
 }
+```
+Fragmento: supone que ingresada y correcta son String y que ingresada no es null.
 
 ejercicio 9
 
@@ -133,3 +136,11 @@ En lugar de evaluar condiciones booleanas complejas (verdadero/falso), toma el v
 
 ejercicio 11
 Si un método puede devolver `null`, pedirle cualquier método con el punto (`.`) revienta en `NullPointerException`; siempre se debe validar con `!= null` antes de usar la referencia".
+
+
+> [!note] Matices del repaso
+> List/ArrayList.size() se conserva como mención. En el switch clásico, break u otra salida evita continuar por casos siguientes. Para un String que puede ser null, valida antes de invocar métodos o usa una comparación desde un literal conocido.
+
+
+## Consulta de conceptos Java
+[[Sintaxis básica]] · [[Strings]] · [[Arreglos (Arrays)]] · [[Operadores aritméticos básicos]] · [[Variables y scopes]] · [[Condicionales (Conditionals)]]
