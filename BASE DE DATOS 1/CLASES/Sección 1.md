@@ -15,8 +15,15 @@ status: revisar
 >La información es el resultado de los datos recopilados 
 
 ### Base de datos
-- Es una recopilación organizada de datos estructurados que se almac
+Es una recopilación organizada de datos estructurados que se almacenan de forma electrónica en un sistema informático.
 - Proporciona los medios para transformar los datos obtenidos en información útil
+#### Base de datos relacionales
+Almacena la información en tablas con filas y columnas
+- TABLA:  Es una recopilación de registros.
+	-> objeto principal de una base de datos 
+- FILA: Instancia->SOLO EN ORACLE, registro->en general
+- COLUMNA: Campo o atributo-> en general
+>Una base de datos relacional consta de tablas que están vinculadas por un atributo común
 
 ## 1.3 Tipo de modelo de bases de datos
 
