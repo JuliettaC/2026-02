@@ -13,5 +13,5 @@ status: revisar
 ## 2.3 Entidades y atributos
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
-## 2.6 Modelado de rela
+## 2.6 Modelado de relación de entidades (ERD)
 
