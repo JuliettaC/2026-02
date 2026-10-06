@@ -40,11 +40,14 @@ Los datos se organizan en una estructura de árbol y se almacenan como registros
 #### Modelo de red
 Organiza los datos como una telaraña donde todo puede conectarse entre si
 ![[Pasted image 20261006193822.png|196]]
-
 >En el [[Sección 1#modelo jerárquico|modelo jerárquico]] cada dato solo puede tener un padre, mientras que en el [[Sección 1#Modelo de red|de red]] se pueden tener múltiples padres y conectar en cualquier dirección
 #### Modelo orientado a objetos
-
+Guarda la información como "objetos" de la vida real, reuniendo en un solo paquete lo que el objeto **es** (sus datos) y lo que el objeto **puede hacer** (sus acciones)
+![[Pasted image 20261006195044.png|259]]
 #### Modelo relacional
+Organiza los datos en [[Sección 1#Base de datos relacionales|tablas]] compuestas por filas y columnas que se conectan entre sí mediante identificadores comunes o claves
+![[Pasted image 20261006194833.jpg|231]]
+>El [[Sección 1#Modelo de archivo plano|archivo plano]] guarda toda la información en un único texto continuo sin conectar datos automáticamente, mientras que el [[Sección 1#Modelo relacional|relacional]] separa la información en múltiples tablas vinculadas para evitar repeticiones y errores
 
 ## 1.4 Requisitos de negocio
 
