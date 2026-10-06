@@ -26,6 +26,21 @@ Almacena la información en tablas con filas y columnas
 >Una base de datos relacional consta de tablas que están vinculadas por un atributo común
 
 ## 1.3 Tipo de modelo de bases de datos
+### Proceso de desarrollo de bases de datos
+1. Estrategia y análisis: Modelado de datos conceptuales
+2. Diseño: Diseño de base de datos
+3. Creación: Creación de base de datos
+### Tipo de modelo de bases de datos
+#### Modelo de archivo plano
+Es una base de datos diseñada en torno a una única tabla 
+->Normalmente están en texto sin formato, en el que cada línea contiene solo un registro y se separan con delimitadores (como tabuladores y comas)![[Pasted image 20261006193456.png|221]]
+#### Modelo jerárquico
+
+#### Modelo orientado a objetos
+
+ 
+#### Modelo de red
+#### Modelo relacional
 
 ## 1.4 Requisitos de negocio
 

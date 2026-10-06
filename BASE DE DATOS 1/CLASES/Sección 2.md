@@ -16,5 +16,4 @@ status: revisar
 ## 2.6 Modelado de relación de entidades (ERD)
 
 
-[[Sección 1#Base de datos relacionales]]
 
