@@ -1,5 +1,6 @@
 ---
 status: revisar
+tags:
 ---
 # Sección 1: Introducción
 
@@ -33,7 +34,8 @@ Almacena la información en tablas con filas y columnas
 ### Tipo de modelo de bases de datos
 #### Modelo de archivo plano
 Es una base de datos diseñada en torno a una única tabla 
-->Normalmente están en texto sin formato, en el que cada línea contiene solo un registro y se separan con delimitadores (como tabuladores y comas)![[Pasted image 20261006193456.png|221]]
+->Normalmente están en texto sin formato, en el que cada línea contiene solo un registro y se separan con delimitadores (como tabuladores y comas)
+![[Pasted image 20261006193456.png|221]]
 #### Modelo jerárquico
 Los datos se organizan en una estructura de árbol y se almacenan como registros que se conectan entre sí a través de enlaces
 ![[Pasted image 20261006193731.png|214]]
