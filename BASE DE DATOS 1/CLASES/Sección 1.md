@@ -35,11 +35,15 @@ Almacena la información en tablas con filas y columnas
 Es una base de datos diseñada en torno a una única tabla 
 ->Normalmente están en texto sin formato, en el que cada línea contiene solo un registro y se separan con delimitadores (como tabuladores y comas)![[Pasted image 20261006193456.png|221]]
 #### Modelo jerárquico
+Los datos se organizan en una estructura de árbol y se almacenan como registros que se conectan entre sí a través de enlaces
+![[Pasted image 20261006193731.png|214]]
+#### Modelo de red
+Organiza los datos como una telaraña donde todo puede conectarse entre si
+![[Pasted image 20261006193822.png|196]]
 
+>En el [[Sección 1#modelo jerárquico|modelo jerárquico]] cada dato solo puede tener un padre, mientras que en el [[Sección 1#Modelo de red|de red]] se pueden tener múltiples padres y conectar en cualquier dirección
 #### Modelo orientado a objetos
 
- 
-#### Modelo de red
 #### Modelo relacional
 
 ## 1.4 Requisitos de negocio
