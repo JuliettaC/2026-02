@@ -53,4 +53,7 @@ Organiza los datos en [[Sección 1#Base de datos relacionales|tablas]] compuesta
 
 ## 1.4 Requisitos de negocio
 
-
+### Necesidad de una solución de base de datos
+Permite a varios usuarios integrar y gestionar grandes volúmenes de datos interrelacionados, reduciendo la redundancia y asegurando la integridad que un archivo plano no puede ofrecer
+### Reglas de negocio 
+Son pautas simples que describen los procesos operativos y definen las relaciones y restricciones sobre los datos de una organización 
