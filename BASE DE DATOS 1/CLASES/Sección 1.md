@@ -2,6 +2,7 @@
 status: revisar
 tags:
   - BaseDeDatos
+ejercicios: "[[Ejercicios Sección 1]]"
 ---
 # Sección 1: Introducción
 

@@ -47,13 +47,26 @@ RESTRICCIONES:
 - REGLAS DE NEGOCIO:
 	1. Registro e identificación de médicos: A cada médico registrado en el hospital se le debe asignar un identificador
 	2. Experiencia del personal médico: Los médicos asociados al hospital deben contar con experiencia laboral comprobable
-	3. Registro de pacientes: Cada paciente debe registrarse obligatoriamente en el sistema durante su primera visita al 
+	3. Registro de pacientes: Cada paciente debe registrarse obligatoriamente en el sistema durante su primera visita al hospital
+	4. Identificación de pacientes: A cada paciente que ingresa al hospital debe asignar un número de identificación
+- RESTRICCIONES:
+	1. Formato ID de médico: Debe empezar con DC
+	2. Los médicos tienen un mínimo de 7 años de experiencia laboral 
+	3. El ID del paciente debe empezar con PT
 ### Errores / aprendizaje
-
-- **Error:**
-- **Por qué:**
-- **Aprendí:**
-
+**Error:** los mismos del anterior
+**Aprendí:**
+Una regla describe **qué se hace** y una restricción describe **el límite, condición o formato exacto** de esa acción.
+1. **Aplica la prueba de las dos preguntas:**
+    - ¿Qué hace el sistema o negocio? $\rightarrow$ Es una **Regla de negocio**.
+    - ¿Qué límite, valor fijo o condición le impone el negocio a esa acción? $\rightarrow$ Es una **Restricción**.
+2. **Divide la frase en dos mitades:**
+    - _Mitad 1 (Acción):_ "A cada médico se le asigna un ID único" (Regla).
+    - _Mitad 2 (Límite):_ "El ID debe iniciar obligatoriamente con 'DC'" (Restricción).
+3. **Usa siempre la estructura sujeto + verbo:**
+    - Evita poner etiquetas sueltas como _"Registro de pacientes"_. Redacta siempre una oración completa: _"Cada paciente nuevo debe registrarse en el hospital"_ o _"El sistema asigna un identificador..."_.
+4. **Rastrea palabras de filtro:**
+    - Cada vez que leas números, fechas, prefijos o palabras como _"mínimo"_, _"máximo"_, _"únicamente"_ o _"empieza por"_, extráelas de inmediato hacia tu lista de restricciones.
 ### Conceptos relacionados
 [[Sección 1#Reglas de negocio|Reglas de negocio]]
 
