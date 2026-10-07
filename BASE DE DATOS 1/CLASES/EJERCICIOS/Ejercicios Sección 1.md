@@ -20,35 +20,39 @@ RESTRICCIONES:
 - Límite inicial de categorías Inicialmente, los miembros solo pueden pertenecer a una de las tres categorías, con posibilidad de ampliar a otras más adelante.
 - Cambio de tipo de membresía: El tipo de miembro no se puede modificar arbitrariamente; solo se permite el cambio si se aporta una justificación válida
 ### Errores / aprendizaje
-
-- **Error:** Me faltaron las restricciones del negocio y confundí una restricción con una regla del negocio
-- **Aprendí:**  
+**Error:** Me faltaron las restricciones del negocio y confundí una restricción con una regla del negocio
+**Aprendí:**  
 1. Conocer la diferencia clave entre los conceptos
 - **Regla de negocio:** Es una política, norma operativa o directriz general que describe **qué hace o cómo opera el negocio** (por ejemplo: _"los miembros pagan una cuota"_).
 - **Restricción:** Es una **limitación o condición estricta** que acota a la regla de negocio, impidiendo que suceda cualquier cosa (por ejemplo: _"el tipo de inscripción no puede cambiarse"_ o _"solo existen 3 categorías"_).
 - **Problema:** Es el conflicto o necesidad que la empresa busca solucionar (por ejemplo: _"la base de clientes no es estable"_).
-- **Suposición:** Una premisa o conjetura que se toma como verdadera sin haber sido verificada formalmente.
-    
-### 2. Método de resolución en 4 pasos
+- **Suposición:** Una premisa o conjetura que se toma como verdadera sin haber sido verificada formalmente.    
+ 2. Método de resolución en 4 pasos
+	1. **Lectura y filtrado:** Separa la historia de contexto de los datos operativos. Frases como _"LibBook es una empresa de éxito"_ son decorativas y no generan reglas ni restricciones.
+     2. **Subrayar acciones y obligaciones:** Busca verbos de acción y condiciones obligatorias: _"pagarán"_, _"se les otorgan"_, _"ofrece"_, etc. De aquí se obtienen las **reglas de negocio**.
+	3. **Detectar los límites y condiciones:**  Localiza palabras clave de limitación como: _"solo"_, _"únicamente"_, _"no se puede"_, _"a menos que"_, o listas cerradas de valores. De aquí se obtienen las **restricciones**.
+	4. **Redactar de forma clara y directa:** Escribe cada regla y restricción en una sola frase breve y declarativa, asociando la restricción directamente con la regla que está limitando.
+### Enunciado
+> El hospital Star Care es un hospital con varias especialidades que atiende las necesidades de diferentes pacientes. A cada médico registrado en este hospital se le asigna un ID único que empieza por las letras "DC". El hospital garantiza que los médicos asociados tienen un mínimo de siete años de experiencia laboral. Cada paciente se debe registrar en el hospital en su primera visita. Cuando llega un paciente, se le asigna un número de paciente único que empieza por las letras "PT". 
+> **Su tarea consiste en identificar las reglas de negocio y las restricciones asociadas a partir del escenario del caso descrito.**
 
-1. **Lectura y filtrado:**
-    
-    - Separa la historia de contexto de los datos operativos. Frases como _"LibBook es una empresa de éxito"_ son decorativas y no generan reglas ni restricciones.
-        
-2. **Subrayar acciones y obligaciones:**
-    
-    - Busca verbos de acción y condiciones obligatorias: _"pagarán"_, _"se les otorgan"_, _"ofrece"_, etc. De aquí se obtienen las **reglas de negocio**.
-        
-3. **Detectar los límites y condiciones:**
-    
-    - Localiza palabras clave de limitación como: _"solo"_, _"únicamente"_, _"no se puede"_, _"a menos que"_, o listas cerradas de valores. De aquí se obtienen las **restricciones**.
-        
-4. **Redactar de forma clara y directa:**
-    
-    - Escribe cada regla y restricción en una sola frase breve y declarativa, asociando la restricción directamente con la regla que está limitando.
-        
+### Mi intento
+- REGLAS DE NEGOCIO:
+	1. Se le asigna un ID único a cada médico que empieza por las letras "DC"
+	2. Registro de pacientes
+- RESTRICCIONES:
+	1. Los médicos tienen un mínimo de 7 años de experiencia laboral 
 
-¿Te gustaría practicar con otro caso
+### Solución
+- REGLAS DE NEGOCIO:
+	1. Registro e identificación de médicos: A cada médico registrado en el hospital se le debe asignar un identificador
+	2. Experiencia del personal médico: Los médicos asociados al hospital deben contar con experiencia laboral comprobable
+	3. Registro de pacientes: Cada paciente debe registrarse obligatoriamente en el sistema durante su primera visita al 
+### Errores / aprendizaje
+
+- **Error:**
+- **Por qué:**
+- **Aprendí:**
 
 ### Conceptos relacionados
 [[Sección 1#Reglas de negocio|Reglas de negocio]]
