@@ -17,6 +17,7 @@ una [[Sección 1#Modelo de archivo plano|base de datos de archivo plano]] almace
 | -> implementar                                 |             |
 | -> extraer información                         |             |
 | todos los registros se almacenan un solo lugar |             |
+| ordenamiento y filtrado de informes simples    |             |
 |                                                |             |
 
 ## 2.2 Modelos de datos conceptuales y físicos
