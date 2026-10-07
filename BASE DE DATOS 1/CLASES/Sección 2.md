@@ -25,8 +25,20 @@ es una estructura simple donde se organizan y se almacenan datos
 ### Reglas para tablas de bases de datos relacionales 
 - cada tabla tiene un nombre distinto
 - puede contener varias filas
-- 
+- cada tabla tiene un valor para identificar de forma única las filas
+- las entradas en las columnas son valores únicos y son del mismo tipo
+- el orden de las filas y columnas no es importante
+### Términos clave
+- TABLA: estructura de almacenamiento básica
+- COLUMNA: atributo que describe la información de la tabla
+- LLAVE PRIMARIA: identificador único para cada fila
+- CLAVE FORANEA: columna que hace referencia a una columna de llave primaria en otra tabla
+- FILA: datos de una instancia de tabla
+- CAMPO: el único valor que se encuentra en la intersección de una fila y una columna
+
 ## 2.2 Modelos de datos conceptuales y físicos
+### Modelo conceptual
+Aborda las necesidades de un negocio (lo ideal desde el punto de vista conceptual), pero no su implantación (lo físicamente posible)
 
 ## 2.3 Entidades y atributos
 ## 2.4 Identificadores únicos
