@@ -39,8 +39,26 @@ es una estructura simple donde se organizan y se almacenan datos
 ## 2.2 Modelos de datos conceptuales y físicos
 ### Modelo conceptual
 Aborda las necesidades de un negocio (lo ideal desde el punto de vista conceptual), pero no su implantación (lo físicamente posible)
+>Se basa en las necesidades actuales, pero puede reflejar las necesidades futuras
 
+| identifica                                                                      | no especifica                                                                               |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Entidades importantes (objetos que se convierten en tablas en la base de datos) | atributos (objetos que se convierten en columnas o campos en la base de datos)              |
+| relaciones entre entidades                                                      | identificadores únicos (un atributo que se convierte en llave primaria en la base de datos) |
+### Modelo lógico
+Es una representación formal y detallada de las necesidades de información de una organización (entidades, atributos, relaciones y reglas de negocio), completamente independiente de cualquier tecnología, software o base de datos física donde se vaya a implementar.
+> se representa en un diagrama de entidad- relación (ERD)
+
+### Modelo físico 
+Es la especificación detallada de cómo se implementa el [[Sección 2#Modelo lógico|modelo lógico]] en un motor de base de datos concreto, definiendo tablas, columnas, tipo de datos, claves primarias y foráneas e índices.
+#### Paso para crear un modelo de datos físico
+1. Modelar entidades como tablas
+2. Modelar relaciones como claves foráneas
+3. Modelar atributos como columnas
+4. Modificar el modelo de datos físico en función de las restricciones y re
 ## 2.3 Entidades y atributos
+
+
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)
