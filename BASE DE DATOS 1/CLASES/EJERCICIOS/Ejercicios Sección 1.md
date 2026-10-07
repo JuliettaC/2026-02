@@ -93,17 +93,27 @@ Una regla describe **qué se hace** y una restricción describe **el límite, co
 - PROBLEMA:
 	1. 
 ### Solución
-
-```sql
--- Escribir aquí la solución correcta o final
-```
-
+- REGLA DEL NEGOCIO:
+	1. **Tipología de clientes:** La base de datos debe admitir clientes individuales y clientes asociados a una entidad "Equipo". Ambos pueden adquirir cualquier artículo del catálogo.
+	2. **Cálculo de descuentos por volumen de jugadores:** El descuento sobre el precio de lista solo aplica si la compra corresponde a un equipo, y su porcentaje debe calcularse en función de la cantidad de integrantes registrados para dicho equipo.
+	3. **Trazabilidad de pedidos:** Todo pedido debe registrarse con su detalle de líneas de pedido (artículos, cantidades, precio unitario aplicado y subtotales).
+	4. **Asignación formal de ventas:** Los representantes de ventas están asignados contractualmente a la gestión de ventas de equipos, no de ventas individuales directas de mostrador.
+- SUPOSICIÓN:
+	1. **Estructura del descuento:** Existe una tabla o escala tabulada de descuentos (por ejemplo: de 9 a 15 jugadores = 10%, de 16 o más = 15%) y una regla para validar el número de jugadores que componen el equipo.
+- PROBLEMA:
+	1. **Falta de canal formal para quejas individuales:** Los representantes atienden informalmente las quejas de clientes individuales, lo que desvía su tiempo de la atención a equipos y provoca pérdida de trazabilidad de los reclamos.
+- _Solución de datos:_ Incorporar una entidad o módulo de `Reclamo / Queja` vinculada al cliente y a la orden, independientemente del tipo de cliente.
 ### Errores / aprendizaje
 
-- **Error:**
+ **Error:**
+ Confundir la **descripción literal de la operación diaria** con la formulación formal de reglas de negocio, y dejar vacíos los campos de **suposiciones** y **problemas**.
 - **Por qué:**
-- **Aprendí:**
+**Aprendí:**
 
+| **Categoría**        | **Tu pregunta mental**                                 | **Tu plantilla de respuesta**                                     |
+| -------------------- | ------------------------------------------------------ | ----------------------------------------------------------------- |
+| **Regla de Negocio** | ¿Qué debe obligar o impedir el sistema?                | _«Para que ocurra [X], debe cumplirse obligatoriamente [Y]»_      |
+| **Suposición**       | ¿Qué dato falta aquí para que esto funcione?           | _«Se asume que el negocio cuenta con un criterio/tabla para [X]»_ |
+| **Problema**         | ¿Qué se está haciendo a ciegas o de forma desordenada? | _«Falta un registro formal de [X], lo que provoca [Y]»_           |
 ### Conceptos relacionados
-
-<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
+[[Sección 1#Reglas de negocio|Reglas de negocio]]
