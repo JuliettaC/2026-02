@@ -5,19 +5,52 @@
 > **Su tarea consiste en identificar las reglas de negocio y las restricciones asociadas a partir del escenario del caso descrito.**
 
 ### Mi intento
-REGLAS DE NE
+REGLAS DE NEGOCIO:
+1. hay tres tipos de miembros corporativo, alumno, particular 
+2. la inscripción de alumnos es gratuita
+3. corporativo y particular pagan una cuota 
+4. solo se puede cambiar el tipo de miembro con una justificación valida
 ### Solución
-
-```sql
--- Escribir aquí la solución correcta o final
-```
-
+REGLAS DE NEGOCIO:
+1. Inscripción y cobro general: Los miembros deben pagar una cuota de membresía para pertenecer a la biblioteca.
+2. Membresía de alumnos: La inscripción para los alumnos es gratuita y no requiere cuota de pago
+3. Membresía de corporativos y profesorado: Los miembros corporativos y de profesorado pagan una cuota que les otorga privilegios exclusivos
+4. Servicios ofrecidos: LibBook alquila CD y provee acceso a internet para la consulta de revistas y artículos.
+RESTRICCIONES: 
+- Límite inicial de categorías Inicialmente, los miembros solo pueden pertenecer a una de las tres categorías, con posibilidad de ampliar a otras más adelante.
+- Cambio de tipo de membresía: El tipo de miembro no se puede modificar arbitrariamente; solo se permite el cambio si se aporta una justificación válida
 ### Errores / aprendizaje
 
-- **Error:**
-- **Por qué:**
-- **Aprendí:**
+- **Error:** Me faltaron las restricciones del negocio y confundí una restricción con una regla del negocio
+- **Aprendí:**  
+1. Conocer la diferencia clave entre los conceptos
+- **Regla de negocio:** Es una política, norma operativa o directriz general que describe **qué hace o cómo opera el negocio** (por ejemplo: _"los miembros pagan una cuota"_).
+- **Restricción:** Es una **limitación o condición estricta** que acota a la regla de negocio, impidiendo que suceda cualquier cosa (por ejemplo: _"el tipo de inscripción no puede cambiarse"_ o _"solo existen 3 categorías"_).
+- **Problema:** Es el conflicto o necesidad que la empresa busca solucionar (por ejemplo: _"la base de clientes no es estable"_).
+- **Suposición:** Una premisa o conjetura que se toma como verdadera sin haber sido verificada formalmente.
+    
+### 2. Método de resolución en 4 pasos
+
+1. **Lectura y filtrado:**
+    
+    - Separa la historia de contexto de los datos operativos. Frases como _"LibBook es una empresa de éxito"_ son decorativas y no generan reglas ni restricciones.
+        
+2. **Subrayar acciones y obligaciones:**
+    
+    - Busca verbos de acción y condiciones obligatorias: _"pagarán"_, _"se les otorgan"_, _"ofrece"_, etc. De aquí se obtienen las **reglas de negocio**.
+        
+3. **Detectar los límites y condiciones:**
+    
+    - Localiza palabras clave de limitación como: _"solo"_, _"únicamente"_, _"no se puede"_, _"a menos que"_, o listas cerradas de valores. De aquí se obtienen las **restricciones**.
+        
+4. **Redactar de forma clara y directa:**
+    
+    - Escribe cada regla y restricción en una sola frase breve y declarativa, asociando la restricción directamente con la regla que está limitando.
+        
+
+¿Te gustaría practicar con otro caso
 
 ### Conceptos relacionados
+[[Sección 1#Reglas de negocio|Reglas de negocio]]
 
-<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
+
