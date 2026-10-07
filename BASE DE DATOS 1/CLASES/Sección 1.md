@@ -1,6 +1,7 @@
 ---
 status: revisar
 tags:
+  - BaseDeDatos
 ---
 # Sección 1: Introducción
 
@@ -56,4 +57,12 @@ Organiza los datos en [[Sección 1#Base de datos relacionales|tablas]] compuesta
 ### Necesidad de una solución de base de datos
 Permite a varios usuarios integrar y gestionar grandes volúmenes de datos interrelacionados, reduciendo la redundancia y asegurando la integridad que un archivo plano no puede ofrecer
 ### Reglas de negocio 
-Son pautas simples que describen los procesos operativos y definen las relaciones y restricciones sobre los datos de una organización 
+Son pautas simples que describen los procesos operativos y definen las relaciones y restricciones sobre los datos de una organización
+- **Restricción:** Limitación explícita que restringe el alcance o comportamiento de una regla de negocio
+- **Suposición:** Declaración o hecho que se da por sentado sin comprobarse
+- **Problema:** Situación u obstáculo que genera inconsistencias o requiere solución
+### Modelado conceptual
+Representa de forma clara los requisitos del negocio para evitar errores y sirve como base sólida para construir la base de datos física
+
+#BaseDeDatos 
+
