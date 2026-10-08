@@ -55,7 +55,11 @@ Es la especificación detallada de cómo se implementa el [[Sección 2#Modelo l�
 1. Modelar entidades como tablas
 2. Modelar relaciones como claves foráneas
 3. Modelar atributos como columnas
-4. Modificar el modelo de datos físico en función de las restricciones y re
+4. Modificar el modelo de datos físico en función de las restricciones y requisitos físicos
+
+> El sueño del cliente (modelo conceptual) se convierte en una realidad física (modelo físico)
+
+
 ## 2.3 Entidades y atributos
 
 

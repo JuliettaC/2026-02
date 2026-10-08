@@ -17,5 +17,33 @@
 - **Aprendí:**
 
 ### Conceptos relacionados
+[[Sección 2#2.1 Base de datos relacionales]]
 
-<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
+## Ejercicio 2-2: Modelos de datos conceptuales y físicos Prácticas
+
+### Enunciado
+> En esta práctica, ilustrará la diferencia entre una idea y un resultado físico. Tareas 
+> 1. Proporcione cinco razones para crear un modelo de datos conceptual. 
+> 2. Enumere dos ejemplos de modelos conceptuales y modelos físicos.
+
+### Mi intento
+- tarea 1
+1. facilita la comunicación con el cliente
+2. independencia tecnológica permitiendo concentrarse puramente en las reglas y necesidades de información del negocio
+3. detección temprana de errores y omisiones
+4. prevención de redundancia y mantenimiento de integridad
+5. base y guía para el diseño fisico
+- tarea 2
+Ejemplos de Modelos Conceptuales (La idea / El plano abstracto):
+1. **El plano arquitectónico o croquis de una casa:** Muestra la distribución de espacios, habitaciones y cómo se conectan entre sí, sin entrar en marcas de tuberías o tipos de cableado eléctrico.
+2. **Un Diagrama Entidad-Relación (ERD) conceptual:** Modela entidades como `CLIENTE` y `PEDIDO`, indicando que un cliente puede realizar muchos pedidos, sin definir tipos de datos SQL, índices o nombres de tablas de almacenamiento.
+Ejemplos de Modelos Físicos (La implementación / El resultado tangible):
+3. **La casa construida en el terreno:** La estructura real con ladrillos específicos, tuberías de PVC de cierto diámetro, cableado de cobre y especificaciones exactas de carga y materiales.
+4. **El script de tablas (DDL en SQL) en un DBMS específico:** La definición técnica concreta (por ejemplo, en Oracle Database) con sentencias `CREATE TABLE pedidos (id_pedido NUMBER(10) PRIMARY KEY, fecha DATE NOT NULL...)`, asignación de espacios de tabla (_tablespaces_) y creación de índices.
+
+### Conceptos relacionados
+[[Sección 2#2.2 Modelos de datos conceptuales y físicos]]
+
+
+
+
