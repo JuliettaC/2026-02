@@ -193,10 +193,33 @@ Cada entidad1 {debe ser o puede ser} nombre de relación {uno o más o único} e
 
 #### Relación de uno a varios (1-m) o varios a uno (m-1)
 Tiene la cardinalidad de uno o más en una dirección y de solo uno en la dirección contraria
+
 -> ej. Cada CUSTOMER debe recibir la visita de un único SALES REPRESENTATIVE / Cada SALES REPRESENTATIVE puede asignarse a uno o más CUSTOMER
 #### Relación de varios a varios (M:M)
-#### 
-#### 
+Tiene la cardinalidad de uno o más en ambas direcciones.
+
+-> ej. Cada EMPLOYEE puede asignarse a uno o más JOB / Cada JOB puede realizarlo uno o más EMPLOYEE
+#### Relación de uno a uno (1:1)
+Tiene la cardinalidad de solo uno en ambas direcciones.
+
+-> ej. Cada COMPUTER debe contener una única MOTHERBOARD / Cada MOTHERBOARD debe contenerla un único COMPUTER
+#### Relación recursiva
+Ocurre cuando una entidad se relaciona consigo misma.
+
+-> ej. Cada EMPLOYEE puede gestionar uno o más EMPLOYEE / Cada EMPLOYEE debe ser gestionado por un único EMPLOYEE
+
+### Matriz de relaciones
+Herramienta en cuadrícula para recopilar información inicial entre un juego de entidades:
+- Entidades listadas a la izquierda (filas) y arriba (columnas)
+- Cuadro con texto: indica la relación y su nombre en esa dirección
+- Cuadro vacío: indica que no existe relación directa entre ese par
+- Cuadros en la diagonal: representan las relaciones recursivas
+- Por encima de la diagonal: es la imagen inversa o duplicada de lo que está por debajo 
+
+### Clave foránea
+Es la transformación física de una relación conceptual hacia la base de datos relacional.
+
+Es una columna o combinación de columnas de una tabla que hace referencia a una [[Sección 2#Llave primaria|llave primaria]] en la misma tabla o en otra tabla.\
 
 ## 2.6 Modelado de relación de entidades (ERD)
 
