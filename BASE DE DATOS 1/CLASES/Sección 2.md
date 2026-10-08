@@ -59,8 +59,9 @@ Es la especificación detallada de cómo se implementa el [[Sección 2#Modelo l�
 
 > El sueño del cliente (modelo conceptual) se convierte en una realidad física (modelo físico)
 
-
 ## 2.3 Entidades y atributos
+
+### Entidades
 
 
 ## 2.4 Identificadores únicos
