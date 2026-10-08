@@ -3,5 +3,6 @@
 !/.gitignore
 !/**/CLASES/**
 !/**/JAVA/**
+!/z/IMAGENES/**
 /.obsidian/
 /ARQUITECTURA WEB/
