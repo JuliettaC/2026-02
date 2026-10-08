@@ -170,9 +170,34 @@ En el [[Sección 2#Estilos de notación para ERD|diagrama de ERD]] se traza una 
 - Pata de gallo: representa una o más instancias ("varios")
 
 ### Componentes de una relación
+#### Nombre
+Etiqueta que describe la conexión en minúsculas y se ubica cerca del punto de inicio de la entidad a la que está asignada
+#### Opcionalidad 
+Indica si la relación debe existir o no (mínimo de la relación)
+- Obligatoria: Al menos un registro coincidente (se lee debe ser o debe)
+- Opcional: Cero registros coincidentes (se lee puede ser o puede)
+#### Cardinalidad
+Mide la cantidad y responde a la pregunta "cuántos?" (máximo de la relación)
+- Uno: Un único registro coincidente (termina en línea simple/única punta)
+- Varios: Uno o más registros coincidentes (termina en pata de gallo)
+#### Sintaxis de regla de negocio 
+Cada entidad1 {debe ser o puede ser} nombre de relación {uno o más o único} entidad2
+
+### Tipos de relaciones
+
+### Relación de una a varios o varios a uno 
+>1 - 1 (1 a 1)
+>1 - m (1 a muchos)
+>m - 1 (muchos a 1)
+>m - m (muchos a muchos)
+
+#### Relación de uno a varios (1-m) o varios a uno (m-1)
+Tiene la cardinalidad de uno o más en una dirección y de solo uno en la dirección contraria
+-> ej. Cada CUSTOMER debe recibir la visita de un único SALES REPRESENTATIVE / Cada SALES REPRESENTATIVE puede asignarse a uno o más CUSTOMER
+#### Relación de varios a varios (M:M)
+#### 
+#### 
 
 ## 2.6 Modelado de relación de entidades (ERD)
 
 
-
-ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
