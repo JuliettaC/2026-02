@@ -160,8 +160,19 @@ REGLAS
 
 ## 2.5 Relaciones
 
+### Relaciones
+Es una asociación bidireccional y significativa entre dos entidades o entre una entidad y ella misma. Sirve para representar cómo interactúan o se conectan los datos dentro del modelo
+#### Línea de relación
+En el [[Sección 2#Estilos de notación para ERD|diagrama de ERD]] se traza una línea entre las dos entidades 
+- Línea sólida: representa una relación obligatoria
+- Línea discontinua: representa una relación opcional
+- Única punta: representa una sola instancia ("uno")
+- Pata de gallo: representa una o más instancias ("varios")
+
+### Componentes de una relación
 
 ## 2.6 Modelado de relación de entidades (ERD)
 
 
 
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
