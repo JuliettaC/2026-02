@@ -159,6 +159,8 @@ REGLAS
 > Es la transformación de un **UID** (del modelo lógico) al pasar a la **base de datos física**.
 
 ## 2.5 Relaciones
+
+
 ## 2.6 Modelado de relación de entidades (ERD)
 
 
