@@ -87,6 +87,11 @@ Un atributo no volátil es aquel cuyo valor permanece constante una vez registra
 Un atributo volátil es aquel cuyo valor cambia con frecuencia a lo largo del tiempo
 -> ej. edad, saldo disponible
 
+#### Atributos obligatorios y opcionales
+Los atributos obligatorios deben tener un valor ( * )
+Los atributos opcionales pueden no tener un valor y esta en blancos ( ° )
+
+
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)

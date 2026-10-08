@@ -84,19 +84,35 @@ ENTIDADES:
 	- Tipo de cliente
 	- Nombre
 	- Dirección
-	- Número de telefono
+	- Número de teléfono
 	- Correo electrónico
 	- **Equipo**
 2. EQUIPO
+	- Nombre del equipo
+	- Número de jugadores
+	- Descuento
 3. REPRESENTANTE DE VENTAS
+	- Nombre
+	- dirección
+	- teléfono
+	- correo electrónico 
+	- comisión
+	- tipo de comisión
 4. PEDIDO
+	- Fecha
+	- Artículos
+	- Precio total
 5. ARTÍCULO
+	- Nombre del artículo 
+	- Color 
+	- Tamaño 
+	- Categoría
+	- Id artículo
 6. INVENTARIO
+	- Id artículo
+	- coste unitario
+	- unidades disponibles
 #### Solución
-
-```sql
--- Escribir aquí la solución correcta o final
-```
 
 #### Errores / aprendizaje
 
@@ -105,8 +121,7 @@ ENTIDADES:
 - **Aprendí:**
 
 #### Conceptos relacionados
-
-<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
+[[Sección 2#Atributos]]
 
 
 
