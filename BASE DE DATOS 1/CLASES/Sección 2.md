@@ -126,6 +126,14 @@ representa las entidades mediante rectángulos y enfoca las relaciones a través
 
 ## 2.4 Identificadores únicos
 
+### Identificadores únicos
+Es un [[Sección 2#Atributos|atributo]] que cumple con las siguientes reglas
+1. es único en todas las instancias de la entidad
+2. tiene un valor no NULL para cada [[Sección 2#Entidades e instancias|instancia]] de la entidad en el tiempo que dura la instancia 
+3. tiene un valor que nunca cambia en el tiempo 
+> un UID sirve para distinguir cada registro dentro de una base de datos sin riesgo de confusión. 
+
+
 
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)
