@@ -140,7 +140,8 @@ Se compone de un solo atributo se una cuando un único dato basta para garantiza
 Es una combinación de dos o más atributos se usa cuando ningún campo por sí solo es único pero al juntarlos forman una clave irrepetible
 -> ej. ENTIDAD HORARIO DE CLASE -> Número de aula, Hora combinación num de aula + hora crean un identificador único  
 
-
+#### UID artificial 
+Se crea a partir de datos que asigna o genera el sistema y no se producen de forma natural, pero se crean con fines de identificación
 
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)

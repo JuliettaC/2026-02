@@ -252,38 +252,66 @@ ALUMNO
 - Teléfono
 EXAMEN
 - ID examen
-- Nom
+- fecha
+- tipo de examen
+- fecha publicación de resultado
 SESIÓN ACADEMICA 
 - ID sesión
 - Nombre
 - Fecha inicio
 - Fecha fin
 2. CARDINALIDAD
-### Solución
- ATRIBUTOS 
 DEPARTAMENTO
-- ID departamento
-- Nombre departamento
-- Asistencia alumno
-- Asistencia profesor
+- `#` ID departamento
+- * Nombre departamento
+- ° Edificio / Ubicación
 CURSO
-- ID curso
-- Nombre curso
-- profesor
+- `#`ID curso
+- * Nombre curso
+- * Descripción
+- ° profesor
 PROFESOR
-- ID profesor 
-- nombre 
+- `#` ID profesor 
+- * nombre 
+- * correo electrónico 
+- ° teléfono
 ALUMNO
-- ID alumno
-- Nombre
-- Teléfono
-- curso
-- sesión académica
+- `#`ID alumno
+- * Nombre
+- * fecha de nacimiento
+- * dirección
+- * correo electrónico
+- ° Teléfono
 EXAMEN
+- `#`ID examen
+- * fecha
+- * tipo de examen
+- * fecha publicación de resultado
 SESIÓN ACADEMICA 
-- Examen
-- Resultado alumno
-2. CARDINALIDAD
+- `#`ID sesión
+- * Nombre
+- * Fecha inicio
+- * Fecha fin
+### Conceptos relacionados
+[[Sección 2#2.3 Entidades y atributos]]
+
+## Ejercicio 2.4 - 
+
+### Enunciado
+> Escribir aquí qué pide el ejercicio.
+
+### Mi intento
+
+```sql
+-- Escribir aquí mi primera solución
+```
+
+### Solución
+
+```sql
+-- Escribir aquí la solución correcta o final
+```
+
 ### Errores / aprendizaje
 
 - **Error:**
@@ -293,6 +321,5 @@ SESIÓN ACADEMICA
 ### Conceptos relacionados
 
 <!-- Añade solo WikiLinks relevantes para este ejercicio. -->
-
 
 
