@@ -143,6 +143,21 @@ Es una combinación de dos o más atributos se usa cuando ningún campo por sí 
 #### UID artificial 
 Se crea a partir de datos que asigna o genera el sistema y no se producen de forma natural, pero se crean con fines de identificación
 
+#### UIDs candidatos
+Ocurre cuando una entidad tiene mas de un posible UID para identificarla
+-> ej. Número de identificación, Número de nomina
+##### Selección y roles
+###### UID Primario
+Solo uno de los candidatos se elige como principal
+###### UID secundarios
+Son todos los demás candidatos que no fueron elegidos como el primario
+#### Llave primaria
+Columna o juego de columnas que **identifica de forma única cada fila** de una tabla. Puede ser una columna existente o una generada por la base de datos mediante una secuencia.
+REGLAS
+- Debe contener un **valor único** para cada fila.
+- **No puede contener valores nulos** (no admite `NULL`).
+> Es la transformación de un **UID** (del modelo lógico) al pasar a la **base de datos física**.
+
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)
 

@@ -388,3 +388,33 @@ ENTIDADES:
 	- `#` Id inventario 
 	- * coste unitario
 	- * unidades disponibles
+
+#### Conceptos relacionados
+[[Sección 2#2.4 Identificadores únicos]]
+
+## Ejercicio 2-4: Identificadores únicos Prácticas
+
+### Enunciado
+> Escribir aquí qué pide el ejercicio.
+
+### Mi intento
+
+```sql
+-- Escribir aquí mi primera solución
+```
+
+### Solución
+
+```sql
+-- Escribir aquí la solución correcta o final
+```
+
+### Errores / aprendizaje
+
+- **Error:**
+- **Por qué:**
+- **Aprendí:**
+
+### Conceptos relacionados
+
+<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
