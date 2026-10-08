@@ -81,16 +81,36 @@ Es una característica, propiedad o dato descriptivo específico que ayuda a ide
 Se clasifican en 
 - Obligatorios (no se permiten valores nulos) -> se indica con un *
 - Opcionales (se permiten valores nulos) -> se indica con un °
-#### Atributos volátiles y no volátiles
-Un atributo no volátil es aquel cuyo valor permanece constante una vez registrado
+#### Volátiles y no volátiles
+##### Atributo no volátil
+es aquel cuyo valor permanece constante una vez registrado
 -> ej. la fecha de nacimiento
-Un atributo volátil es aquel cuyo valor cambia con frecuencia a lo largo del tiempo
+##### Atributo volátil
+es aquel cuyo valor cambia con frecuencia a lo largo del tiempo
 -> ej. edad, saldo disponible
 
-#### Atributos obligatorios y opcionales
-Los atributos obligatorios deben tener un valor ( * )
-Los atributos opcionales pueden no tener un valor y esta en blancos ( ° )
+#### Obligatorios y opcionales
+##### Atributos obligatorios
+deben tener un valor ( * )
+##### Atributos opcionales
+pueden no tener un valor y esta en blancos ( ° )
 
+#### Únicos y compuestos
+> Se diferencian por la posibilidad de dividirse en partes más pequeñas
+##### Atributos únicos
+no se pueden dividir en subpartes
+-> ej. ID, primer nombre, apellido
+##### Atributos compuestos 
+se pueden dividir en subpartes más pequeñas que representan atributos básicos con diferentes significado propios
+-> ej. nombre, se puede subdividir en primer nombre, apellido 
+
+#### Único valor y de varios valores
+##### Atributos de único valor
+pueden tener un solo valor en un momento concreto 
+-> ej. apellido
+##### Atributos de varios valores
+pueden tener más de un valor al mismo tiempo
+-> ej. dirección, una persona o entidad puede
 
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
