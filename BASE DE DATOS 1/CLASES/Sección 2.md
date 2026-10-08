@@ -112,7 +112,21 @@ pueden tener un solo valor en un momento concreto
 pueden tener más de un valor al mismo tiempo
 -> ej. dirección, una persona o entidad pueden registrar varias direcciones simultáneas
 
+### Estilos de notación para ERD
+![[Pasted image 20261007225420.png]]
+#### Notación Barker
+representa las entidades con rectángulos de esquinas redondeadas; los atributos se listan dentro con símbolos específicos (`#` para UID, `*` para obligatorio y `o` para opcional), y la cardinalidad usa patas de gallo con líneas continuas (obligatorio) o discontinuas (opcional)
+![[Pasted image 20261007225154.png]]
+#### Notación de Ingeniería de la Información
+representa las entidades con rectángulos estándar divididos en secciones (clave primaria arriba y atributos regulares abajo); la cardinalidad y opcionalidad se indican estrictamente en los extremos de las líneas mediante símbolos de círculos (cero / opcional), barras (uno / obligatorio) y patas de gallo (muchos)
+![[Pasted image 20261007225216.png]]
+#### Notación de Bachman
+representa las entidades mediante rectángulos y enfoca las relaciones a través de flechas orientadas; la dirección de la flecha apunta hacia la entidad que representa el lado "muchos" de la relación (punteros o conjuntos en modelos de red)
+![[Pasted image 20261007225204.png]]
+
 ## 2.4 Identificadores únicos
+
+
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)
 
