@@ -132,6 +132,13 @@ Es un [[Sección 2#Atributos|atributo]] que cumple con las siguientes reglas
 2. tiene un valor no NULL para cada [[Sección 2#Entidades e instancias|instancia]] de la entidad en el tiempo que dura la instancia 
 3. tiene un valor que nunca cambia en el tiempo 
 > un UID sirve para distinguir cada registro dentro de una base de datos sin riesgo de confusión. 
+#### UID simple
+Se compone de un solo atributo se una cuando un único dato basta para garantizar que no existan duplicados.
+-> ej. Entidad PERSONA -> Rut
+
+#### UID compuesto
+Es una combinación de dos o más atributos se usa cuando ningún campo por sí solo es único pero al juntarlos forman una clave irrepetible
+-> ej. ENTIDAD HORARIO DE CLASE -> Número de aula, Hora combinación num de aula + hora crean un identificador único  
 
 
 

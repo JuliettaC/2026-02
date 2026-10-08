@@ -204,6 +204,46 @@ ENTIDADES:
 [[Sección 2#Obligatorios y opcionales]]
 [[Sección 2#Obligatorios y opcionales]]
 
+## Ejercicio 2-3: Entidades y atributos Prácticas
+
+### Enunciado
+> Para su comodidad, aquí se muestra un resumen de cómo funciona la base de datos académica (sistema de gestión de escuela): 
+> a. Una escuela/universidad tiene diferentes departamentos que ofrecen cursos a los alumnos en una determinada sesión académica. 
+> b. Cada uno de estos cursos lo imparte un profesor. 
+> c. Los alumnos pueden inscribirse en diferentes cursos en una sesión académica. 
+> d. Además de los detalles de registro, la universidad/escuela debe mantener también la información principal sobre el alumno. 
+> e. El departamento mantiene los datos de asistencia del alumno, que determinarán si un alumno puede optar a los exámenes de esa sesión académica o no.
+> f. Para cada sesión académica, se realizan exámenes y los resultados se comparten con el alumno en un período de tiempo estipulado. 
+> g. El departamento también mantiene un registro del tiempo de conexión y desconexión del profesorado para sus necesidades de generación de informes.
+> 1. Con la información proporcionada anteriormente, identifique y cree las entidades del sistema de gestión de escuela.
+> 2. En esta práctica, identificará los atributos y la notación de opcionalidad asociada a ellos en las entidades que ha creado en el ejercicio 1.
+> 3. Agregue los atributos adecuados y si son opcionales u obligatorios ( * , °) a todas las entidades de la base de datos académica.
+
+### Mi intento
+1. ENTIDADES
+DEPARTAMENTO
+CURSO
+PROFESOR
+ALUMNO
+EXAMEN
+
+2. ATRIBUTOS 
+3. CARDINALIDAD
+### Solución
+
+```sql
+-- Escribir aquí la solución correcta o final
+```
+
+### Errores / aprendizaje
+
+- **Error:**
+- **Por qué:**
+- **Aprendí:**
+
+### Conceptos relacionados
+
+<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
 
 
 
