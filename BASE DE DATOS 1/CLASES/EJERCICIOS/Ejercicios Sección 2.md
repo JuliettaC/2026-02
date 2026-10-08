@@ -113,13 +113,45 @@ ENTIDADES:
 	- coste unitario
 	- unidades disponibles
 #### Solución
-
-#### Errores / aprendizaje
-
-- **Error:**
-- **Por qué:**
-- **Aprendí:**
-
+ENTIDADES:
+1. CLIENTE
+	- Id cliente
+	- Nombre
+	- tipo de cliente
+	- Dirección
+	- Teléfono
+	- Correo electrónico
+	- Saldo
+2. EQUIPO
+	- Id equipo
+	- Nombre del equipo
+	- Número de jugadores
+	- Descuento
+3. REPRESENTANTE DE VENTAS
+	- Id representante
+	- Nombre
+	- dirección
+	- teléfono
+	- correo electrónico 
+	- comisión total 
+	- tipo de comisión
+4. PEDIDO
+	- Id pedido
+	- Fecha
+	- Artículos comprados
+	- Numero de unidades
+	- Precio total
+5. ARTÍCULO
+	- Id artículo
+	- Nombre del artículo 
+	- Color 
+	- Tamaño 
+	- Categoría
+	- Precio
+6. INVENTARIO
+	- Id inventario 
+	- coste unitario
+	- unidades disponibles
 #### Conceptos relacionados
 [[Sección 2#Atributos]]
 

@@ -110,7 +110,7 @@ pueden tener un solo valor en un momento concreto
 -> ej. apellido
 ##### Atributos de varios valores
 pueden tener más de un valor al mismo tiempo
--> ej. dirección, una persona o entidad puede
+-> ej. dirección, una persona o entidad pueden registrar varias direcciones simultáneas
 
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
