@@ -74,6 +74,13 @@ Es cualquier cosa, persona, lugar o concepto del mundo real, relevante para el n
 Una instancia es un miembro específico dentro de ese conjunto. Al pasar al modelo físico, cada instancia se convierte en una **fila o registro** de una tabla.
 > las entidades contienen instancias
 
+### Atributos
+Es una característica, propiedad o dato descriptivo específico que ayuda a identificar, calificar o detallar a una entidad
+> Se nombran en minúscula / mayúscula - minúscula y en singular **no debe incluir el nombre de la entidad**
+#### Características
+Se clasifican en 
+- Obligatorios (no se permiten valores nulos) -> se indica con un *
+- Opcionales (se permiten valores nulos) -> se in
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)
