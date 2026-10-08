@@ -295,31 +295,96 @@ SESIÓN ACADEMICA
 ### Conceptos relacionados
 [[Sección 2#2.3 Entidades y atributos]]
 
-## Ejercicio 2.4 - 
-
+## Ejercicio 2.4 - Base de datos de la tienda Oracle Baseball League
+[[Ejercicios Sección 2#Ejercicio 2.3 — Base de datos de la tienda Oracle Baseball League]]
 ### Enunciado
-> Escribir aquí qué pide el ejercicio.
+> Usted es una pequeña empresa de consultoría especializada en el desarrollo de bases de datos. Le acaban de adjudicar un contrato para desarrollar un modelo de datos para un sistema de aplicaciones de bases de datos de una pequeña tienda denominada Oracle Baseball League (OBL). La tienda ofrece servicios de venta de conjuntos de béisbol para toda la comunidad. OBL tiene dos tipos de cliente; hay personas que pueden adquirir artículos como pelotas, zapatillas, guantes, camisas, camisetas serigrafiadas y pantalones. Además, los clientes pueden representar a un equipo cuando adquieren uniformes y equipación conjunta. Los equipos y los clientes individuales son libres de comprar cualquier artículo de la lista de inventario, pero los equipos obtienen un descuento en el precio de lista según el número de jugadores. Cuando un cliente realiza un pedido, registramos los artículos de ese pedido en nuestra base de datos. El equipo de OBL cuenta con tres representantes de ventas que oficialmente solo atienden a equipos, pero se sabe que gestionan las quejas de los clientes individuales.
 
-### Mi intento
-
-```sql
--- Escribir aquí mi primera solución
-```
-
-### Solución
-
-```sql
--- Escribir aquí la solución correcta o final
-```
-
-### Errores / aprendizaje
-
-- **Error:**
-- **Por qué:**
-- **Aprendí:**
-
-### Conceptos relacionados
-
-<!-- Añade solo WikiLinks relevantes para este ejercicio. -->
-
-
+### Ejercicio 2.4.1 - Identificadores únicos
+#### Mi intento
+ENTIDADES:
+1. CLIENTE
+	- `#` Id cliente
+	- * Nombre
+	- * Dirección
+	- * Teléfono
+	- * Correo electrónico
+	- ° Equipo al que pertenecen
+2. EQUIPO
+	- `#`Id equipo
+	- * Nombre del equipo
+	- * Número de jugadores
+	- ° Descuento
+3. REPRESENTANTE DE VENTAS
+	- `#`Id representante
+	- * Nombre
+	- * dirección
+	- * teléfono
+	- * correo electrónico 
+	- * comisión total 
+	- * tipo de comisión
+4. PEDIDO
+	- `#` Id pedido
+	- * Fecha
+	- * Artículos comprados
+	- * Numero de unidades
+	- * Tamaño 
+	- * Color 
+	- * Precio
+	- * Precio total
+5. ARTÍCULO
+	- `#`Id artículo
+	- * Nombre del artículo 
+	- * Descripción
+	- ° Color 
+	- ° Tamaño 
+	- * Categoría
+	- * Precio
+6. INVENTARIO
+	- `#` Id inventario 
+	- * coste unitario
+	- * unidades disponibles
+### Ejercicio 2.4.2 - Identificadores únicos
+#### Mi intento
+ENTIDADES:
+1. CLIENTE
+	- `#` Id cliente
+	- `#` Correo electrónico
+	- * Nombre
+	- * Dirección
+	- * Teléfono
+	- ° Equipo al que pertenecen
+2. EQUIPO
+	- `#`Id equipo
+	- * Nombre del equipo
+	- * Número de jugadores
+	- ° Descuento
+3. REPRESENTANTE DE VENTAS
+	- `#`Id representante
+	- * Nombre
+	- * dirección
+	- * teléfono
+	- * correo electrónico 
+	- * comisión total 
+	- * tipo de comisión
+4. PEDIDO
+	- `#` Id pedido
+	- * Fecha
+	- * Artículos comprados
+	- * Numero de unidades
+	- * Tamaño 
+	- * Color 
+	- * Precio
+	- * Precio total
+5. ARTÍCULO
+	- `#`Id artículo
+	- * Nombre del artículo 
+	- * Descripción
+	- ° Color 
+	- ° Tamaño 
+	- * Categoría
+	- * Precio
+6. INVENTARIO
+	- `#` Id inventario 
+	- * coste unitario
+	- * unidades disponibles
