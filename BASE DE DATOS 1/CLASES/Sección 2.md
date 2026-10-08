@@ -70,6 +70,9 @@ Es cualquier cosa, persona, lugar o concepto del mundo real, relevante para el n
 - Característica: Existe gracias a otra entidad principal
 - Intersección: Existe gracias a dos o más entidades
 
+### Entidades e instancias
+Una instancia es un miembro específico dentro de ese conjunto. Al pasar al modelo físico, cada instancia se convierte en una **fila o registro** de una tabla.
+> las entidades contienen instancias
 
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
