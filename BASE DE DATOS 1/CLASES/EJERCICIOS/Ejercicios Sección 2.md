@@ -226,15 +226,64 @@ CURSO
 PROFESOR
 ALUMNO
 EXAMEN
+PERIODO ACADEMICO 
 
 2. ATRIBUTOS 
-3. CARDINALIDAD
+DEPARTAMENTO
+- ID departamento
+- Nombre departamento
+- Edificio / Ubicación
+CURSO
+- ID curso
+- Nombre curso
+- profesor
+- Descripción
+PROFESOR
+- ID profesor 
+- nombre 
+- correo electrónico 
+- teléfono
+ALUMNO
+- ID alumno
+- Nombre
+- fecha de nacimiento
+- dirección
+- correo electrónico
+- Teléfono
+EXAMEN
+- ID examen
+- Nom
+SESIÓN ACADEMICA 
+- ID sesión
+- Nombre
+- Fecha inicio
+- Fecha fin
+2. CARDINALIDAD
 ### Solución
-
-```sql
--- Escribir aquí la solución correcta o final
-```
-
+ ATRIBUTOS 
+DEPARTAMENTO
+- ID departamento
+- Nombre departamento
+- Asistencia alumno
+- Asistencia profesor
+CURSO
+- ID curso
+- Nombre curso
+- profesor
+PROFESOR
+- ID profesor 
+- nombre 
+ALUMNO
+- ID alumno
+- Nombre
+- Teléfono
+- curso
+- sesión académica
+EXAMEN
+SESIÓN ACADEMICA 
+- Examen
+- Resultado alumno
+2. CARDINALIDAD
 ### Errores / aprendizaje
 
 - **Error:**
