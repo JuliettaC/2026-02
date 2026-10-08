@@ -155,6 +155,54 @@ ENTIDADES:
 #### Conceptos relacionados
 [[Sección 2#Atributos]]
 
+### 2.3.3 - atributos
+> Utilice la transcripción de la entrevista y las entidades y atributos ya identificados en la lección anterior y, a continuación, marque cuáles cree que serán obligatorios (*) u opcionales (o). Tenga en cuenta que los atributos opcionales pueden estar en blanco, a diferencia de los obligatorios, que deben tener un valor. Compruebe si alguno de los atributos podría describirse como volátil; si es así, pueden cambiarse por un equivalente no volátil.
+
+#### Mi intento
+ENTIDADES:
+1. CLIENTE
+	- `#` Id cliente
+	- * Nombre 
+	- * tipo de cliente 
+	- ° Dirección
+	- * Teléfono
+	- ° Correo electrónico
+	- * Saldo
+2. EQUIPO
+	- `#`Id equipo
+	- * Nombre del equipo
+	- * Número de jugadores
+	- * Descuento
+3. REPRESENTANTE DE VENTAS
+	- `#` Id representante
+	- * Nombre
+	- * Dirección
+	- * teléfono
+	- * correo electrónico 
+	- * comisión total 
+	- * tipo de comisión
+4. PEDIDO
+	- `#` Id pedido
+	- * Fecha
+	- * Artículos comprados
+	- * Numero de unidades
+	- * Precio total
+5. ARTÍCULO
+	- `#`  Id artículo
+	- * Nombre del artículo 
+	- ° Color 
+	- ° Tamaño 
+	- * Categoría
+	- * Precio
+6. INVENTARIO
+	- `#`Id inventario 
+	- * coste unitario
+	- * unidades disponibles
+
+ Atributos volátiles: saldo cliente
+#### Conceptos relacionados
+[[Sección 2#Obligatorios y opcionales]]
+[[Sección 2#Obligatorios y opcionales]]
 
 
 
