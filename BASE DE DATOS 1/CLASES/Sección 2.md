@@ -62,6 +62,13 @@ Es la especificación detallada de cómo se implementa el [[Sección 2#Modelo l�
 ## 2.3 Entidades y atributos
 
 ### Entidades
+Es cualquier cosa, persona, lugar o concepto del mundo real, relevante para el negocio, de la cual se necesita recopilar y registrar información
+>El nombre de la entidad se debe escribir en singular y en mayúscula
+
+#### Tipos de entidades
+- Principal: Existe de forma independiente
+- Característica: Existe gracias a otra entidad principal
+- Intersección: Existe gracias a dos o más entidades
 
 
 ## 2.4 Identificadores únicos
