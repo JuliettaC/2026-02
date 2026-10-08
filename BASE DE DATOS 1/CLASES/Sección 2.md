@@ -80,7 +80,13 @@ Es una característica, propiedad o dato descriptivo específico que ayuda a ide
 #### Características
 Se clasifican en 
 - Obligatorios (no se permiten valores nulos) -> se indica con un *
-- Opcionales (se permiten valores nulos) -> se in
+- Opcionales (se permiten valores nulos) -> se indica con un °
+#### Atributos volátiles y no volátiles
+Un atributo no volátil es aquel cuyo valor permanece constante una vez registrado
+-> ej. la fecha de nacimiento
+Un atributo volátil es aquel cuyo valor cambia con frecuencia a lo largo del tiempo
+-> ej. edad, saldo disponible
+
 ## 2.4 Identificadores únicos
 ## 2.5 Relaciones
 ## 2.6 Modelado de relación de entidades (ERD)
