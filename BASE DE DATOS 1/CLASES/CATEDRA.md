@@ -1,3 +1,36 @@
+## ⚠️ IMPORTANTE: Activar Oracle antes de usar Bases de Datos
+
+Para ahorrar RAM en mi notebook, cambié los servicios de Oracle a **inicio Manual**.
+
+**Antes de trabajar con Oracle:**
+
+1. Presionar `Win + R`.
+    
+2. Escribir `services.msc` y pulsar Enter.
+    
+3. Buscar `OracleServiceFREE`.
+    
+4. Hacer clic derecho → **Iniciar**.
+    
+5. Buscar `OracleOraDB23Home1TNSListener`.
+    
+6. Hacer clic derecho → **Iniciar**.
+    
+
+✅ Ahora puedo utilizar Oracle Database y conectarme desde las herramientas de la universidad.
+
+**Cuando termine de estudiar:**
+
+1. Volver a `services.msc`.
+    
+2. Detener `OracleServiceFREE`.
+    
+3. Detener `OracleOraDB23Home1TNSListener`.
+    
+
+**Recordatorio:** No desinstalar Oracle ni cambiar los servicios a Deshabilitado. Dejarlos en Manual para poder iniciarlos cuando los necesite.
+
+**Nota:** Si Oracle no conecta, comprobar que ambos servicios estén en ejecución.
 Modelo identidad - relación 
 
 El nombre tiene que ser singular y en mayúsculas.
