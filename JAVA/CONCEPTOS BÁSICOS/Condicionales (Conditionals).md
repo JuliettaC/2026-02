@@ -11,10 +11,11 @@ aliases:
 ---
 
 # Condicionales (Conditionals)
-> [!summary] En una frase
-> Seleccionan instrucciones según una condición boolean o un valor concreto.
+> [!summary] Qué es
+> Eligen una ruta según una condición boolean o un valor.
 
 ## if, else if y else
+
 ```java
 int edad = 20;
 if (edad >= 18) {
@@ -26,10 +27,11 @@ if (edad >= 18) {
 }
 ```
 
-Solo se ejecuta la primera rama que corresponda. Un else if se evalúa si las condiciones previas fueron falsas. Java exige boolean; un entero no sirve como condición.
+**Importante:** se ejecuta la primera rama aplicable. else if se evalúa si las anteriores fueron falsas; Java no acepta un entero como condición.
 
 ## Ternario
-Devuelve un valor: `condicion ? valorSiTrue : valorSiFalse`.
+
+**Cómo funciona:** condicion ? valorSiTrue : valorSiFalse devuelve un valor.
 
 ```java
 int edad = 18;
@@ -38,7 +40,8 @@ System.out.println(estado);
 ```
 
 ## switch clásico
-Útil para valores específicos en lugar de rangos.
+
+**Uso:** seleccionar casos por valores concretos.
 
 ```java
 int opcion = 2;
@@ -54,8 +57,12 @@ switch (opcion) {
 }
 ```
 
-En esta forma con `case ...:`, sin break u otra salida puede continuar por los casos siguientes (fall-through), aunque no coincidan. Puede ser intencional; no falta un break obligatoriamente en todo caso. default sirve cuando no hay coincidencia.
+- **break u otra salida:** evita continuar por los casos siguientes.
+- Sin salida puede haber **fall-through**, aunque el siguiente caso no coincida; a veces es intencional.
+- **default:** se usa cuando ningún caso coincide.
 
-[[Operadores lógicos]] combina condiciones; [[Strings]] explica equals para comparar texto.
+## Relacionado
+
+[[Operadores lógicos]] · [[Strings]]
 
 Fuente: [JLS §14.9 y §14.11](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html).

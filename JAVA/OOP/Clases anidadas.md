@@ -10,13 +10,13 @@ aliases:
 ---
 
 # Clases anidadas
-> [!summary] En una frase
-> Una clase anidada se declara dentro de otra y permite agrupar tipos relacionados.
-
-La que contiene la declaración es la clase externa (outer class). No toda clase anidada es inner: una clase miembro static es anidada, pero no es una inner class.
+> [!summary] Qué es
+> Son clases declaradas dentro de otra; agrupan tipos relacionados.
 
 ## Ejemplo completo
-Guarda como `Externa.java`.
+
+Guarda como **Externa.java**.
+
 ```java
 public class Externa {
     private int valor = 10;
@@ -43,13 +43,20 @@ public class Externa {
 }
 ```
 
-- Interna está asociada a una instancia de Externa.
-- Auxiliar no necesita una instancia externa.
-- Una anidada puede acceder a miembros private dentro del tipo superior. Para campos de instancia, una anidada static necesita una referencia a la instancia externa.
+| Tipo | Instancia externa |
+|---|---|
+| Interna (inner) del ejemplo | Necesita una |
+| Anidada static | No necesita una |
 
-Sirven para agrupar clases con una utilidad ligada a otra. Pueden limitar visibilidad y facilitar mantenimiento, pero anidar no oculta automáticamente una clase: depende de [[Modificadores de acceso]]. [[Herencia, interfaces y composición#Composición y encapsulamiento]] desarrolla la protección del estado.
+**Importante:**
 
-[[static]] explica la pertenencia a la clase; [[Clases y objetos]] explica la instancia.
+- La que contiene la declaración es la **outer class**.
+- Las anidadas pueden acceder a private del mismo tipo superior.
+- Una anidada static necesita una referencia para usar campos de instancia externos.
+- Anidar no oculta automáticamente: la visibilidad depende del modificador.
+
+## Relacionado
+
+[[Modificadores de acceso]] · [[Herencia, interfaces y composición#Composición y encapsulamiento]] · [[static]] · [[Clases y objetos]]
 
 Fuente: [JLS §8.1.3](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html#jls-8.1.3).
-

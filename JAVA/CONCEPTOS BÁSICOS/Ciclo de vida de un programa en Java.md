@@ -10,40 +10,49 @@ aliases:
 ---
 
 # Ciclo de vida de un programa en Java
-> [!summary] En una frase
-> El código fuente se compila a bytecode y una JVM compatible lo ejecuta.
+> [!summary] Qué es
+> El fuente se compila a bytecode; una JVM compatible lo ejecuta.
 
 ## Consulta rápida
+
 ```text
 Hola.java → javac → Hola.class → java / JVM → ejecución
 ```
 
-Para el ejemplo completo de [[Sintaxis básica]]:
 ```shell
 javac Hola.java
 java Hola
 ```
 
 ## Creación y compilación
-- `.java`: fuente escrito por el programador.
-- `javac`: comprueba sintaxis y tipos y genera uno o más `.class` con bytecode.
-- Un error de compilación impide generar correctamente el programa; que compile no garantiza que haga lo esperado.
+
+| Elemento | Función |
+|---|---|
+| .java | Fuente |
+| javac | Comprueba el lenguaje y genera uno o más .class |
+| .class | Bytecode |
 
 ## Carga y preparación
-Detalle conservado de clase:
-- **Loading:** la JVM carga la representación binaria de las clases.
-- **Linking:** verifica bytecode, prepara campos static con valores por defecto y resuelve referencias simbólicas. La resolución puede ser diferida.
-- **Initialization:** ejecuta la inicialización de clase, incluidos inicializadores static. Consulta [[static#Estado compartido e inicialización]].
+
+| Etapa | Qué hace |
+|---|---|
+| Loading | Carga clases |
+| Linking | Verifica, prepara campos static y resuelve referencias; la resolución puede diferirse |
+| Initialization | Ejecuta inicializadores de clase |
 
 ## Ejecución y limpieza
-- En JVM como HotSpot, el intérprete y el JIT permiten ejecutar y optimizar bytecode frecuente; no toda JVM debe usar exactamente esa estrategia.
-- El garbage collector recupera memoria de objetos que ya no son alcanzables. No impide todas las fugas: una referencia retenida innecesariamente puede impedir recuperar memoria.
-- Al terminar el proceso, el sistema operativo recupera sus recursos; esto no garantiza ejecutar toda limpieza pendiente ni cerrar lógicamente cada recurso.
-- «Write once, run anywhere» requiere una JVM compatible y las dependencias del programa.
 
-[[static]] ayuda a distinguir inicialización de clase de la preparación de cada objeto. Los fallos durante ejecución se consultan en [[Exception Handling]].
-
-Fuente: [JLS §12](https://docs.oracle.com/javase/specs/jls/se25/html/jls-12.html).
+- **HotSpot:** intérprete y JIT ejecutan y optimizan; no toda JVM usa la misma estrategia.
+- **Garbage collector:** recupera objetos inalcanzables; retener referencias puede impedirlo.
+- Terminar el proceso no garantiza ejecutar limpieza pendiente ni cerrar lógicamente recursos.
+- **Portabilidad:** requiere JVM compatible y dependencias.
 
 ## Relación con los tipos de errores
-[[Tipos de errores]] distingue fallos léxicos, sintácticos y semánticos detectados al compilar de fallos que aparecen al ejecutar. Los lógicos necesitan contrastar el comportamiento con el propósito: una compilación correcta y una ejecución sin excepciones no verifican los requisitos.
+
+**Compilar y ejecutar sin excepciones no demuestra corrección lógica:** hay que comprobar los requisitos.
+
+## Relacionado
+
+[[Sintaxis básica]] · [[static#Estado compartido e inicialización]] · [[static]] · [[Exception Handling]] · [[Tipos de errores]]
+
+Fuente: [JLS §12](https://docs.oracle.com/javase/specs/jls/se25/html/jls-12.html).

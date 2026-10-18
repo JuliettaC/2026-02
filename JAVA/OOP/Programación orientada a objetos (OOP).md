@@ -9,10 +9,10 @@ aliases:
 ---
 
 # Programación orientada a objetos (OOP)
-> [!summary] En una frase
+> [!summary] Qué es
 > Organiza el programa en objetos que reúnen datos y acciones.
 
-Puede modelar entidades del mundo real o conceptos del programa.
+**Para qué sirve:** modelar entidades o conceptos mediante estado y operaciones.
 
 ## Mapa del grupo
 - [[Clases y objetos]]: plantilla, instancia, new y constructor.
@@ -23,9 +23,12 @@ Puede modelar entidades del mundo real o conceptos del programa.
 - [[Clases anidadas]]: clases declaradas dentro de otra.
 - [[Packages]]: organización y nombres de clases.
 
-Los [[Tipos de datos]] y las [[Variables y scopes|variables]] de [[Fundamentos]] también se usan al escribir clases. [[Exception Handling]] explica cómo responder a fallos durante ejecución.
-
 - [[Herencia, interfaces y composición]]: abstracción, super, sobrescritura, polimorfismo y encapsulamiento.
 - [[Records y enums]]: datos agrupados y conjuntos cerrados de opciones.
 
-[[Colecciones y genéricos]] explica cómo reunir objetos sin exponer innecesariamente su estado. [[JDBC y consultas parametrizadas]] desarrolla el acceso a datos de los repositorios de clase.
+## Relacionado
+
+- [[Fundamentos]] · [[Tipos de datos]] · [[Variables y scopes|variables]]: base para escribir clases.
+- [[Colecciones y genéricos]]: reunir objetos.
+- [[Exception Handling]]: manejar fallos.
+- [[JDBC y consultas parametrizadas]]: acceso a datos.

@@ -10,16 +10,17 @@ aliases:
 ---
 
 # Operadores lógicos
-> [!summary] En una frase
-> && combina condiciones y evita evaluar la segunda si la primera es falsa.
+> [!summary] Qué es
+> Combinan o niegan condiciones booleanas; el cortocircuito puede evitar una evaluación insegura.
 
 ## && frente a &
-| Operador con boolean | Comportamiento |
-|---|---|
-| `a && b` | Ambas deben ser true; b solo se evalúa si a es true |
-| `a & b` | Ambas deben ser true; evalúa las dos si la primera termina normalmente |
 
-`&` con enteros opera sobre bits, no sobre condiciones booleanas.
+| Operador booleano | Cuándo evalúa la derecha |
+|---|---|
+| && | Solo si la izquierda es true |
+| & | Siempre que la izquierda termine normalmente |
+| \|\| | Solo si la izquierda es false |
+| ! | Niega la condición |
 
 ```java
 String texto = null;
@@ -28,15 +29,23 @@ if (texto != null && texto.length() > 0) {
 }
 ```
 
-Cambiar && por & aquí evaluaría texto.length() y produciría [[Exception Handling|NullPointerException]].
-
-Para [[Condicionales (Conditionals)|condiciones]], también existen `||` (O con cortocircuito) y `!` (negación). Negar un grupo requiere paréntesis: `!(a && b)`.
+**Importante:** cambiar && por & puede causar NullPointerException. Con enteros, & opera sobre bits.
 
 ## Rangos y negaciones
-Para que un valor esté dentro de un intervalo cerrado debe ser mayor o igual al mínimo **y** menor o igual al máximo. Para estar fuera basta con ser menor que el mínimo **o** mayor que el máximo. Exigir que sea simultáneamente menor que el mínimo y mayor que el máximo nunca detecta valores fuera de un intervalo ordinario.
 
-Por De Morgan, `!(a && b)` equivale a `!a || !b`, y `!(a || b)` a `!a && !b`. Negar solo una parte cambia el significado. Con double o float, NaN no satisface las comparaciones de orden habituales; si el contrato exige un número finito, compruébalo además.
+| Intención | Condición |
+|---|---|
+| Dentro de [mínimo, máximo] | Mayor o igual al mínimo **y** menor o igual al máximo |
+| Fuera del intervalo | Menor al mínimo **o** mayor al máximo |
+| Negar a && b | !a \|\| !b |
+| Negar a \|\| b | !a && !b |
 
-`>` excluye la igualdad y `>=` la incluye. Un límite máximo ya alcanzado y un mínimo exigido requieren razonar qué sucede exactamente en la frontera. El lenguaje admite ambas condiciones: el requisito determina cuál es correcta.
+- Niega grupos con paréntesis: **!(a && b)**.
+- **>** excluye igualdad; **>=** la incluye. Revisa la frontera según el requisito.
+- NaN no satisface comparaciones de orden: valida finitud si el contrato la exige.
+
+## Relacionado
+
+[[Exception Handling|NullPointerException]] · [[Condicionales (Conditionals)|condiciones]]
 
 Fuente: [JLS §15.22–15.24](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html).

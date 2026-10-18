@@ -12,7 +12,7 @@ aliases:
 > Documentación general de Java, explicaciones por tema y enlaces a los apuntes de origen.
 
 ## 🟢 Fundamentos
-[[Fundamentos]] organiza la base del lenguaje.
+[[Fundamentos]]: base del lenguaje.
 
 - [[Sintaxis básica]] · [[Ciclo de vida de un programa en Java]]
 - [[Tipos de datos]] · [[Variables y scopes]] · [[Type Casting]]
@@ -23,7 +23,7 @@ aliases:
 - [[Colecciones y genéricos]] · [[Optional]] · [[Fechas con LocalDate]]
 
 ## 🟠 OOP
-[[Programación orientada a objetos (OOP)]] reúne los conceptos de objetos.
+[[Programación orientada a objetos (OOP)]]: datos y comportamiento.
 
 - [[Clases y objetos]] · [[Atributos y métodos]]
 - [[Modificadores de acceso]] · [[static]] · [[final]]
@@ -72,10 +72,11 @@ aliases:
 - [[LENGUAJES DE PROGRAMACIÓN/CLASES/UNIDAD 2/14-10-2026|14 de octubre — asistencia y notas]]
 
 ## Referencias que ya estaban en el vault
-- [[Array vs ArrayList]]: comparación original, ampliada mediante [[Colecciones y genéricos]].
-- [[java.pdf|Roadmap Java (PDF)]]. El progreso válido es el que indicaste, no todos los nodos del PDF.
+- [[Array vs ArrayList]] · [[Colecciones y genéricos]]
+- [[java.pdf|Roadmap Java (PDF)]]: referencia; no indica tu progreso.
 
 ## Mantener estos apuntes
-Anota primero en la clase fechada. Después incorpora solo lo nuevo a la ficha correspondiente, con un ejemplo pequeño y enlaces dentro de frases. Usa «Por verificar» cuando falte contexto. Agrega al índice un tema nuevo cuando lo estudies.
+- Anota en la clase fechada; integra lo nuevo en su tema, sin repetir.
+- Usa **«Por verificar»** si falta contexto; enlaza temas nuevos desde el índice.
 
-Para Graph View, filtra por `path:JAVA` y crea grupos de color con `tag:#java/fundamentos`, `tag:#java/oop` y `tag:#java/excepciones`. Los MOCs agrupan conceptos; la posición de los nodos la calcula Obsidian.
+**Graph View:** filtro `path:JAVA`; grupos `tag:#java/fundamentos`, `tag:#java/oop` y `tag:#java/excepciones`. Obsidian calcula la posición de los nodos.

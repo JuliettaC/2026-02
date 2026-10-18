@@ -8,18 +8,25 @@ aliases:
 ---
 
 # Convenciones de nombres
-> [!summary] En una frase
-> Nombres consistentes permiten reconocer clases, variables y métodos rápidamente.
+> [!summary] Qué es
+> Son pautas para reconocer clases, variables y métodos al leer.
 
 | Elemento | Convención | Ejemplo |
 |---|---|---|
-| Clase | PascalCase | `MiClaseEjemplo` |
-| Variable o método | camelCase | `nombreUsuario`, `calcularTotal()` |
-| Constante | MAYÚSCULAS_CON_GUIONES | `VALOR_MAXIMO` |
-| Package | minúsculas | `clases.ejemplos` |
+| Clase | PascalCase | MiClase |
+| Variable / método | camelCase | nombreUsuario / calcularTotal() |
+| Constante | MAYÚSCULAS_CON_GUIONES | VALOR_MAXIMO |
+| Package | minúsculas | clases.ejemplos |
 
-Son convenciones, no requisitos generales del compilador. Lo obligatorio es respetar las reglas de identificadores de [[Sintaxis básica]].
+## Importante
 
-El objeto no «tiene formato camelCase»: la variable que lo referencia suele usarlo. [[Clases y objetos]] distingue ambos conceptos. [[final]] explica qué significa impedir reasignación; no toda variable final se nombra como constante.
+- Son **convenciones**, no requisitos generales del compilador.
+- Debes respetar las reglas de **identificadores**.
+- camelCase describe el nombre de la variable, no el objeto.
+- No toda variable final se nombra como una constante.
+
+## Relacionado
+
+[[Sintaxis básica]] · [[Clases y objetos]] · [[final]]
 
 Fuente: [JLS §6.1](https://docs.oracle.com/javase/specs/jls/se25/html/jls-6.html#jls-6.1).

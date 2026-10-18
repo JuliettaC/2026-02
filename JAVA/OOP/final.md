@@ -9,10 +9,11 @@ aliases:
 ---
 
 # final
-> [!summary] En una frase
-> Impide reasignar una variable; en métodos y clases restringe cambios mediante herencia.
+> [!summary] Qué es
+> Impide reasignar variables, sobrescribir métodos o heredar de una clase.
 
 ## Variables
+
 ```java
 final int limite;
 limite = 10;
@@ -24,9 +25,10 @@ System.out.println(numeros[0]); // 9
 // numeros = new int[3]; // No compila: reasignación.
 ```
 
-Una variable final solo puede asignarse una vez. En referencias se fija la referencia, no el contenido mutable del objeto. final no convierte todo objeto en inmutable ni toda variable en una constante de compilación.
+**Importante:** fija la referencia, no el contenido mutable. No toda variable final es una constante de compilación.
 
 ## Campos y constructor
+
 ```java
 class Alumno {
     final String nombre;
@@ -37,14 +39,22 @@ class Alumno {
 }
 ```
 
-Puedes asignar un campo de instancia en su declaración o, si queda sin inicializar, en cada [[Clases y objetos#Constructor|constructor]] que deba hacerlo. Cada objeto puede recibir un valor diferente. Si usas un mismo literal al declarar el campo, todos recibirán ese valor.
+| Variable final | Dónde se asigna |
+|---|---|
+| Local | Una vez, antes de leerla |
+| Campo de instancia sin inicializar | En cada constructor que deba asignarlo |
+| Campo static sin inicializar | En un bloque de inicialización de clase |
+| Campo inicializado en su declaración | Allí; no vuelve a asignarse |
 
-Un final local puede asignarse después de declararlo, antes de leerlo. Un campo static final no se inicializa desde cada constructor; puede inicializarse en su declaración o en un bloque de inicialización de clase, según las reglas de asignación definitiva. Consulta [[static#Estado compartido e inicialización]].
+Cada objeto puede recibir un valor distinto. Un static final no se inicializa desde cada constructor.
 
 ## Métodos y clases: mención estudiada
-- Un método final no se puede sobrescribir en subclases; su autor sí puede editar su código fuente. final no añade restricciones de acceso.
-- Una clase final no admite subclases con extends; sí permite crear instancias normalmente.
 
-[[Herencia, interfaces y composición]] desarrolla herencia y overriding. [[static]] distingue un campo compartido; [[Modificadores de acceso]] controla quién puede usarlo.
+- **Método final:** no se sobrescribe; no cambia el acceso ni impide editar su fuente.
+- **Clase final:** no admite subclases; sí puede instanciarse si sus otras reglas lo permiten.
+
+## Relacionado
+
+[[Clases y objetos#Constructor|constructor]] · [[static#Estado compartido e inicialización]] · [[Herencia, interfaces y composición]] · [[static]] · [[Modificadores de acceso]]
 
 Fuentes: [JLS §4.12.4](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.12.4) y [§8](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html).

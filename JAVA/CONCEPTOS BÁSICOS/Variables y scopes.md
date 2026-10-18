@@ -11,20 +11,22 @@ aliases:
 ---
 
 # Variables y scopes
-> [!summary] En una frase
-> Una variable almacena un valor; su scope determina dónde puedes referirte a ella por su nombre.
+> [!summary] Qué es
+> Una variable almacena un valor; su scope indica dónde puedes usar su nombre.
 
 ## Sintaxis
+
 ```java
 int edad = 20;
 edad = 21;
 System.out.println(edad);
 ```
 
-El [[Tipos de datos|tipo]] limita lo que puedes asignar. `=` asigna; `==` compara.
+**Importante:** = asigna; == compara. El tipo limita lo asignable.
 
 ## Alcance de variables locales
-Desde su declaración, una variable local puede usarse dentro de su bloque. Un bloque interno puede usar variables externas; el externo no ve las declaradas dentro.
+
+Una local se usa desde su declaración dentro del bloque. Los bloques internos ven nombres externos, pero no al revés.
 
 ```java
 int total = 10;
@@ -35,23 +37,33 @@ if (total > 0) {
 // descuento no está disponible aquí.
 ```
 
-> [!warning] Confusión frecuente
-> Salir del scope no garantiza destrucción inmediata de memoria ni de un objeto referenciado. Scope trata de visibilidad del nombre.
+> [!warning] Importante
+> Scope es visibilidad del nombre, no destrucción inmediata del objeto. Fuera del bloque el nombre no existe: no «se vuelve null».
 
 ## Inicialización
-- Las locales deben estar asignadas antes de leerlas.
-- Los campos y los elementos de arrays reciben valores por defecto: `0`, `false` o `null`, según el tipo.
-- Los parámetros reciben el valor proporcionado al llamar al método.
-- Un nombre no disponible fuera del bloque causa error de compilación; no «se vuelve null».
+
+| Variable | Valor inicial |
+|---|---|
+| Local | Debe asignarse antes de leerse |
+| Campo / elemento de array | Valor por defecto: cero, false o null |
+| Parámetro | Valor recibido al llamar |
 
 ## Recordatorio de clase: acumuladores
-Si quieres un total por boleta, inicializa el acumulador dentro del bucle de boletas. Si quieres un total general, colócalo fuera. La ubicación depende del cálculo, no de una regla única.
+
+- **Total por boleta:** inicializa dentro del bucle de boletas.
+- **Total general:** inicializa fuera.
+- La ubicación depende de **qué quieres acumular**.
 
 ## Mantener el significado del estado
-Una variable puede tener el tipo correcto y almacenar el dato equivocado. En pasarLista, guardar siempre true ignora el argumento presente y registra asistencia incluso cuando se indicó ausencia. Contar con `!m.presente()` suma ausencias, no presencias. Son dos decisiones independientes: reparar el contador no arregla los datos registrados incorrectamente.
 
-Los estados también deben cambiar en la dirección adecuada. Al prestar se marca prestado y al devolver se marca disponible; buscar un préstamo vigente requiere distinguirlo de uno cerrado. El compilador reconoce operaciones válidas, pero no deduce estas reglas del negocio. Consulta [[Tipos de errores#Error lógico: 2]].
+- Guardar siempre true **ignora** el argumento de asistencia.
+- Contar !presente suma **ausencias**; corregir el contador no repara los datos mal guardados.
+- Prestar → **prestado**; devolver → **disponible**.
+- Un préstamo vigente debe distinguirse de uno cerrado.
+- Un tipo correcto no garantiza un dato ni un resultado correcto.
 
-Cuando un parámetro tiene el mismo nombre que un campo, usa [[Atributos y métodos#this|this]] para distinguirlos. [[final]] restringe la reasignación.
+## Relacionado
+
+[[Tipos de datos|tipo]] · [[Tipos de errores#Error lógico: 2]] · [[Atributos y métodos#this|this]] · [[final]]
 
 Fuentes: [JLS §6.3](https://docs.oracle.com/javase/specs/jls/se25/html/jls-6.html#jls-6.3) y [§4.12.5](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.12.5).

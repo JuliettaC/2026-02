@@ -11,20 +11,20 @@ aliases:
 ---
 
 # Modificadores de acceso
-> [!summary] En una frase
-> Controlan desde dónde puede usarse una clase, constructor o miembro.
+> [!summary] Qué es
+> Controlan desde dónde pueden usarse clases, constructores y miembros.
 
 ## Consulta rápida
+
 | Acceso | Alcance |
 |---|---|
-| private | Dentro del tipo superior que engloba la declaración; incluye sus clases anidadas |
-| Sin modificador (package-private) | Mismo package |
-| protected | Mismo package; también subclases bajo reglas adicionales |
-| public | Accesible donde también lo sea el tipo que lo contiene |
-
-No se escribe `default` para conseguir package-private.
+| private | Dentro del tipo superior que engloba la declaración, incluidas anidadas |
+| Sin modificador | Mismo package |
+| protected | Mismo package; subclases con restricciones adicionales |
+| public | Donde también sea accesible el tipo contenedor |
 
 ## Ejemplo
+
 ```java
 class Persona {
     private String nombre = "Ana";
@@ -35,12 +35,18 @@ class Persona {
 }
 ```
 
-Desde otra clase independiente, persona.nombre no es accesible, pero el método public puede serlo si Persona también es accesible.
+**Cómo funciona:** otra clase independiente no lee persona.nombre directamente; usa el método accesible.
 
 ## Confusiones comunes
-- Una clase superior solo puede ser public o package-private; private/protected sí se permiten en clases miembro.
-- Una [[Clases anidadas|clase anidada]] puede acceder a miembros private dentro del mismo tipo superior.
-- Para protected desde otro [[Packages|package]], el acceso desde el código de una subclase a un miembro de instancia requiere que el tipo de la referencia receptora sea esa subclase o una subclase suya. Heredar no permite acceder a ese miembro sobre cualquier instancia del tipo base. Consulta [[Herencia, interfaces y composición]].
-- Las variables locales no llevan modificadores de acceso.
+
+- **Package-private:** se omite el modificador; no se escribe default.
+- Clase superior: public o package-private. Miembro anidado: puede ser private/protected.
+- Las anidadas acceden a private dentro del mismo tipo superior.
+- **protected fuera del package:** desde una subclase, el receptor de un miembro de instancia debe tener el tipo de esa subclase o una derivada suya.
+- Las locales no llevan modificadores de acceso.
+
+## Relacionado
+
+[[Clases anidadas|clase anidada]] · [[Packages|package]] · [[Herencia, interfaces y composición]]
 
 Fuente: [JLS §6.6](https://docs.oracle.com/javase/specs/jls/se25/html/jls-6.html#jls-6.6).

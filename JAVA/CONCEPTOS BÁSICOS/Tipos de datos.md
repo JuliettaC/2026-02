@@ -9,21 +9,21 @@ aliases:
 ---
 
 # Tipos de datos
-
-> [!summary] En una frase
-> El tipo determina los valores y operaciones permitidos; una variable guarda un valor primitivo o una referencia.
+> [!summary] Qué es
+> El tipo define los valores y operaciones permitidos: primitivos o referencias.
 
 ## Primitivos
-| Tipo      | Recordatorio                                                    |
-| --------- | --------------------------------------------------------------- |
-| `byte`    | 8 bits; −128 a 127                                              |
-| `short`   | 16 bits; −32 768 a 32 767                                       |
-| `int`     | 32 bits; −2 147 483 648 a 2 147 483 647                         |
-| `long`    | 64 bits; −9 223 372 036 854 775 808 a 9 223 372 036 854 775 807 |
-| `float`   | 32 bits; aproximadamente 6–7 dígitos significativos             |
-| `double`  | 64 bits; aproximadamente 15–16 dígitos significativos           |
-| `char`    | 16 bits; una unidad UTF-16, de 0 a 65 535                       |
-| `boolean` | `true` o `false`                                                |
+
+| Tipo | Tamaño y rango / precisión |
+|---|---|
+| byte | 8 bits; −128 a 127 |
+| short | 16 bits; −32 768 a 32 767 |
+| int | 32 bits; −2 147 483 648 a 2 147 483 647 |
+| long | 64 bits; −2⁶³ a 2⁶³−1 |
+| float | 32 bits; ~6–7 dígitos significativos |
+| double | 64 bits; ~15–16 dígitos significativos |
+| char | 16 bits; unidad UTF-16, de 0 a 65 535 |
+| boolean | true o false |
 
 ```java
 int edad = 20;
@@ -35,36 +35,40 @@ boolean aprobado = true;
 String nombre = "Ana";
 ```
 
-`char` usa comillas simples; un carácter visible puede necesitar más de una unidad UTF-16. `'AB'` y `''` son inválidos.
+**Importante:** char usa comillas simples; un carácter visible puede ocupar más de una unidad UTF-16. 'AB' y un literal char vacío son inválidos.
 
 ## Referencias
-[[Strings|String]], [[Arreglos (Arrays)|arrays]] y tipos de [[Clases y objetos|clase]] son tipos de referencia. Una referencia permite localizar un objeto; la «flecha» es una analogía, no una dirección numérica que puedas manipular en Java. `null` indica ausencia de objeto.
 
-[[Records y enums]] explica estas formas de declarar tipos. [[Colecciones y genéricos]] desarrolla el uso de envolventes como Integer para almacenar valores en colecciones.
+- Guardan una referencia al objeto, no una dirección numérica manipulable.
+- String, arrays y tipos de clase son referencias; **null** indica ausencia.
+- Records y enums también declaran tipos; las colecciones usan envolventes como **Integer**.
 
 ## Elegir un tipo y sobredimensionamiento
-Elige según el rango esperado, las operaciones y la precisión necesaria. Usar un tipo más amplio no modifica automáticamente el tipo de los cálculos que lo alimentan. Tampoco es correcto reducir todo a byte o short para ahorrar memoria: muchas operaciones promueven sus operandos a int y el coste real de objetos y estructuras depende de la JVM.
 
-float y double representan aproximaciones binarias; no todos los decimales son exactos. Para cantidades monetarias que exijan precisión decimal se necesita una representación apropiada y una regla de redondeo explícita, no asumir que double conserva siempre centavos exactos.
+- Elige según **rango, operaciones y precisión**.
+- Un receptor más amplio no cambia el tipo del cálculo.
+- Reducir todo a byte/short no garantiza ahorrar: hay promociones a int y costes dependientes de la JVM.
+- float/double son aproximaciones binarias; para dinero exacto define representación decimal y redondeo.
 
 ## Errores comunes
-- `int saldo = 1.000;` no compila: el literal es `double`. Para mil usa `1_000`.
-- Los enteros pueden desbordarse sin avisar; consulta [[Operadores aritméticos básicos]].
-- [[Type Casting]] no significa que cualquier tipo pueda convertirse en cualquier otro.
-- Las [[Variables y scopes|variables locales]] necesitan asignación antes de leerse.
 
-Fuente: [JLS §4.2 y §4.3](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html).
+- **1.000** es un double, no mil. Para mil usa **1_000**.
+- Los enteros pueden desbordarse sin excepción.
+- Casting no permite convertir cualquier tipo a cualquier otro.
+- Las locales requieren asignación antes de leerse.
 
 ## Material de clase conservado
 
+> [!warning] Por verificar
+> Faltan Recording 20260923154132.m4a y Recording 20260923161006.m4a. Su contenido no se ha supuesto.
+
+> [!note] Importante
+> La imagen simplifica «vida útil»: distingue alcance del nombre y recuperación de memoria.
+
 ![[Pasted image 20260905172213.png]]
 
-> [!warning] Por verificar
-> Falta la grabación enlazada originalmente: `Recording 20260923154132.m4a`. Localiza el archivo y vuelve a insertarlo; no se ha supuesto su contenido.
+## Relacionado
 
-> [!warning] Por verificar
-> Falta la grabación enlazada originalmente: `Recording 20260923161006.m4a`. Localiza el archivo y vuelve a insertarlo; no se ha supuesto su contenido.
+[[Strings|String]] · [[Arreglos (Arrays)|arrays]] · [[Clases y objetos|clase]] · [[Records y enums]] · [[Colecciones y genéricos]] · [[Operadores aritméticos básicos]] · [[Type Casting]] · [[Variables y scopes|variables locales]] · [[Variables y scopes]]
 
-> [!note] Matiz de la imagen original
-> La tabla ilustrada simplifica «vida útil». Para distinguir scope y recuperación de memoria, consulta [[Variables y scopes]].
-
+Fuente: [JLS §4.2 y §4.3](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html).

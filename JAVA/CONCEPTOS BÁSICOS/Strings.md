@@ -9,18 +9,19 @@ aliases:
 ---
 
 # Strings
-> [!summary] En una frase
-> String representa texto inmutable; sus métodos permiten consultarlo o producir un resultado.
+> [!summary] Qué es
+> String representa texto inmutable; sus métodos consultan o devuelven resultados.
 
 ## Métodos frecuentes
+
 | Método | Resultado |
 |---|---|
-| `length()` | Cantidad de unidades UTF-16 |
-| `charAt(i)` | Unidad char de la posición i |
-| `substring(inicio, fin)` | Texto entre inicio incluido y fin excluido |
-| `toUpperCase()` / `toLowerCase()` | Texto en mayúsculas / minúsculas |
-| `equals(otro)` | Comparación de contenido |
-| `equalsIgnoreCase(otro)` | Comparación sin distinguir mayúsculas |
+| length() | Cantidad de unidades UTF-16 |
+| charAt(i) | Unidad char en i |
+| substring(inicio, fin) | Inicio incluido; fin excluido |
+| toUpperCase() / toLowerCase() | Texto en mayúsculas / minúsculas |
+| equals / equalsIgnoreCase | Contenido / contenido ignorando mayúsculas |
+| isEmpty() / isBlank() | Longitud cero / vacío o solo espacios en blanco |
 
 ```java
 String texto = "Java";
@@ -31,9 +32,10 @@ texto = texto.toUpperCase();
 System.out.println(texto);                // JAVA
 ```
 
-El objeto original no cambia: reasignas la [[Variables y scopes|variable]] al resultado. No todos los métodos devuelven String ni necesariamente crean un objeto nuevo.
+**Importante:** reasignar texto no modifica el objeto original. No todo método devuelve String ni crea un objeto nuevo.
 
 ## Comparar texto
+
 ```java
 String ingresada = "clave123";
 String correcta = new String("clave123");
@@ -41,26 +43,33 @@ System.out.println(ingresada == correcta);     // false: referencias diferentes
 System.out.println(ingresada.equals(correcta));// true: mismo contenido
 ```
 
-`==` entre referencias comprueba identidad; los primitivos no tienen métodos `equals`. Para objetos en general, el significado de `equals` depende de la clase.
+- **== entre referencias:** identidad. **equals en String:** contenido.
+- En otras clases, equals depende de su implementación; los primitivos no tienen ese método.
+- equalsIgnoreCase no elimina espacios ni ignora tildes.
 
 ## Límites y null
-- `charAt`: `0 ≤ i < length()`.
-- `substring`: `0 ≤ inicio ≤ fin ≤ length()`; fin puede ser igual a length.
-- Los índices incorrectos producen [[Exception Handling|excepciones]].
-- Llamar métodos sobre `null` produce NullPointerException; comprueba la referencia cuando puede ser null.
 
-`isEmpty()` comprueba si la longitud es cero; `isBlank()` acepta también texto formado solo por caracteres que Java considera espacios en blanco. Ninguno puede invocarse sobre null. `equalsIgnoreCase` no elimina espacios ni hace equivalentes palabras con y sin tilde: úsalo cuando el contrato solo quiera ignorar diferencias de mayúsculas.
+| Operación | Límites válidos |
+|---|---|
+| charAt(i) | 0 ≤ i < length() |
+| substring(inicio, fin) | 0 ≤ inicio ≤ fin ≤ length() |
 
-```java
-String respuesta = null;
-if (respuesta != null && respuesta.equalsIgnoreCase("sí")) {
-    System.out.println("Confirmado");
-}
-```
+- Un índice incorrecto causa una excepción.
+- Invocar métodos sobre null causa **NullPointerException**.
 
-[[Operadores lógicos|&&]] evita evaluar el segundo operando si el primero es falso. Para tamaños, recuerda [[Arreglos (Arrays)|array.length]] frente a String.length().
+**Referencia posiblemente null:** compruébala antes de llamar métodos; el ejemplo está en [[Operadores lógicos#&& frente a &]].
+
+**Importante:** && evita la segunda evaluación si la referencia es null. Array usa **length**; String, **length()**.
 
 ## Mención conservada: Integer Cache
-Integer es un objeto que envuelve un int. El boxing de valores constantes entre −128 y 127 garantiza reutilización de identidad; Integer.valueOf también garantiza caché en ese intervalo y puede ampliarlo. Fuera de él no asumas objetos siempre distintos. Compara valores con equals, no basándote en la caché.
+
+- Integer envuelve un int; compara valores con **equals**.
+- El boxing de constantes entre **−128 y 127** garantiza identidad compartida.
+- Integer.valueOf garantiza caché en ese intervalo y puede ampliarlo.
+- Fuera del intervalo no supongas identidades iguales ni siempre distintas.
+
+## Relacionado
+
+[[Variables y scopes|variable]] · [[Exception Handling|excepciones]] · [[Operadores lógicos|&&]] · [[Arreglos (Arrays)|array.length]]
 
 Fuentes: [API String](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html), [JLS §5.1.7](https://docs.oracle.com/javase/specs/jls/se25/html/jls-5.html#jls-5.1.7) y [Integer.valueOf](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html#valueOf(int)).

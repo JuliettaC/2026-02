@@ -12,11 +12,12 @@ aliases:
 ---
 
 # Atributos y métodos
-> [!summary] En una frase
-> Los campos representan datos; los métodos definen acciones o cálculos.
+> [!summary] Qué es
+> Los campos guardan estado; los métodos definen acciones y cálculos.
 
 ## Sintaxis y ejemplo completo
-Guarda como `Contador.java`.
+
+Guarda como **Contador.java**.
 
 ```java
 public class Contador {
@@ -29,7 +30,6 @@ public class Contador {
     int obtenerValor() {
         return valor;
     }
-// hola
 
     public static void main(String[] args) {
         Contador contador = new Contador();
@@ -39,15 +39,19 @@ public class Contador {
 }
 ```
 
-- Campo: `int valor;`; es parte del estado del objeto.
-- Método: tipo de retorno, nombre, parámetros entre `()` y cuerpo.
-- `void` indica que no devuelve un valor.
-- `int obtenerValor()` debe devolver un int en toda ruta que finalice normalmente.
-- cantidad es un parámetro; el 2 de la llamada es un argumento.
-- Llamar un método exige paréntesis, incluso sin argumentos.
+| Elemento | Función |
+|---|---|
+| Campo | Dato del objeto |
+| Método | Retorno, nombre, parámetros y cuerpo |
+| void | No devuelve valor |
+| Parámetro / argumento | Variable declarada / valor recibido |
+
+**Importante:** llamar requiere paréntesis. Un retorno no void debe dar un valor compatible en toda ruta que termine normalmente.
 
 ## this
-this se refiere al objeto actual. Cuando el parámetro y el campo se llaman igual:
+
+**Qué es:** referencia al objeto actual; distingue el campo del parámetro.
+
 ```java
 class Alumno {
     String nombre;
@@ -58,16 +62,23 @@ class Alumno {
 }
 ```
 
-`nombre = nombre;` asignaría el parámetro a sí mismo. `this.nombre = nombre;` actualiza el campo; dura mientras no se cambie y el objeto siga existiendo, no «permanentemente».
+**Duda resuelta:** nombre = nombre se asigna el parámetro a sí mismo; this.nombre = nombre actualiza el campo hasta que vuelva a cambiar.
 
 ## Firma, argumentos y paso por valor
-La firma de un método comprende su nombre y tipos de parámetros, con las reglas adicionales de los métodos genéricos; el tipo de retorno no permite distinguir por sí solo dos sobrecargas. Los argumentos deben coincidir en número, orden y tipos compatibles. Intercambiar una fecha y un código causa un error de tipos; intercambiar dos String puede compilar y alterar el significado.
 
-Java siempre pasa argumentos por valor. Para un primitivo copia el valor; para un objeto copia la referencia. Reasignar el parámetro no reasigna la variable del llamador, pero mutar el objeto compartido puede producir cambios visibles desde ambas referencias. No se pasa el objeto completo por copia ni la variable del llamador por referencia.
-
-Un retorno no void debe aportar un valor compatible en las rutas que terminan normalmente. `return` termina la llamada actual; no equivale a mostrar un dato. Un método que devuelve un boolean de éxito debe ser consultado antes de anunciar que una operación se completó.
+- **Firma:** nombre y tipos de parámetros, con reglas adicionales para genéricos; el retorno solo no distingue sobrecargas.
+- Argumentos: respeta **cantidad, orden y tipos**. Intercambiar dos String puede compilar y cambiar el significado.
+- **Java pasa por valor:** copia el primitivo o la referencia.
+- Reasignar un parámetro no reasigna la variable del llamador; mutar el objeto compartido sí puede verse desde fuera.
+- **return** termina la llamada; mostrar un dato no es devolverlo.
+- Comprueba el resultado de éxito antes de anunciar que una operación funcionó.
 
 ## Relaciones con otros temas
-Un [[Clases y objetos#Constructor|constructor]] prepara la instancia, pero no es un método con tipo de retorno. [[Variables y scopes]] distingue campos, parámetros y variables locales. [[static]] identifica métodos de clase; [[Modificadores de acceso]] controla visibilidad.
+
+El constructor prepara la instancia y **no tiene tipo de retorno**; static identifica miembros de clase.
+
+## Relacionado
+
+[[Clases y objetos#Constructor|constructor]] · [[Variables y scopes]] · [[static]] · [[Modificadores de acceso]]
 
 Fuente: [JLS §8.3–8.4](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html).

@@ -11,16 +11,16 @@ aliases:
 ---
 
 # Clases y objetos
-> [!summary] En una frase
-> Una clase define una plantilla; un objeto es una instancia concreta con su propio estado.
-
-Una clase describe [[Atributos y métodos|datos y acciones]]. Las [[Convenciones de nombres (Naming Conventions)|convenciones]] usan PascalCase para clases y camelCase para variables que referencian objetos.
+> [!summary] Qué es
+> Una clase define datos y comportamiento; un objeto es una instancia con estado propio.
 
 ## Constructor
-Prepara el objeto al crearlo. Tiene el nombre de la clase y **no declara tipo de retorno**, ni siquiera void. Se utiliza habitualmente con new.
+
+**Qué hace:** prepara el objeto al crearlo. Tiene el nombre de la clase y **ningún tipo de retorno**, ni void.
 
 ## Ejemplo completo
-Guarda como `Auto.java`.
+
+Guarda como **Auto.java**.
 
 ```java
 public class Auto {
@@ -39,14 +39,19 @@ public class Auto {
 }
 ```
 
-Cada objeto tiene su marca; las variables primero y segundo guardan referencias. [[Atributos y métodos#this|this.marca]] identifica el campo del objeto actual.
+**Cómo funciona:** cada Auto tiene su marca; primero y segundo guardan referencias.
 
 ## Puntos clave
-- `Auto primero;` declara una variable, no crea el objeto.
-- `new Auto("Toyota")` crea la instancia y ejecuta su constructor.
-- Si no declaras ningún constructor en una clase común, Java proporciona uno sin parámetros. Si declaras uno, no agrega automáticamente otro sin parámetros.
-- new es la forma básica estudiada, pero no significa que todo objeto de Java deba crearse escribiendo new: un literal String también representa un objeto.
 
-[[Modificadores de acceso]] limita quién puede usar una clase o constructor.
+- **Auto primero;** declara una referencia; no crea un objeto.
+- **new Auto("Toyota")** crea e inicializa la instancia.
+- Sin constructores declarados, una clase común recibe uno sin parámetros.
+- Si declaras un constructor, Java no añade otro sin parámetros.
+- No todo objeto requiere escribir new: un literal String también representa un objeto.
+- Nombres: clase en **PascalCase**; variable que referencia al objeto en **camelCase**.
+
+## Relacionado
+
+[[Atributos y métodos|datos y acciones]] · [[Convenciones de nombres (Naming Conventions)|convenciones]] · [[Atributos y métodos#this|this.marca]] · [[Modificadores de acceso]]
 
 Fuente: [JLS §8.8](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html#jls-8.8).

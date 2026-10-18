@@ -9,24 +9,24 @@ aliases:
 ---
 
 # Fundamentos
-> [!summary] En una frase
+> [!summary] Qué es
 > Sintaxis, valores y estructuras que permiten escribir programas sencillos.
 
 ## Escribir y ejecutar
-- [[Sintaxis básica]] y [[Convenciones de nombres (Naming Conventions)]] ayudan a leer el código.
-- [[Expresiones y sentencias (Expressions & Statements)]] distingue cálculos de instrucciones.
-- [[Ciclo de vida de un programa en Java]] explica fuente, compilación y ejecución.
+- [[Sintaxis básica]] · [[Convenciones de nombres (Naming Conventions)]]: escritura.
+- [[Expresiones y sentencias (Expressions & Statements)]]: cálculos e instrucciones.
+- [[Ciclo de vida de un programa en Java]]: compilar y ejecutar.
 
 ## Representar y transformar datos
-- [[Tipos de datos]] define qué puede almacenar una [[Variables y scopes|variable]].
-- [[Type Casting]] convierte valores entre tipos numéricos.
-- [[Strings]] trabaja con texto; [[Operadores aritméticos básicos]] con cálculos.
-- [[Entrada y salida de datos (I O)]] permite interacción por consola.
+- [[Tipos de datos]] · [[Variables y scopes|variable]]: valores y alcance.
+- [[Type Casting]]: conversiones numéricas.
+- [[Strings]]: texto · [[Operadores aritméticos básicos]]: cálculos.
+- [[Entrada y salida de datos (I O)]]: consola.
 
 ## Decidir y repetir
-- [[Condicionales (Conditionals)]] usa condiciones, que pueden combinarse con [[Operadores lógicos]].
-- [[Bucles]] permite recorrer [[Arreglos (Arrays)]].
-- [[Variables y scopes]] aclara dónde puede usarse una variable.
+- [[Condicionales (Conditionals)]] · [[Operadores lógicos]]: decisiones.
+- [[Bucles]] · [[Arreglos (Arrays)]]: recorridos.
+- [[Variables y scopes]]: visibilidad de nombres.
 
 ## Trabajar con datos de los apuntes de octubre
 - [[Colecciones y genéricos]]: secuencias, asociaciones, tipos y vistas.
@@ -34,4 +34,4 @@ aliases:
 - [[Fechas con LocalDate]]: fechas y diferencias de días.
 - [[Tipos de errores]]: distinguir fallos del lenguaje, de ejecución y de lógica.
 
-La organización de datos y acciones en clases se consulta en [[Programación orientada a objetos (OOP)]].
+**Siguiente grupo:** [[Programación orientada a objetos (OOP)]].

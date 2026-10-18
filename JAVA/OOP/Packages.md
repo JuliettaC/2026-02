@@ -10,11 +10,12 @@ aliases:
 ---
 
 # Packages
-> [!summary] En una frase
-> Un package agrupa clases y forma parte de su nombre completo.
+> [!summary] Qué es
+> Agrupan clases y forman parte de su nombre completo.
 
 ## Sintaxis
-Ejemplo de archivo `clases/Saludo.java`; package precede a los imports.
+
+Archivo **clases/Saludo.java**: package aparece antes de los imports.
 
 ```java
 package clases;
@@ -28,17 +29,24 @@ public class Saludo {
 }
 ```
 
-Scanner se importa como ejemplo de sintaxis; este programa no lo utiliza.
+**Importante:** Scanner solo ilustra el import; el ejemplo no lo utiliza.
 
 ## Puntos clave
-- Nombre completo: `paquete.Clase`; por ejemplo java.util.Scanner.
-- import permite escribir el nombre corto; no copia código ni crea objetos.
-- Dos packages pueden contener clases con el mismo nombre simple; el nombre completo elimina ambigüedad.
-- Mención de clase conservada: java.util.Date y java.sql.Date son tipos diferentes; su uso queda pendiente.
-- java.util.ArrayList pertenece a java.util; [[Array vs ArrayList]] compara estructuras y [[Colecciones y genéricos]] desarrolla sus operaciones.
-- Sin package se usa un paquete sin nombre (unnamed/default package). En proyectos con varias clases suele preferirse un nombre explícito: recomendación de organización.
-- Las carpetas suelen reflejar el package; desde la raíz del ejemplo: `javac -d . clases/Saludo.java` y `java clases.Saludo`.
 
-[[Modificadores de acceso]] explica package-private y protected. [[Entrada y salida de datos (I O)]] muestra Scanner en uso.
+| Concepto | Qué recordar |
+|---|---|
+| Nombre completo | paquete.Clase, como java.util.Scanner |
+| import | Permite el nombre corto; no copia código ni crea objetos |
+| Nombres repetidos | El nombre completo distingue clases de distintos packages |
+| Sin package | Paquete sin nombre; en proyectos suele preferirse uno explícito |
+
+- java.util.Date y java.sql.Date son tipos distintos; su uso detallado queda pendiente.
+- ArrayList está en **java.util**.
+- Las carpetas suelen reflejar el package.
+- Desde la raíz: **javac -d . clases/Saludo.java**; después **java clases.Saludo**.
+
+## Relacionado
+
+[[Array vs ArrayList]] · [[Colecciones y genéricos]] · [[Modificadores de acceso]] · [[Entrada y salida de datos (I O)]]
 
 Fuente: [JLS §7.4 y §7.5](https://docs.oracle.com/javase/specs/jls/se25/html/jls-7.html).
