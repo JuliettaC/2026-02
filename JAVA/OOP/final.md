@@ -39,12 +39,12 @@ class Alumno {
 
 Puedes asignar un campo de instancia en su declaración o, si queda sin inicializar, en cada [[Clases y objetos#Constructor|constructor]] que deba hacerlo. Cada objeto puede recibir un valor diferente. Si usas un mismo literal al declarar el campo, todos recibirán ese valor.
 
-Un final local puede asignarse después de declararlo, antes de leerlo. Un campo static final no se inicializa desde cada constructor; los bloques inicializadores ya se mencionaron en clase y quedan pendientes.
+Un final local puede asignarse después de declararlo, antes de leerlo. Un campo static final no se inicializa desde cada constructor; puede inicializarse en su declaración o en un bloque de inicialización de clase, según las reglas de asignación definitiva. Consulta [[static#Estado compartido e inicialización]].
 
 ## Métodos y clases: mención estudiada
 - Un método final no se puede sobrescribir en subclases; su autor sí puede editar su código fuente. final no añade restricciones de acceso.
 - Una clase final no admite subclases con extends; sí permite crear instancias normalmente.
 
-Herencia y overriding quedan pendientes de desarrollo. [[static]] distingue un campo compartido; [[Modificadores de acceso]] controla quién puede usarlo.
+[[Herencia, interfaces y composición]] desarrolla herencia y overriding. [[static]] distingue un campo compartido; [[Modificadores de acceso]] controla quién puede usarlo.
 
 Fuentes: [JLS §4.12.4](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.12.4) y [§8](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html).

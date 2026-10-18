@@ -32,4 +32,11 @@ Cambiar && por & aquí evaluaría texto.length() y produciría [[Exception Handl
 
 Para [[Condicionales (Conditionals)|condiciones]], también existen `||` (O con cortocircuito) y `!` (negación). Negar un grupo requiere paréntesis: `!(a && b)`.
 
+## Rangos y negaciones
+Para que un valor esté dentro de un intervalo cerrado debe ser mayor o igual al mínimo **y** menor o igual al máximo. Para estar fuera basta con ser menor que el mínimo **o** mayor que el máximo. Exigir que sea simultáneamente menor que el mínimo y mayor que el máximo nunca detecta valores fuera de un intervalo ordinario.
+
+Por De Morgan, `!(a && b)` equivale a `!a || !b`, y `!(a || b)` a `!a && !b`. Negar solo una parte cambia el significado. Con double o float, NaN no satisface las comparaciones de orden habituales; si el contrato exige un número finito, compruébalo además.
+
+`>` excluye la igualdad y `>=` la incluye. Un límite máximo ya alcanzado y un mínimo exigido requieren razonar qué sucede exactamente en la frontera. El lenguaje admite ambas condiciones: el requisito determina cuál es correcta.
+
 Fuente: [JLS §15.22–15.24](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html).

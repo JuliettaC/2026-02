@@ -40,7 +40,7 @@ Desde otra clase independiente, persona.nombre no es accesible, pero el método 
 ## Confusiones comunes
 - Una clase superior solo puede ser public o package-private; private/protected sí se permiten en clases miembro.
 - Una [[Clases anidadas|clase anidada]] puede acceder a miembros private dentro del mismo tipo superior.
-- Para protected desde otro [[Packages|package]], el acceso de una subclase a un miembro de instancia tiene restricciones sobre la referencia usada. Esta es una mención para reconocer el modificador; herencia queda pendiente.
+- Para protected desde otro [[Packages|package]], el acceso desde el código de una subclase a un miembro de instancia requiere que el tipo de la referencia receptora sea esa subclase o una subclase suya. Heredar no permite acceder a ese miembro sobre cualquier instancia del tipo base. Consulta [[Herencia, interfaces y composición]].
 - Las variables locales no llevan modificadores de acceso.
 
 Fuente: [JLS §6.6](https://docs.oracle.com/javase/specs/jls/se25/html/jls-6.html#jls-6.6).

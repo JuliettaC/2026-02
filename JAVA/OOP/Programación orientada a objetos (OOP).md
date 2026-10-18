@@ -25,4 +25,7 @@ Puede modelar entidades del mundo real o conceptos del programa.
 
 Los [[Tipos de datos]] y las [[Variables y scopes|variables]] de [[Fundamentos]] también se usan al escribir clases. [[Exception Handling]] explica cómo responder a fallos durante ejecución.
 
-Herencia y encapsulamiento pueden aparecer mencionados en las fichas existentes, pero su desarrollo queda pendiente.
+- [[Herencia, interfaces y composición]]: abstracción, super, sobrescritura, polimorfismo y encapsulamiento.
+- [[Records y enums]]: datos agrupados y conjuntos cerrados de opciones.
+
+[[Colecciones y genéricos]] explica cómo reunir objetos sin exponer innecesariamente su estado. [[JDBC y consultas parametrizadas]] desarrolla el acceso a datos de los repositorios de clase.

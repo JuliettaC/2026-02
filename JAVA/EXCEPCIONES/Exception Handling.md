@@ -63,6 +63,18 @@ Error se puede capturar técnicamente. Como regla de diseño habitual, no intent
 - OutOfMemoryError: no se puede satisfacer una solicitud de memoria; no equivale necesariamente a agotar toda la RAM del computador.
 - StackOverflowError: desborde de la pila, frecuentemente por recursión excesiva.
 
+## Propagación y orden de captura
+Si una operación lanza una excepción, se abandona el flujo normal hasta encontrar un catch compatible; si el método no la captura, se propaga al llamador. Los catch se prueban en orden. Un catch de una superclase antes de uno de su subclase haría inalcanzable este último y el compilador lo rechaza.
+
+NumberFormatException hereda de IllegalArgumentException. Por eso, en PantallaNotas, la captura específica del formato debe aparecer antes de la captura general de argumentos inválidos. IllegalArgumentException comunica que un argumento no cumple el contrato; IllegalStateException comunica que el estado actual impide la operación.
+
+Checked significa que el compilador comprueba la obligación de capturar o declarar, no que el fallo ocurra al compilar. Su lanzamiento real ocurre durante la ejecución. Una declaración throws necesita tipos de excepciones después de la palabra clave: no puede dejarse vacía. Declarar throws tampoco provoca por sí mismo un lanzamiento.
+
+## Recursos y recuperación
+Try-with-resources automatiza el cierre de recursos AutoCloseable. [[JDBC y consultas parametrizadas#Cierre de recursos]] desarrolla su uso con consultas y resultados. Manejar una excepción debe dejar una respuesta coherente: imprimir un mensaje y continuar no basta si quedó estado parcialmente modificado o se anuncia éxito sin haberlo logrado.
+
+Consulta [[Tipos de errores]] para la clasificación didáctica completa. Un error lógico no necesita lanzar una excepción, y una excepción puede ser una manifestación de una condición externa o de un defecto del programa.
+
 ## Relacionado
 - [[Arreglos (Arrays)]] y [[Strings]]: índices inválidos.
 - [[Operadores aritméticos básicos]]: división entera por cero.

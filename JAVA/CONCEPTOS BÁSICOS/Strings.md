@@ -49,6 +49,8 @@ System.out.println(ingresada.equals(correcta));// true: mismo contenido
 - Los índices incorrectos producen [[Exception Handling|excepciones]].
 - Llamar métodos sobre `null` produce NullPointerException; comprueba la referencia cuando puede ser null.
 
+`isEmpty()` comprueba si la longitud es cero; `isBlank()` acepta también texto formado solo por caracteres que Java considera espacios en blanco. Ninguno puede invocarse sobre null. `equalsIgnoreCase` no elimina espacios ni hace equivalentes palabras con y sin tilde: úsalo cuando el contrato solo quiera ignorar diferencias de mayúsculas.
+
 ```java
 String respuesta = null;
 if (respuesta != null && respuesta.equalsIgnoreCase("sí")) {

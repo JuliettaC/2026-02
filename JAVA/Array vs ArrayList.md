@@ -6,7 +6,7 @@ status: mencionado
 
 # Array vs ArrayList
 > [!note] Mención de clase conservada
-> Este apunte ya existía. No representa que Collections esté completado ni se amplía aquí.
+> Se conserva la comparación original; [[Colecciones y genéricos]] desarrolla las operaciones y contratos usados en clase.
 
 ## Array
 - Tamaño fijo: cinco casillas siguen siendo cinco.
@@ -22,7 +22,7 @@ Consulta [[Arreglos (Arrays)]] para ejemplo y recorrido con [[Bucles]].
 - El uso sin tipo (raw type) conserva compatibilidad histórica, pero pierde comprobaciones de tipo y puede causar fallos al leer; no causa necesariamente un error en toda ejecución.
 - Sus elementos son referencias: se usa Integer para valores int, Double para double o String para texto. No todos los objetos son clases envolventes; String no es un wrapper de un primitivo.
 
-Los detalles de Collections y genéricos quedan pendientes; no se añaden ejemplos nuevos de ArrayList.
+Consulta [[Colecciones y genéricos]] para List, Map, tipos genéricos, vistas y copias.
 
 Fuente de los matices corregidos: [JLS §4.5 y §4.8](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html).
 

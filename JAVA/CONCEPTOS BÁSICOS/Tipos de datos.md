@@ -40,7 +40,12 @@ String nombre = "Ana";
 ## Referencias
 [[Strings|String]], [[Arreglos (Arrays)|arrays]] y tipos de [[Clases y objetos|clase]] son tipos de referencia. Una referencia permite localizar un objeto; la «flecha» es una analogía, no una dirección numérica que puedas manipular en Java. `null` indica ausencia de objeto.
 
-Enums y records ya figuraban como ejemplos de tipos; su estudio queda pendiente.
+[[Records y enums]] explica estas formas de declarar tipos. [[Colecciones y genéricos]] desarrolla el uso de envolventes como Integer para almacenar valores en colecciones.
+
+## Elegir un tipo y sobredimensionamiento
+Elige según el rango esperado, las operaciones y la precisión necesaria. Usar un tipo más amplio no modifica automáticamente el tipo de los cálculos que lo alimentan. Tampoco es correcto reducir todo a byte o short para ahorrar memoria: muchas operaciones promueven sus operandos a int y el coste real de objetos y estructuras depende de la JVM.
+
+float y double representan aproximaciones binarias; no todos los decimales son exactos. Para cantidades monetarias que exijan precisión decimal se necesita una representación apropiada y una regla de redondeo explícita, no asumir que double conserva siempre centavos exactos.
 
 ## Errores comunes
 - `int saldo = 1.000;` no compila: el literal es `double`. Para mil usa `1_000`.

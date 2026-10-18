@@ -47,7 +47,7 @@ public class Externa {
 - Auxiliar no necesita una instancia externa.
 - Una anidada puede acceder a miembros private dentro del tipo superior. Para campos de instancia, una anidada static necesita una referencia a la instancia externa.
 
-Sirven para agrupar clases con una utilidad ligada a otra. Pueden limitar visibilidad y facilitar mantenimiento, pero anidar no oculta automáticamente una clase: depende de [[Modificadores de acceso]]. El encapsulamiento solo se conserva como mención.
+Sirven para agrupar clases con una utilidad ligada a otra. Pueden limitar visibilidad y facilitar mantenimiento, pero anidar no oculta automáticamente una clase: depende de [[Modificadores de acceso]]. [[Herencia, interfaces y composición#Composición y encapsulamiento]] desarrolla la protección del estado.
 
 [[static]] explica la pertenencia a la clase; [[Clases y objetos]] explica la instancia.
 

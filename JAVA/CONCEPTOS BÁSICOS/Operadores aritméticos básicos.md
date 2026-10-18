@@ -49,4 +49,18 @@ Un overflow no siempre produce negativo. En cálculos simples con estos operando
 - La división o resto entero por cero lanza [[Exception Handling|ArithmeticException]].
 - Con float/double, dividir por cero puede producir infinito o NaN, sin esa excepción.
 
+## Promoción, acumulación y asignación compuesta
+En las operaciones aritméticas habituales, byte, short y char se promueven a int. Si participa un double el cálculo se hace como double; si no, float prevalece sobre long y long sobre int. Convertir un resultado ya desbordado no recupera su valor original.
+
+`+=` combina cálculo y conversión implícita al tipo de la variable izquierda. Por eso un short en 32767 seguido de `+= 1` compila y termina en −32768; una asignación simple de una suma int a short puede exigir conversión explícita. Que compile no garantiza conservar el rango.
+
+Acumular requiere conservar lo anterior: `ponderacion += e.ponderacion()` suma todas las ponderaciones; `ponderacion = e.ponderacion()` deja solo la última. Para un porcentaje con contadores enteros, convierte antes de dividir. Debes definir también qué resultado representa la ausencia de datos y evitar un denominador cero. Son decisiones del cálculo, no simples cambios de sintaxis.
+
+## Math.round y límites
+`Math.round(float)` devuelve int y `Math.round(double)` devuelve long. Si `neto * TASA_IVA` produce double, asignar el resultado de round directamente a int no es válido. Mantener long suele evitar una reducción innecesaria; si el contrato exige int, comprueba rango y usa una conversión adecuada. Un cast a long de un resultado que ya es long no lo hace compatible con un retorno int.
+
+En el cálculo de multas del 7 de octubre, multiplicar días long por una tarifa int produce long. Puede conservarse long en el retorno y sus consumidores; reducir a int exige comprobar el rango, por ejemplo con Math.toIntExact. Castear a long, como propone la tabla original, no resuelve esa incompatibilidad.
+
+`Math.min` elige el menor y `Math.max` el mayor; escoger uno u otro debe responder al significado del cálculo. [[Fechas con LocalDate]] relaciona esto con los días de atraso.
+
 Fuente: [JLS §15.17 y §15.18](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html).

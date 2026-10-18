@@ -35,7 +35,7 @@ Scanner se importa como ejemplo de sintaxis; este programa no lo utiliza.
 - import permite escribir el nombre corto; no copia código ni crea objetos.
 - Dos packages pueden contener clases con el mismo nombre simple; el nombre completo elimina ambigüedad.
 - Mención de clase conservada: java.util.Date y java.sql.Date son tipos diferentes; su uso queda pendiente.
-- java.util.ArrayList pertenece a java.util; la [[Array vs ArrayList|comparación existente]] conserva esa mención sin desarrollar Collections.
+- java.util.ArrayList pertenece a java.util; [[Array vs ArrayList]] compara estructuras y [[Colecciones y genéricos]] desarrolla sus operaciones.
 - Sin package se usa un paquete sin nombre (unnamed/default package). En proyectos con varias clases suele preferirse un nombre explícito: recomendación de organización.
 - Las carpetas suelen reflejar el package; desde la raíz del ejemplo: `javac -d . clases/Saludo.java` y `java clases.Saludo`.
 

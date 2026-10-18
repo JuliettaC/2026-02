@@ -28,4 +28,10 @@ aliases:
 - [[Bucles]] permite recorrer [[Arreglos (Arrays)]].
 - [[Variables y scopes]] aclara dónde puede usarse una variable.
 
+## Trabajar con datos de los apuntes de octubre
+- [[Colecciones y genéricos]]: secuencias, asociaciones, tipos y vistas.
+- [[Optional]]: expresar ausencia en búsquedas.
+- [[Fechas con LocalDate]]: fechas y diferencias de días.
+- [[Tipos de errores]]: distinguir fallos del lenguaje, de ejecución y de lógica.
+
 La organización de datos y acciones en clases se consulta en [[Programación orientada a objetos (OOP)]].

@@ -48,3 +48,10 @@ System.out.println(alternativa);
 En las rutas Windows de tus ejercicios, ambas formas sirven. No escribas una barra invertida literal sin escaparla: podría producir un escape inválido o uno válido con un significado inesperado.
 
 Fuente: [JLS §3.8–3.10](https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html).
+
+## Literales, escapes y diagnóstico
+Las comillas tipográficas no sustituyen a las comillas delimitadoras de Java. Las comillas dobles delimitan String y las simples un literal char válido. Un literal de punto flotante con exponente necesita dígitos después de e o E, y un escape Unicode requiere cuatro dígitos hexadecimales después de su marcador.
+
+No todos los escapes visibles son válidos: `\d` no es un escape de literal Java, aunque tenga un significado en expresiones regulares. Para transmitir esa secuencia a una expresión regular desde un String habría que escapar la barra en el fuente. Distingue el texto que escribes del valor que recibe la API.
+
+Una coma ausente, un paréntesis sin cerrar y un literal mal formado no pertenecen necesariamente al mismo tipo de error. [[Tipos de errores]] aclara las diferencias con las etiquetas provisionales de las tablas de clase.

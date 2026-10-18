@@ -47,6 +47,11 @@ if (total > 0) {
 ## Recordatorio de clase: acumuladores
 Si quieres un total por boleta, inicializa el acumulador dentro del bucle de boletas. Si quieres un total general, colócalo fuera. La ubicación depende del cálculo, no de una regla única.
 
+## Mantener el significado del estado
+Una variable puede tener el tipo correcto y almacenar el dato equivocado. En pasarLista, guardar siempre true ignora el argumento presente y registra asistencia incluso cuando se indicó ausencia. Contar con `!m.presente()` suma ausencias, no presencias. Son dos decisiones independientes: reparar el contador no arregla los datos registrados incorrectamente.
+
+Los estados también deben cambiar en la dirección adecuada. Al prestar se marca prestado y al devolver se marca disponible; buscar un préstamo vigente requiere distinguirlo de uno cerrado. El compilador reconoce operaciones válidas, pero no deduce estas reglas del negocio. Consulta [[Tipos de errores#Error lógico: 2]].
+
 Cuando un parámetro tiene el mismo nombre que un campo, usa [[Atributos y métodos#this|this]] para distinguirlos. [[final]] restringe la reasignación.
 
 Fuentes: [JLS §6.3](https://docs.oracle.com/javase/specs/jls/se25/html/jls-6.html#jls-6.3) y [§4.12.5](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.12.5).

@@ -33,7 +33,7 @@ java Hola
 Detalle conservado de clase:
 - **Loading:** la JVM carga la representación binaria de las clases.
 - **Linking:** verifica bytecode, prepara campos static con valores por defecto y resuelve referencias simbólicas. La resolución puede ser diferida.
-- **Initialization:** ejecuta la inicialización de clase, incluidos inicializadores static. Solo se conserva esta mención; los bloques inicializadores quedan pendientes.
+- **Initialization:** ejecuta la inicialización de clase, incluidos inicializadores static. Consulta [[static#Estado compartido e inicialización]].
 
 ## Ejecución y limpieza
 - En JVM como HotSpot, el intérprete y el JIT permiten ejecutar y optimizar bytecode frecuente; no toda JVM debe usar exactamente esa estrategia.
@@ -44,3 +44,6 @@ Detalle conservado de clase:
 [[static]] ayuda a distinguir inicialización de clase de la preparación de cada objeto. Los fallos durante ejecución se consultan en [[Exception Handling]].
 
 Fuente: [JLS §12](https://docs.oracle.com/javase/specs/jls/se25/html/jls-12.html).
+
+## Relación con los tipos de errores
+[[Tipos de errores]] distingue fallos léxicos, sintácticos y semánticos detectados al compilar de fallos que aparecen al ejecutar. Los lógicos necesitan contrastar el comportamiento con el propósito: una compilación correcta y una ejecución sin excepciones no verifican los requisitos.
