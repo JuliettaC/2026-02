@@ -11,7 +11,7 @@ status: revisar
 | 2   | 19    |      | falta una comilla       | agr4e                |
 | 3   | 28    |      | falta punto y coma      | agregarlo            |
 | 4   | 30    |      | comillas de otro idioma |                      |
-| 5   |       |      |                         |                      |
+| 5   | 50    |      | falta punto y coma      |                      |
 | 6   |       |      |                         |                      |
 | 7   |       |      |                         |                      |
 | 8   |       |      |                         |                      |
