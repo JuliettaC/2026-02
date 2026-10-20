@@ -5,3 +5,4 @@ Piensa en una interfaz como un **contrato estricto**. A diferencia de una clase 
 2. **Intentar cambiar variables de la interfaz (Error Semántico):** Toda variable declarada dentro de una interfaz es automáticamente `public static final` (una constante inmutable). Intentar cambiar su valor más adelante no compila.
 3. **Confundir `extends` con `implements` (Error Semántico):** Una clase usa `implements` para una interfaz. Si escribe `class Perro extends Mascota` siendo `Mascota` una interfaz, no compila.
 4. **Prohibido hacer `new` (Error Semántico):** Igual que con `abstract`, no puedes hacer `new MiInterfaz()`.
+5. **Implementación incompleta (Error Semántico):** Si una clase normal firma uno o varios contratos (`implements Interfaz1, Interfaz2`), está **obligada** a programar el cuerpo de **todos** los métodos de todas esas interfaces. Si olvida aunque sea uno solo, el código no compila. _(Excepción: que la clase se declare como `abstract`)._
