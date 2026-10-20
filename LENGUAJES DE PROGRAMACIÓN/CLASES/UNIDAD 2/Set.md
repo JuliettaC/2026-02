@@ -8,3 +8,6 @@ NO TIENE POSICIONES NUMERADAS POR LO TANTO NO SE PUEDE USAR .GET()
 
 3. **Asumir que un duplicado reemplaza o lanza error (Error Lógico):** Si agregas un elemento repetido con `.add("A")`, Java no lanza ningún error: simplemente **lo ignora** y `.add()` devuelve `false`. El tamaño (`.size()`) no aumenta.
 4. **Meter `null` en un `TreeSet` (Error de Ejecución):** Mientras que `HashSet` permite guardar un `null`, `TreeSet` ordena los elementos automáticamente comparándolos entre sí. Si intentas hacer `.add(null)` en un `TreeSet`, explota en ejecución con `NullPointerException`.
+
+HASHTREE -> SI ACEPTA NULLS
+TREESET -> NO ACCEPTA NULLS
