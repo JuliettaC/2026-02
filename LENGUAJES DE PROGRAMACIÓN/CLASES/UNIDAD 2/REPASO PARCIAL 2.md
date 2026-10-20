@@ -1,2 +1,3 @@
 **Loops y Condicionales:** Poner un punto y coma justo después de la condición (`if (x == 0);` o `for(...);`), lo que desvincula el bloque de código siguiente (error lógico).
- 
+ **Tamaño y Acceso:** En `Array` se usa la propiedad `.length` y corchetes `arr[0]`. En `ArrayList` se usa el método `.size()` y `.get(0)`. Cruzarlos es un error de compilación.
+ **Tipos:** `ArrayList` no acepta tipos primitivos directamente (`ArrayList<int>` no compila, debe ser `ArrayList<Integer>`).
