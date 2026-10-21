@@ -29,3 +29,5 @@ Piensa en esto como una **red de seguridad para trapecistas**:
 **El código miente.** No explota ni da error, pero calcula mal.
 *ej. Usar `==` para comparar `String`, perder decimales al dividir enteros, o poner mal el signo de una condición (`<` en vez de `>`).*
 
+
+** formatos**
