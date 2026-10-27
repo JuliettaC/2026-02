@@ -1,4 +1,19 @@
 -Modelo identidad - relación 
+## ⚠️ IMPORTANTE: Activar Oracle antes de usar Bases de Datos
+**Antes de trabajar con Oracle:**
+
+1. Presionar `Win + R`.
+2. Escribir `services.msc` y pulsar Enter.
+3. Buscar `OracleServiceFREE`.
+4. Hacer clic derecho → **Iniciar**.
+5. Buscar `OracleOraDB23Home1TNSListener`.
+6. Hacer clic derecho → **Iniciar**.
+**Cuando termine de estudiar:**
+7. Volver a `services.msc`.
+8. Detener `OracleServiceFREE`.
+9. Detener `OracleOraDB23Home1TNSListener`.
+**Nota:** Si Oracle no conecta, comprobar que ambos servicios estén en ejecución.
+Modelo identidad - relación 
 
 El nombre tiene que ser singular y en mayúsculas.
 

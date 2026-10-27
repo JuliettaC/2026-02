@@ -9,11 +9,12 @@ aliases:
 ---
 
 # Sintaxis básica
-> [!summary] En una frase
-> Java distingue mayúsculas y minúsculas y usa llaves para bloques y punto y coma en muchas instrucciones.
+> [!summary] Qué es
+> Java distingue mayúsculas; las llaves delimitan bloques y muchas instrucciones terminan con punto y coma.
 
 ## Ejemplo completo
-Guarda como `Hola.java`; compila y ejecuta según [[Ciclo de vida de un programa en Java]].
+
+Guarda como **Hola.java**.
 
 ```java
 public class Hola {
@@ -25,18 +26,20 @@ public class Hola {
 ```
 
 ## Puntos clave
-- `System`, `String` y `system` son nombres distintos.
-- `{ }` delimita bloques; las [[Variables y scopes|variables locales]] tienen alcance.
-- `;` cierra declaraciones locales y muchas sentencias; no se agrega después de cada bloque.
-- `//` comenta una línea y `/* ... */` comenta varias.
-- Keywords como `class`, `public`, `static`, `void`, `int` y `new` no pueden ser nombres de variables o clases.
-- Un identificador no empieza con un número: `primerTramo`, no `1erTramo`.
-- `1_000` representa mil; `1_000_` es inválido. El punto de `1.000` representa un decimal, no un separador de miles.
 
-[[Clases y objetos]] explica `class` y `new`; [[Atributos y métodos]] explica `main` como método; [[static]] explica por qué puede llamarse sin crear un objeto.
+| Elemento | Qué recordar |
+|---|---|
+| Mayúsculas | System y system son nombres distintos |
+| { } | Delimitan bloques y scopes |
+| ; | Cierra muchas instrucciones; no cada bloque |
+| // / /* ... */ | Comentario de línea / bloque |
+| Keywords | class, public, static, void, int y new son reservadas |
+| Identificadores | No empiezan con número |
+| Números | 1_000 es mil; 1.000 es decimal; 1_000_ es inválido |
 
 ## Rutas de archivos
-En un literal String, `\` inicia un escape: `\n` significa salto de línea. Para representar una barra invertida debes escribir `\\`.
+
+En un String, la barra invertida inicia escapes: **\n** es salto de línea; una barra literal se escribe doble.
 
 ```java
 String ruta = "C:/datos/prestamos.txt";
@@ -45,6 +48,17 @@ System.out.println(ruta);
 System.out.println(alternativa);
 ```
 
-En las rutas Windows de tus ejercicios, ambas formas sirven. No escribas una barra invertida literal sin escaparla: podría producir un escape inválido o uno válido con un significado inesperado.
+**Importante:** en estos ejemplos de Windows ambas rutas sirven. Una barra sin escapar puede crear un escape inválido o cambiar el contenido.
+
+## Literales, escapes y diagnóstico
+
+- String usa **comillas dobles rectas**; char, **simples**. Las tipográficas no sirven de delimitador.
+- Un exponente con e/E necesita dígitos; un escape Unicode necesita **cuatro dígitos hexadecimales**.
+- **\d no es un escape de String Java**. Para enviarlo a una expresión regular, escapa la barra en el fuente.
+- Una falta de delimitador y un literal mal formado pueden pertenecer a categorías de error distintas.
+
+## Relacionado
+
+[[Ciclo de vida de un programa en Java]] · [[Variables y scopes|variables locales]] · [[Clases y objetos]] · [[Atributos y métodos]] · [[static]] · [[Tipos de errores]]
 
 Fuente: [JLS §3.8–3.10](https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html).

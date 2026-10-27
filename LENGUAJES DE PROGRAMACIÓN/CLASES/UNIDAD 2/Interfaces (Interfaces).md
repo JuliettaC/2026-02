@@ -1,0 +1,8 @@
+Piensa en una interfaz como un **contrato estricto**. A diferencia de una clase abstracta (que es un padre que te hereda cosas hechas y otras por hacer), una interfaz es una lista de órdenes vacías. Cualquier clase que "firme" el contrato usando la palabra `implements` está obligada a programar todos esos métodos. Además, a diferencia de `extends` (solo un padre), una clase puede firmar múltiples contratos (`implements Contrato1, Contrato2`).
+
+**Las 4 trampas clásicas al leer código con `interface`:**
+1. **Olvidar escribir `public` en la clase que implementa (Error Semántico):** Todos los métodos de una interfaz son `public` en secreto, aunque no lo diga. Cuando la clase firma el contrato y escribe el método, está **obligada** a ponerle `public` adelante. Si lo deja vacío (`void metodo()`), le baja la visibilidad y no compila.
+2. **Intentar cambiar variables de la interfaz (Error Semántico):** Toda variable declarada dentro de una interfaz es automáticamente `public static final` (una constante inmutable). Intentar cambiar su valor más adelante no compila.
+3. **Confundir `extends` con `implements` (Error Semántico):** Una clase usa `implements` para una interfaz. Si escribe `class Perro extends Mascota` siendo `Mascota` una interfaz, no compila.
+4. **Prohibido hacer `new` (Error Semántico):** Igual que con `abstract`, no puedes hacer `new MiInterfaz()`.
+5. **Implementación incompleta (Error Semántico):** Si una clase normal firma uno o varios contratos (`implements Interfaz1, Interfaz2`), está **obligada** a programar el cuerpo de **todos** los métodos de todas esas interfaces. Si olvida aunque sea uno solo, el código no compila. _(Excepción: que la clase se declare como `abstract`)._

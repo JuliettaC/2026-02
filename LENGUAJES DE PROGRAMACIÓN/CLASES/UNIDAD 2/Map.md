@@ -1,0 +1,7 @@
+Un `Map` (como `HashMap` o `TreeMap`) funciona como una agenda telefónica: guardas pares de **Clave -> Valor** (`Key -> Value`). La clave es única (el nombre del contacto) y sirve para buscar su valor (el número de teléfono). No hereda de `Collection`, por lo que usa métodos distintos a las listas y conjuntos.
+**Las 4 trampas clásicas al leer código con Map:**
+
+1. **Usar `.add()` en lugar de `.put()` (Error Semántico):** Como no es una lista ni un `Set`, el método `.add()` **no existe** en `Map`. Para guardar un par se usa `.put(clave, valor)`. Si ves `.add()`, no compila.
+2. **Claves duplicadas sobrescriben el valor (Error Lógico):** En un `Set`, un duplicado se ignora; en un `Map`, si haces `.put("A", 10)` y luego `.put("A", 99)`, el segundo valor **reemplaza** al primero. El tamaño (`.size()`) no aumenta y el `10` se pierde.
+3. **Desempaquetar un `null` al buscar una clave que no existe (Error de Ejecución):** Si buscas una clave inexistente con `.get("claveFalsa")`, el mapa devuelve `null`. Si asignas ese resultado directamente a un tipo primitivo (ej. `int puntos = mapa.get("claveFalsa");`), Java intenta convertir `null` a `int` y explota con `NullPointerException`.
+4. **Declarar tipos primitivos o solo un tipo en el diamante (Error Semántico):** Un `Map` exige dos tipos de objetos: `Map<String, Integer>`. Poner solo uno (`Map<String>`) o usar primitivos (`Map<String, int>`) no compila.

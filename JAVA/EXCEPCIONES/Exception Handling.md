@@ -12,22 +12,21 @@ aliases:
 ---
 
 # Exception Handling
-> [!summary] En una frase
-> try/catch permite responder a fallos que interrumpen el flujo normal; throws declara que un método puede propagarlos.
+> [!summary] Qué es
+> Las excepciones interrumpen el flujo normal; try/catch permite responder y throws declara propagación.
 
 ## Categorías
-| Categoría | Qué exige el compilador | Ejemplos vistos |
+
+| Categoría | Obligación del compilador | Ejemplos |
 |---|---|---|
-| Checked exceptions | Capturar o declarar con throws | IOException, SQLException |
-| RuntimeException y sus subclases (unchecked) | No exige capturar ni declarar | ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException |
-| Error y sus subclases (también unchecked) | No exige capturar ni declarar | OutOfMemoryError, StackOverflowError |
+| Checked | Capturar o declarar | IOException, SQLException |
+| RuntimeException y subclases | Ninguna de esas dos | ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException |
+| Error y subclases | Ninguna de esas dos | OutOfMemoryError, StackOverflowError |
 
-Las checked suelen aparecer ante fallos externos; las runtime suelen señalar problemas de uso o lógica. Son orientaciones, no la definición formal de esas categorías. Los errores de sintaxis no son excepciones de ejecución.
-
-> [!note] Recordatorio personal conservado
-> «Java deja compilar aunq esté mal»: una excepción unchecked no exige catch; esto no significa que el compilador permita código sintácticamente incorrecto.
+**Importante:** checked comprueba una obligación al compilar; la excepción se lanza **al ejecutar**. «Fallo externo» y «error de uso» son orientaciones, no definiciones.
 
 ## try, catch y finally
+
 ```java
 int divisor = 0;
 try {
@@ -39,16 +38,21 @@ try {
 }
 ```
 
-- try contiene las operaciones.
-- catch recibe un fallo compatible con su tipo; no evita que ocurra, permite responder.
-- finally se ejecuta cuando el control abandona try/catch, incluso por return o excepción, bajo ejecución normal de la JVM. No es una garantía ante terminación del proceso/JVM; si el bloque nunca termina, no se alcanza.
+| Parte | Función |
+|---|---|
+| try | Contiene operaciones que pueden fallar |
+| catch | Responde a una excepción compatible; no impide que ocurra |
+| finally | Limpieza al abandonar try/catch, incluso por return o excepción |
 
-> [!warning] Evita return en finally
-> Puede reemplazar el resultado anterior o suprimir una excepción que se propagaba. Como buena práctica, reserva finally para limpieza.
+> [!warning] Importante
+> finally no se alcanza si el bloque nunca termina y no está garantizado si termina el proceso/JVM. Un return allí puede reemplazar resultados o suprimir excepciones.
 
 ## throw y throws
-- `throw`: lanza una excepción concreta.
-- `throws`: declara en la firma qué excepción puede propagarse; no la maneja.
+
+| Palabra | Qué hace |
+|---|---|
+| throw | Lanza una excepción concreta |
+| throws | Declara tipos que pueden propagarse; no captura ni lanza por sí solo |
 
 ```java
 class Ejemplo {
@@ -58,15 +62,30 @@ class Ejemplo {
 }
 ```
 
+**Importante:** throws no puede quedar vacío. Unchecked no exige catch, pero no permite sintaxis inválida.
+
 ## Error: matiz importante
-Error se puede capturar técnicamente. Como regla de diseño habitual, no intentes recuperar indiscriminadamente errores graves: puede faltar un estado seguro para continuar. No todos cierran automáticamente toda la aplicación.
-- OutOfMemoryError: no se puede satisfacer una solicitud de memoria; no equivale necesariamente a agotar toda la RAM del computador.
-- StackOverflowError: desborde de la pila, frecuentemente por recursión excesiva.
+
+- Error se puede capturar, pero recuperar indiscriminadamente fallos graves puede ser inseguro.
+- **OutOfMemoryError:** no se satisface una solicitud de memoria; no implica agotar toda la RAM.
+- **StackOverflowError:** pila desbordada, frecuentemente por recursión excesiva.
+- No todo fallo termina automáticamente la aplicación.
+
+## Propagación y orden de captura
+
+- Sin catch compatible, la excepción **sube al llamador**.
+- Captura primero subclases y después superclases; invertirlas puede dejar un catch inalcanzable.
+- **NumberFormatException** va antes de **IllegalArgumentException**.
+- **IllegalArgumentException:** argumento inválido. **IllegalStateException:** estado que impide operar.
+
+## Recursos y recuperación
+
+- Try-with-resources cierra **AutoCloseable** automáticamente.
+- Manejar el fallo exige dejar un estado coherente; mostrar un mensaje no basta.
+- Un error lógico puede no lanzar excepción.
 
 ## Relacionado
-- [[Arreglos (Arrays)]] y [[Strings]]: índices inválidos.
-- [[Operadores aritméticos básicos]]: división entera por cero.
-- [[Operadores lógicos]]: proteger el acceso a una referencia null con &&.
-- [[Ciclo de vida de un programa en Java]]: distinguir compilación de ejecución.
+
+[[JDBC y consultas parametrizadas#Cierre de recursos]] · [[Tipos de errores]] · [[Arreglos (Arrays)]] · [[Strings]] · [[Operadores aritméticos básicos]] · [[Operadores lógicos]] · [[Ciclo de vida de un programa en Java]]
 
 Fuentes: [JLS §11](https://docs.oracle.com/javase/specs/jls/se25/html/jls-11.html) y [§14.20.2](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html#jls-14.20.2).

@@ -1,0 +1,7 @@
+Un `Iterator` es un cursor que recorre una colección elemento por elemento usando dos métodos principales: `.hasNext()` (pregunta si queda algún elemento adelante) y `.next()` (avanza el cursor y devuelve ese elemento).
+
+**Las 4 trampas clásicas al leer código con Iterator:**
+1. **Llamar a `.next()` dos veces en el mismo ciclo (Error Lógico / Ejecución):** Cada vez que escribes `it.next()`, el cursor avanza un paso. Si dentro de un `while(it.hasNext())` llamas a `it.next()` dos veces, estás saltando elementos y, si la cantidad de elementos es impar, el segundo `it.next()` explotará al final con `NoSuchElementException`.
+2. **Olvidar llamar a `.next()` dentro del ciclo (Error Lógico - Bucle Infinito):** `.hasNext()` solo mira si hay algo adelante, pero **no mueve el cursor**. Si haces `while(it.hasNext())` y adentro nunca llamas a `it.next()`, el ciclo se repite infinitamente en el mismo lugar.
+3. **Eliminar elementos usando `coleccion.remove()` mientras iteras (Error de Ejecución):** Si estás recorriendo una lista con un `Iterator` (o un bucle `for-each`) e intentas borrar un elemento llamando directamente a `lista.remove(elemento)`, Java detecta que alteraste la lista por fuera del iterador y explota con `ConcurrentModificationException`. Para borrar de forma segura, debe usarse `it.remove()`.
+4. **Llamar a `it.remove()` antes de llamar a `it.next()` (Error de Ejecución):** `it.remove()` borra el último elemento que fue devuelto por `it.next()`. Si llamas a `it.remove()` sin haber hecho `it.next()` primero, explota con `IllegalStateException`.

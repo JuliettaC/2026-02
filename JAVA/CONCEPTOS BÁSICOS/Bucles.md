@@ -10,11 +10,12 @@ aliases:
 ---
 
 # Bucles
-> [!summary] En una frase
-> Repiten instrucciones controlando una condición o recorriendo elementos.
+> [!summary] Qué es
+> Repiten instrucciones mediante una condición o un recorrido.
 
 ## for
-Útil con un contador. Sus tres partes se separan con `;`.
+
+**Uso:** contador. Inicializa una vez, comprueba antes de cada vuelta y actualiza después del cuerpo.
 
 ```java
 for (int i = 0; i < 3; i++) {
@@ -22,10 +23,9 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
-Inicialización una vez; condición antes de cada vuelta; actualización al terminar el cuerpo, salvo que se abandone el bucle.
-
 ## for-each
-Recorre [[Arreglos (Arrays)|arrays]] sin administrar índices; también puede recorrer colecciones, mencionadas en clase y pendientes de estudio.
+
+**Uso:** recorrer arrays o Iterable, como List, sin índices. Un número devuelto por size() no es recorrible.
 
 ```java
 int[] notas = {5, 6, 7};
@@ -35,7 +35,8 @@ for (int nota : notas) {
 ```
 
 ## while
-Evalúa primero: puede ejecutar cero vueltas. Es útil cuando la repetición depende de una condición.
+
+**Uso:** repetir mientras la condición sea true; puede ejecutar **cero** veces.
 
 ```java
 int numero = 0;
@@ -46,7 +47,8 @@ while (numero < 3) {
 ```
 
 ## do...while
-Ejecuta el cuerpo antes de evaluar: al menos una vez si se alcanza la sentencia.
+
+**Uso:** comprobar después del cuerpo; se ejecuta **al menos una vez** si se alcanza la sentencia.
 
 ```java
 int numero = 10;
@@ -56,9 +58,25 @@ do {
 ```
 
 ## Errores comunes
-- No actualizar lo que controla un while puede producir un bucle infinito.
-- Revisa `i < datos.length`, no `i <= datos.length`.
-- El `;` final del do...while sí se necesita.
-- [[Variables y scopes]] ayuda a decidir dónde inicializar un acumulador; [[Operadores lógicos]] combina condiciones.
+
+- Actualiza la condición para evitar un bucle infinito.
+- Índices: **i < datos.length**, no <=.
+- do...while lleva **; final**.
+- Inicializa el acumulador donde corresponda al total deseado.
+
+## break, continue y variable de recorrido
+
+| Elemento | Efecto |
+|---|---|
+| break | Sale del bucle al que se aplica |
+| continue | Omite el resto de la vuelta |
+| continue en for | Pasa por actualización y condición |
+| continue en while | Vuelve a la condición |
+
+**Importante:** reasignar la variable de for-each no reemplaza el elemento. Mutar el objeto referenciado sí puede cambiar el objeto compartido.
+
+## Relacionado
+
+[[Arreglos (Arrays)|arrays]] · [[Colecciones y genéricos]] · [[Variables y scopes]] · [[Operadores lógicos]]
 
 Fuente: [JLS §14.12–14.14](https://docs.oracle.com/javase/specs/jls/se25/html/jls-14.html).
