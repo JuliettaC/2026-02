@@ -1,4 +1,4 @@
-Modelo identidad - relación 
+-Modelo identidad - relación 
 
 El nombre tiene que ser singular y en mayúsculas.
 
@@ -19,7 +19,7 @@ Numero de asientos --- Atributos opcionales (opcionalidad)
 
 Cada atributo posee un TIPO,
 Ejemplo: 
-Rut - Numero
+Rut - Numero 
 Nombre - String
 Fecha - Date
 
@@ -131,3 +131,21 @@ tipo de comisión
 relaciones 
 clave foranea es una llave primaria en otra entidad
 componentes de una relación 
+
+08.10
+normalizar <- buscar
+identificación Relación de bloqueo
+
+15.10
+
+identidad de intersección > entidad de bloqueo
+
+Relaciones no transferible se represente con diamante
+-> no es transferible
+-> Solo son obligatorias
+
+Supertype: tiene una relación principal secundario
+
+Subtype:
+
+

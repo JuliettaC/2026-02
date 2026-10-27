@@ -219,8 +219,6 @@ Herramienta en cuadrícula para recopilar información inicial entre un juego de
 ### Clave foránea
 Es la transformación física de una relación conceptual hacia la base de datos relacional.
 
-Es una columna o combinación de columnas de una tabla que hace referencia a una [[Sección 2#Llave primaria|llave primaria]] en la misma tabla o en otra tabla.\
+Es una columna o combinación de columnas de una tabla que hace referencia a una [[Sección 2#Llave primaria|llave primaria]] en la misma tabla o en otra tabla.
 
 ## 2.6 Modelado de relación de entidades (ERD)
-
-
