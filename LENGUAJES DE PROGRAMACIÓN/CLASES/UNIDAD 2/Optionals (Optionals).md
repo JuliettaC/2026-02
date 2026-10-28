@@ -1,4 +1,4 @@
-Un `Optional` es como una **caja sellada** que puede contener un objeto o estar completamente vacía. En lugar de devolver `null` (lo cual es peligroso porque al menor descuido explota con un `NullPointerException`), los métodos modernos devuelven un `Optional`. Esto obliga a quien recibe la caja a abrirla con métodos seguros que previenen errores en ejecución.
+ Un `Optional` es como una **caja sellada** que puede contener un objeto o estar completamente vacía. En lugar de devolver `null` (lo cual es peligroso porque al menor descuido explota con un `NullPointerException`), los métodos modernos devuelven un `Optional`. Esto obliga a quien recibe la caja a abrirla con métodos seguros que previenen errores en ejecución.
 
 Un **Optional** es literalmente como un **paquete de regalo** 🎁:
 - Puede tener algo adentro.
