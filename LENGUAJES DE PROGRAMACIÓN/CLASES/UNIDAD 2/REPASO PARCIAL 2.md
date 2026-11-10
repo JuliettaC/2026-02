@@ -31,3 +31,12 @@ Piensa en esto como una **red de seguridad para trapecistas**:
 
 
 ** formatos**
+
+** buscar **
+constructor  
+this 
+open close
+
+
+
+
