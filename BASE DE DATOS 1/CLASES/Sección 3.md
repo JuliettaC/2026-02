@@ -27,3 +27,10 @@ Las [[Sección 2#Relación de varios a varios (M:M)|relaciones M:M]] no pueden i
 - Suele contener atributos "consumibles" (cantidades utilizadas, fechas, etc)
 - Tienden a ser entidades volátiles y de gran volumen.
 -> Ej. Una relación M:M entre ORDER y PRODUCT se resuelve creando la entidad de intersección ORDER ITEM (que contiene el atributo Quantity)
+
+### Relaciones no transferibles
+Es una relación que,  una vez establecida, no se puede transferir entre las instancias de las entidades que conecta.
+- Se representa gráficamente mediante un diamante sobre la línea de relación
+- Solamente pueden ser relaciones obligatorias 
+-> ej. El país de nacimiento de una persona (PERSON `born in` COUNTRY). No se puede transferir porque una persona no puede cambiar su país de nacimiento.
+![[Pasted image 20261111174950.png]]
