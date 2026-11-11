@@ -34,3 +34,16 @@ Es una relación que,  una vez establecida, no se puede transferir entre las ins
 - Solamente pueden ser relaciones obligatorias 
 -> ej. El país de nacimiento de una persona (PERSON `born in` COUNTRY). No se puede transferir porque una persona no puede cambiar su país de nacimiento.
 ![[Pasted image 20261111174950.png]]
+
+### Entidades Supertipo y Subtipo
+Cuando varias entidades comparten atributos comunes pero también tienen características únicas, se modelan como una jerarquía principal-secundario.
+#### Supertipo:
+Entidad de nivel superior que contiene los atributos y relaciones comunes
+#### Subtipo:
+Sub agrupamiento (entidad de nivel inferior) que hereda del [[Sección 3#Supertipo|supertipo]] y contiene atributos o relaciones especificas.
+
+##### Características del subtipo
+- Se dibuja gráficamente dentro de la entidad supertipo
+- Hereda todos los atributos y relaciones del supertipo
+- Nunca existe en solitario (si hay un subtipo, debe haber al menos otro)
+- Comparten exactamente la misma clave primaria que el supertipo.
