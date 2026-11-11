@@ -1,6 +1,6 @@
 ---
 status: Acotación del modelo de datos
-ejercicios:
+ejercicios: "[[Ejercicios Sección 3]]"
 tags:
   - BaseDeDatos
 ---
@@ -66,3 +66,16 @@ Los datos jerárquicos se modelan como una serie de relaciones 1:M secuenciales
 Ocurren cuando una entidad se relaciona consigo misma (explicado de forma básica en [[Sección 2#Relación recursiva|relación recursiva]]).
 - Se modelan gráficamente con un **bucle** (la línea sale y vuelve a entrar a la misma entidad).
 - Para resolver una relación recursiva que resulta ser **M:M** (ej. lista de materiales donde un componente es parte de otro y está formado por varios), se debe crear una **entidad de intersección** genérica.
+
+### Relaciones de arco
+Un arco agrupa varias relaciones de forma que se excluyen entre sí. Implica una condición lógica "OR" (o excluyente) 
+- Una instancia de la entidad solo puede tener una relación válida del arco en un momento dado.
+- **Caracteristicas**
+	- Suelen tener el mismo nombre de la relación 
+	- Deben se todas obligatorias o todas opcionales, con la misma cardinalidad
+	- Se representa con una línea curva trazada sobre las relaciones participantes, con un círculo en cada intersección
+
+> Los arcos son una forma alternativa de modelar lo que habitualmente se hace con un Supertipo/Subtipo
+
+![[Pasted image 20261111203411.png|451]]
+
