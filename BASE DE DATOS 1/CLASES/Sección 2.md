@@ -222,3 +222,8 @@ Es la transformación física de una relación conceptual hacia la base de datos
 Es una columna o combinación de columnas de una tabla que hace referencia a una [[Sección 2#Llave primaria|llave primaria]] en la misma tabla o en otra tabla.
 
 ## 2.6 Modelado de relación de entidades (ERD)
+### Modelo de relación de entidad (ERM)
+Se deriva de las especificaciones de negocio y su objetivo consiste en crear una imagen clara de la información que se almacena en una futura base de datos.
+- Se trata de una lista de todas las entidades y atributos, así como todas las relaciones entre las entidades que son importantes.
+- Proporciona información en segundo plan como, por ejemplo, descripciones de las entidades, tipos de dato y restricciones.
+- No necesita un diagrama, pero el diagrama suele ser una herramienta muy útil.
