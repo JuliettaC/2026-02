@@ -227,3 +227,38 @@ Se deriva de las especificaciones de negocio y su objetivo consiste en crear una
 - Se trata de una lista de todas las entidades y atributos, así como todas las relaciones entre las entidades que son importantes.
 - Proporciona información en segundo plan como, por ejemplo, descripciones de las entidades, tipos de dato y restricciones.
 - No necesita un diagrama, pero el diagrama suele ser una herramienta muy útil.
+### Diagrama de relación de entidad (ERM)
+Un ERD es un modelo que identifica los conceptos o las entidades que existen en un sistema y las relaciones entre esas entidades.
+- El analista/diseñador de la base de datos puede comprender mejor la información que se va a incluir a través del proceso de construcción del ERD.
+- Funciona como herramienta de documentación
+- Se utiliza para comunicar de forma efectiva la estructura lógica de la base de datos a los usuarios.
+- Se puede utilizar para representar los requisitos de los datos de un negocio, independiente del tipo de base de datos que se utilice e incluso si no hay ninguna
+
+### Modelos "sin implantación"
+Un buen modelo de datos lógico sigue siendo el mismo independiente del tipo de sistema de base de datos que finalmente se incorpore o implante. Esto es lo que se entiende por modelo "sin implantación"
+
+### Objetivos del modelado de ER
+- Capturar toda la información necesaria.
+- Asegurarse de que la información solo aparece una vez
+- no modelar ninguna información derivada de otra información que ya este modelada.
+- Localizar información en un lugar previsible y lógico.
+
+| Pasos para crear un ERD                          |
+| ------------------------------------------------ |
+| 1. Crear entidades y atributos                   |
+| 2. Seleccionar identificadores únicos            |
+| 3. Crear relaciones                              |
+| 4. Identificar la opcionalidad y la cardinalidad |
+| 5. Comprobar el modelo                           |
+### ERDish
+Es el término que se utiliza para comunicar con claridad las reglas de negocio capturadas en un ERD
+- Se utiliza para indicar las relaciones entre entidades en un ERD desglozando cada sentencia en sus componentes
+- Puesto que una relación tiene dos partes, se lee primero una parte de izquierda a derecha y, a continuación, la relación de derecha a izquierda.
+#### Componenres de ERDish
+- EACH
+- Entidad A
+- OPTIONALITY (must be / may be)
+- RELATIONSHIP NAME
+- CARDINALITY (one and only one / one or more)
+- Entidad B
+-> ej. EACH BOOK MUST BE WRITTEN BY ONE AND ONLY ONE AUTHOR
