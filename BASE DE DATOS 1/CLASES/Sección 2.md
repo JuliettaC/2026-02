@@ -1,6 +1,8 @@
 ---
-status: revisar
-ejercicios: "[[ejercicios Sección 2]]"
+status: Base de datos y modelado de datos
+ejercicios: "[[Ejercicios Sección 2]]"
+tags:
+  - BaseDeDatos
 ---
 # Sección 2
 
@@ -262,3 +264,6 @@ Es el término que se utiliza para comunicar con claridad las reglas de negocio 
 - CARDINALITY (one and only one / one or more)
 - Entidad B
 -> ej. EACH BOOK MUST BE WRITTEN BY ONE AND ONLY ONE AUTHOR
+![[Pasted image 20261111163004.png]]
+
+#BaseDeDatos 
