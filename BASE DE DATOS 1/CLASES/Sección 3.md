@@ -47,3 +47,14 @@ Sub agrupamiento (entidad de nivel inferior) que hereda del [[Sección 3#Superti
 - Hereda todos los atributos y relaciones del supertipo
 - Nunca existe en solitario (si hay un subtipo, debe haber al menos otro)
 - Comparten exactamente la misma clave primaria que el supertipo.
+![[Pasted image 20261111180213.png|144]]
+
+##### Reglas de los subtipos
+1. Exhaustivas: cada instancia del supertipo DEBE ser una instancia de algún subtipo. Se debe crear un subtipo "OTHER" para categorizar instancias que no encajen en los demás
+2. Mutuamente excluyentes: Cada instancia encaja en un solo subtipo a la vez. No puede pertenecer a dos simultáneamente
+
+### Enfoques de creación 
+|**ENFOQUE**|**TIPO**|**DESCRIPCIÓN**|
+|---|---|---|
+|**Generalización**|Ascendente|Combinar entidades inferiores (ej. CAR, TRUCK) en una superior por atributos comunes (VEHICLE).|
+|**Especialización**|Descendente|Desglosar una entidad superior (EMPLOYEE) en inferiores (CURRENT EMPLOYEE, EX-EMPLOYEE).|
