@@ -79,3 +79,29 @@ Un arco agrupa varias relaciones de forma que se excluyen entre sí. Implica una
 
 ![[Pasted image 20261111203411.png|451]]
 
+## 3.2 Seguimiento de cambios de datos
+
+### Manejo de datos históricos
+La mayoría de los sistemas no solo registran el estado actual, si no que requieren un historial para buscar tendencias, realizar auditorias o analizar procesos
+> Cada vez que se actualiza un [[Sección 2#Atributos|atributo]] o se transfiere una relación, se pierde la información anterior a menos que se modele un registro histórico.
+
+Dado que almacenar exceso de datos es costoso, siempre se deben validar los requisitos con el usuario haciendo preguntas claves
+- ¿es necesaria una pista de auditoría?
+- ¿cambian los valores o las relaciones a lo largo del tiempo?
+- ¿Es necesario consultar datos antiguos?
+
+### Estrategias de modelado histórico
+#### 1. Seguimiento de valores de atributo
+Si un atributo cambia (ej. estado de un contrato), se debe crear una nueva entidad para almacenar los diferentes estados a lo largo del tiempo
+- La nueva entidad llevará un atributo de fecha (ej. effective date) que formará parte de su UID
+
+#### 2. Incorporación de relaciones que cambian
+Si lo que cambia en el tiempo es una relación (ej. quién alquila un apartamento), se agrega una nueva entidad intermedia que capture la relación a lo largo del tiempo (ej. crear la entidad RENTAL entre PERSON y APARTMENT)
+
+#### 3. Uso de entidades de intersección para históricos
+Al resolver una [[Sección 2#Relación de varios a varios (M:M)|relación M:M]], la entidad de intersección es el lugar ideal para realizar el seguimiento en el tiempo. 
+-> ej. En lugar de relacionar EMPLOYEE y JOB directamente (lo cual solo guarda el trabajo actual), se resuelve con la entidad JOB HISTORY que almacena `Start Date` y `End Date`.
+
+#### 4. Registro de información modificada
+Para mantener pistas de auditoría sobre quién alteró qué datos, se agregan entidades (ej. PAYMENT MODIFICATION) que almacenan datos como monto previo, modificado por, y fecha de modificación
+
