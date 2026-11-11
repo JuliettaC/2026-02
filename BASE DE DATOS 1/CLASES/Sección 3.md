@@ -58,3 +58,11 @@ Sub agrupamiento (entidad de nivel inferior) que hereda del [[Sección 3#Superti
 |---|---|---|
 |**Generalización**|Ascendente|Combinar entidades inferiores (ej. CAR, TRUCK) en una superior por atributos comunes (VEHICLE).|
 |**Especialización**|Descendente|Desglosar una entidad superior (EMPLOYEE) en inferiores (CURRENT EMPLOYEE, EX-EMPLOYEE).|
+### Relaciones jerárquicas 
+Los datos jerárquicos se modelan como una serie de relaciones 1:M secuenciales
+- Los UID se pueden propagar a través de varias relaciones de bloqueo. 
+	--> ej. COMPANY está compuesta por DIVISION, que está compuesta por DEPARTMENT, que está compuesto por TEAM.
+### Relaciones recursivas
+Ocurren cuando una entidad se relaciona consigo misma (explicado de forma básica en [[Sección 2#Relación recursiva|relación recursiva]]).
+- Se modelan gráficamente con un **bucle** (la línea sale y vuelve a entrar a la misma entidad).
+- Para resolver una relación recursiva que resulta ser **M:M** (ej. lista de materiales donde un componente es parte de otro y está formado por varios), se debe crear una **entidad de intersección** genérica.
