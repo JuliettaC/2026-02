@@ -129,4 +129,39 @@ Es el proceso de organizar las tablas y atributos de una base de datos relaciona
 - **SOLUCIÓN** Si un atributo depende de otro que no es la clave primaria, extráelos hacia una nueva entidad y establece una relación
 
 ### Regla de nefgocio
-Las reglas de negocio (introducidas en [[Sección 1#Reglas de negocio]]) definen el comportamiento de una organización. Existen dos tipos principales de cara al modelado:
+Las reglas de negocio (introducidas en [[Sección 1#Reglas de negocio]]) definen el comportamiento de una organización. Existen dos tipos principales de cara al modelado
+
+|**TIPO DE REGLA**|**DEFINICIÓN**|**REPRESENTACIÓN EN ERD**|
+|---|---|---|
+|**Estructurales**|Definen los tipos de información estática y cómo se relacionan (ej. todo pedido debe tener un cajero).|Sí se pueden representar gráficamente en el diagrama ERD.|
+|**De Procedimiento**|Gestionan procesos, flujos de trabajo o eventos dependientes del tiempo (ej. A debe ocurrir antes que B).|NO suelen representarse en el ERD; se documentan para programarse posteriormente.|
+>Muchas reglas de procedimiento requieren programación adicional (scripts, triggers o funciones en la base de datos) para hacer cumplir aspectos matemáticos o temporales (ej. el cálculo del pago de horas extras o el bloqueo de cuentas morosas)
+
+### 3.4 Asignación y terminología del modelado de datos
+Al transformar el [[Sección 2#Modelo lógico|modelo lógico]] en un [[Sección 2#Modelo físico|modelo físico]], la terminología cambia.
+
+| **DISEÑO LÓGICO (ERD)** | **DISEÑO FÍSICO (BBDD Relacional)**               |
+| ----------------------- | ------------------------------------------------- |
+| Entidad                 | Tabla                                             |
+| Instancia               | Fila                                              |
+| Atributo                | Columna                                           |
+| UID Primario            | [[Sección 2#Llave primaria\|Llave primaria (PK)]] |
+| UID Secundario          | Clave única (UK)                                  |
+| Relación                | [[Sección 2#Clave foránea\|Clave foránea (FK)]]   |
+
+### Reglas de nomenclatura para tablas y columnas en oracle
+- **Tablas** Se nombran usando el PLURAL de la entidad (ej. STUDENT se convierte en STUDENTS)
+- **Columnas** Sustituyen los espacios y caracteres especiales por caracteres de subrayado _ (ej. `first name` se convierte en `first_name`). Suelen usar abreviaturas más cortas que en el modelo lógico.
+- **Restricciones Oracle DB SQL** 
+	- Deben empezar por una letra
+	- Hasta 30 caracteres alfanuméricos
+	- Prohibido usar palabras reservadas de SQL
+	- Los nombres de tabla deben ser únicos en la cuenta, y los de columnas únicos en la tabla
+
+### Nombres abreviados para claves foráneas
+Para asignar nombres a las calves foráneas, se utiliza una abreviatura única de la tabla de origen
+- Entidades de más de una palabra: iniciales (PRIVATE HOMES->PHE)
+- Entidades de una palabra/ varias sílabas: consonantes principales (DEPARTAMENT -> DPT)
+	-> ej. La columna de clave foránea en EMPLOYEES hacia DEPARTMENTS será `dpt_id`.
+
+
