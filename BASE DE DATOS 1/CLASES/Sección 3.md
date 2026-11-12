@@ -165,3 +165,4 @@ Para asignar nombres a las calves foráneas, se utiliza una abreviatura única d
 	-> ej. La columna de clave foránea en EMPLOYEES hacia DEPARTMENTS será `dpt_id`.
 
 
+	
