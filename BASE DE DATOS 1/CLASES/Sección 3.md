@@ -105,3 +105,11 @@ Al resolver una [[Sección 2#Relación de varios a varios (M:M)|relación M:M]],
 #### 4. Registro de información modificada
 Para mantener pistas de auditoría sobre quién alteró qué datos, se agregan entidades (ej. PAYMENT MODIFICATION) que almacenan datos como monto previo, modificado por, y fecha de modificación
 
+## 3.3 Normalización y reglas de negocio
+
+### Normalización
+Es el proceso de organizar las tablas y atributos de una base de datos relacional para minimizar la redundancia.
+- ayuda a evitar anomalías de inserción, actualización y supresión
+- Aumenta la integridad y estabilidad de los datos
+- El objetivo en el diseño de bases de datos es normalizar hasta el **Tercer Formato Normal (3NF)** antes de pasar al [[Sección 2#Modelo físico|modelo físico]].
+
