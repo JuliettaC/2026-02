@@ -113,3 +113,4 @@ Es el proceso de organizar las tablas y atributos de una base de datos relaciona
 - Aumenta la integridad y estabilidad de los datos
 - El objetivo en el diseño de bases de datos es normalizar hasta el **Tercer Formato Normal (3NF)** antes de pasar al [[Sección 2#Modelo físico|modelo físico]].
 
+### Formatos normales
