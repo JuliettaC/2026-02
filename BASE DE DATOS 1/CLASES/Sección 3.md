@@ -114,3 +114,19 @@ Es el proceso de organizar las tablas y atributos de una base de datos relaciona
 - El objetivo en el diseño de bases de datos es normalizar hasta el **Tercer Formato Normal (3NF)** antes de pasar al [[Sección 2#Modelo físico|modelo físico]].
 
 ### Formatos normales
+#### 1. Primer formato normal (1NF)
+**REGLA** Todos los atributos deben tener un único valor
+- Ningún atributo puede contener listas o multiples valotes (no puede haber "atributos de varios valores")
+- **SOLUCIÓN** si un atributo tiene varios valores (ej. Teléfonos), crea una nueva entidad vinculada mediante una relación 1:M
+### 2. Segundo formato normal (2NF)
+**REGLA** Un atributo (que no sea UID) debe depender por completo de todo el UID de la entidad
+- Es especialmente crítico cuando existe un [[Sección 2#UID compuesto|UID compuesto]]. Ningún atributo puede depender de solo una parte de la clave.
+- **SOLUCIÓN** Si un atributo solo depende de una parte del UID o de otra entidad, muévelo a la entidad correspondiente
+
+### 3. Tercer formato normal (3NF)
+**REGLA** Ningún atributo no-UID puede depender de otro atributo no-UID
+- Prohíbe explícitamente las dependencias transitivas. (El atributo debe depender solo del UID de la entidad)
+- **SOLUCIÓN** Si un atributo depende de otro que no es la clave primaria, extráelos hacia una nueva entidad y establece una relación
+
+### Regla de nefgocio
+Las reglas de negocio (introducidas en [[Sección 1#Reglas de negocio]]) definen el comportamiento de una organización. Existen dos tipos principales de cara al modelado:
