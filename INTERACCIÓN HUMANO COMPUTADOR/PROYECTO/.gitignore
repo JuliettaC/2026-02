@@ -1,21 +1,2 @@
-# Lista permitida para esta etapa documental. Todo nuevo archivo requiere revisión.
+# Contenedor local: no incorporar carpetas al repositorio del semestre.
 *
-!/.gitignore
-!/README.md
-!/AGENTS.md
-!/CLAUDE.md
-!/docs/
-/docs/*
-!/docs/requisitos.md
-!/docs/contexto.md
-!/docs/decisiones.md
-!/docs/estadoActual.md
-!/docs/fuentes.md
-!/docs/colaboracion.md
-!/.agent/
-/.agent/*
-!/.agent/rules/
-/.agent/rules/*
-!/.agent/rules/contexto.md
-# No usar git add -f. Los originales, audios, datos personales, credenciales,
-# consentimientos y derivados temporales quedan excluidos por defecto.
