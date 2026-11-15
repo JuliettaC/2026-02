@@ -23,9 +23,21 @@ Las preguntas de F03 exploran planificación de rutas, obstáculos físicos, tie
 | HIP-03 | Información insuficiente sobre rutas podría contribuir a retrasos, fatiga, riesgos y menor autonomía. | F03 p. 2, paso 4; allí se refiere al campus |
 | HIP-04 | Las aplicaciones de mapas podrían no representar barreras relevantes para diferentes necesidades de movilidad. | F07/F08, planteamiento posterior |
 
-No existen en los materiales revisados citas verificadas que permitan convertir estas hipótesis en hallazgos. Tampoco se comprobó que las plataformas entreguen las mismas rutas a todas las personas. No atribuir experiencia, condición, diagnóstico o declaraciones a quien aparece en la grabación.
+No existen en los materiales revisados citas verificadas que permitan convertir estas hipótesis en hallazgos. Tampoco se comprobó que las plataformas entreguen las mismas rutas a todas las personas. F06 corresponde, según aclaración del usuario, a una conversación del equipo con la profesora sobre el proyecto, no a una entrevista a participantes. Su transcripción aportada por el usuario se revisó como F09 tras confirmar el consentimiento; no acredita experiencias ni hallazgos del público objetivo.
 
-## Orientación posterior, pendiente de ratificación
+## Contexto aportado por la conversación con la profesora
+
+La síntesis de F09 distingue los turnos por el sentido del diálogo, sin asegurar identidades en los fragmentos ambiguos. Las orientaciones académicas están en [requisitos](requisitos.md), O01–O04; sus decisiones pendientes permanecen en DEC-01/02/11/12.
+
+El equipo aclara que busca ayudar a una persona a identificar una opción viable para desplazarse dentro de un espacio con barreras, mediante información u orientación tecnológica. No propone reconstruir la infraestructura. En el intercambio, la profesora expresa que entiende esa aclaración y valora el tema, insistiendo en delimitarlo (F09-C). Esto respalda la dirección general del planteamiento, pero no una aprobación formal del alcance, del guion o de una solución concreta.
+
+Una comuna, la universidad y un parque aparecen como alternativas de delimitación; parques, museos y salas ilustran posibilidades. Ninguno queda elegido. Las menciones a discapacidad visual o motricidad de brazos exploran otros alcances; no prueban que se hayan incorporado al público objetivo. La distinción entre dificultades temporales y permanentes tampoco se resuelve (F09-B/C).
+
+En ese momento el grupo expresa dificultades para identificar personas a quienes entrevistar y una intervención menciona posibles contactos cercanos. Se trata de una vía potencial de reclutamiento, no de participantes contactados, consentimientos obtenidos ni entrevistas realizadas (F09-D/E). La propuesta del equipo de acompañar a una persona en su trayecto es una técnica por considerar; no acredita observaciones efectuadas.
+
+La idea de una página con información de accesibilidad del Metro aparece hacia el cierre, sin atribución clara ni acuerdo demostrado (F09-F). No se adopta como producto, alcance o requisito. Tampoco se asume que la conversación se centre específicamente en Google Maps: ese énfasis procede de otros insumos.
+
+## Orientación de los resúmenes previos, pendiente de ratificación
 
 F07 y F08 amplían el escenario a desplazamientos urbanos en **Santiago**, sugieren Providencia como piloto y proponen enfocarse en personas adultas con movilidad reducida en extremidades inferiores. Incluyen segmentos peatonales/rodados y posibles conexiones con Metro o buses. No acreditan que el equipo o la docente aprobaran ese cambio. El modelo F05 está redactado para mayores de 18 años, pero no demuestra selección ni reclutamiento.
 

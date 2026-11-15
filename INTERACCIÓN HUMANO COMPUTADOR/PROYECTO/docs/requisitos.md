@@ -91,3 +91,16 @@ La rúbrica considera Logrado, por ejemplo, hallazgos más descriptivos, algún 
 **R21 (F05 pp. 1–2, modelo de consentimiento):** participación voluntaria de mayores de 18 años; posibilidad de omitir respuestas, pausar o terminar sin consecuencias; permisos separados para audio, video, procesamiento por IA/transcripción automática y citas textuales sin identificación. Sin permiso de grabación, el modelo indica tomar notas. Acceso al equipo y docente; uso solo en la actividad; eliminar grabaciones al término de la asignatura. El modelo en blanco no acredita ninguno de esos permisos.
 
 No hay obligación en F01 de desarrollar una aplicación de producción, elegir una tecnología particular o implementar mapas en tiempo real. Las propuestas específicas del producto se mantienen en [contexto](contexto.md), no se añaden a esta pauta como exigencias docentes.
+
+## Orientaciones orales para delimitar el proyecto
+
+Fuente: F09, transcripción aportada por el usuario; localizadores y límites en [fuentes](fuentes.md). Se registran separadamente de R01–R21 porque la reunión no tiene fecha verificada y el texto no fue cotejado con el audio. No se alteran mínimos, ponderaciones ni entregables de F01.
+
+| ID | Orientación atribuible por el contexto del diálogo a la profesora | Alcance y límites |
+|---|---|---|
+| O01 | Acotar el territorio a un espacio abordable y accesible para el trabajo del grupo. | F09-B/E: ciudad completa resulta demasiado amplia; comuna, universidad o parque son alternativas. No hay lugar seleccionado. |
+| O02 | Definir un público particular y distinguir situaciones de movilidad relevantes. | F09-B/E: considerar temporal/permanente, tipo de dificultad motriz y edad; no ampliar automáticamente a discapacidad visual o a todos los perfiles. La profesora deja la decisión al equipo. |
+| O03 | Orientar el trabajo a una aportación tecnológica vinculada con la carrera y partir de la comprensión del usuario. | F09-C/D: informar sobre lugares o recorridos es una posibilidad; modificaciones arquitectónicas no son el objetivo expresado. Investigar usuario, frustraciones y deseos precede a construir y validar prototipos. No se prescribe una app específica ni se ordena desarrollarla ahora. |
+| O04 | Revisar acceso real al público y al lugar; se anticipan fotografías, levantamiento de información y pruebas. Presentar una definición más concreta para la clase siguiente. | F09-B/E: no se especifican cantidad, formato, fase de entrega ni fecha de esa clase. Confirmar detalles en DEC-12; la mención general a pruebas no traslada automáticamente a Parte 1 la evaluación de Parte 2. |
+
+El pasaje de F09-D sobre asumir una situación ante dificultades de reclutamiento es ambiguo. R07 y R20 mantienen la exigencia de participantes reales; DEC-11 registra la consulta necesaria antes de interpretar cualquier excepción.

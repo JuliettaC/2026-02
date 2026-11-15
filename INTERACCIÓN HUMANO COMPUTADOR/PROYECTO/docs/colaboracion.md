@@ -2,7 +2,7 @@
 
 ## Fuente de verdad
 
-Los originales son evidencia primaria y permanecen privados e intactos. `docs/` contiene la interpretación vigente, verificable mediante las referencias F01–F08. Para obligaciones prevalece F01, salvo aclaración posterior documentada de la docente. Una decisión del equipo no elimina un requisito académico. Ante conflicto, registrarlo en [decisiones](decisiones.md), sin resolverlo por suposición.
+Los originales son evidencia primaria y permanecen privados e intactos. `docs/` contiene la interpretación vigente, verificable mediante las referencias F01–F09. Para obligaciones prevalece F01, salvo aclaración posterior documentada de la docente. Una decisión del equipo no elimina un requisito académico. Ante conflicto, registrarlo en [decisiones](decisiones.md), sin resolverlo por suposición.
 
 El [README](../README.md) asigna un único documento responsable a cada tema. Enlazarlo en lugar de copiar sus tablas. Los resúmenes antiguos de la raíz se conservan excluidos como antecedentes, no se mantienen como una segunda fuente vigente.
 
@@ -48,5 +48,7 @@ No se ejecutó `git add`, `git commit` ni `git push` en esta preparación. Los l
 ## Registro de asistencia de IA
 
 El 2026-11-15 se utilizó Codex para inventariar los insumos, leer texto de documentos, verificar visualmente páginas PDF, resumir requisitos y preparar esta documentación e instrucciones. No se procesó F06 ni se generaron datos de participantes. La revisión humana del equipo está pendiente. Este registro alimentará la declaración final, pero no certifica ni sustituye declarar otros usos de IA realizados por integrantes.
+
+En la continuación de esta revisión, el usuario confirmó el consentimiento de quienes conversan y aportó F09. Codex analizó ese texto para resumir orientaciones académicas, actualizar contexto y registrar ambigüedades. No escuchó F06 ni cotejó la transcripción con el audio; no guardó la transcripción íntegra ni la conversación personal final en el repositorio. La revisión humana de atribuciones y conclusiones sigue pendiente.
 
 Al usar IA, registrar herramienta, fecha, propósito, materiales autorizados y revisión humana efectuada. Para iniciar una sesión nueva puede pedirse: «Lee AGENTS.md y sus documentos obligatorios. Indica el estado comprobado y los bloqueos de mi tarea. Trabaja solo con evidencia y actualiza el documento responsable al terminar». No depender de la memoria de una conversación.
