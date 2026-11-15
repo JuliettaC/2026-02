@@ -1,4 +1,4 @@
-# PROYECTO IHC · Wo bu zhi dao
+  # PROYECTO IHC · Wo bu zhi dao
 
 Repositorio de contexto compartido para los cinco integrantes del proyecto de Interacción Humano-Computador de la Universidad Mayor. Estudiamos la información que necesitan las personas con movilidad reducida en extremidades inferiores para planificar sus desplazamientos. El alcance territorial todavía requiere un acuerdo documentado.
 
